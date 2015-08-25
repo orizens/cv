@@ -60,7 +60,8 @@ body{
     background-color:#222;
     color:#333;
     font:16px 'Marvel', sans-serif;
-    line-height:22px
+    line-height:22px;
+    margin: 0;
 }
 ol,ul{
     list-style:none
