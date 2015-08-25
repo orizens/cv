@@ -1,0 +1,48 @@
+/* Code is compressed only in the preview version.
+The css files in the download are nicely formated and commented.
+Check out the screenshots section for a look at the code*/
+#cv{
+    border:none;
+    width:100%;
+    /*float:none;*/
+    margin:0
+}
+.first-cv-section{
+   
+}
+.person h1{
+    margin-bottom:10px
+}
+.person h2{
+    letter-spacing:0
+}
+
+.cv-section{
+    margin:0
+}
+.cv-section-name{
+    float:none;
+    margin-bottom:30px
+}
+
+.cv-section-items{
+    /*float:none;*/
+    /*width:90%;*/
+    /*margin-left:10%*/
+    background-color: #fafafa;
+    border-radius: 1px;
+    border-bottom: 1px solid #ededed;
+    padding: 10px;
+}
+ 
+
+#contact-info {
+    margin-right: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.tikal-client {
+    font-weight: bold;
+}
