@@ -209,10 +209,7 @@ h2.cv-section-name{
     margin: 0;
     /*float: left;*/
 }
-.item h4:hover{
-    background-color:#000;
-    color:#fff
-}
+
 .item h2{
     color:#3A8DBE;
     font-size:22px;
