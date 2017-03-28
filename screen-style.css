@@ -122,7 +122,9 @@ em{
 	background-size: cover;
 }
 .first-cv-section{
-    background-color:#F8F8F8;
+    background:#F8F8F8 url(images/orizens-bg.png);
+    background-blend-mode: color-burn;
+    background-size: cover;
     margin:0;
     padding: 15px;
     position: relative;
@@ -307,17 +309,21 @@ span.skill-tag {
         background-color: #fafafa;
         border-radius: 1px;
         border-bottom: 1px solid #ededed;
-        padding: 10px;
+        padding: 2rem;
         margin-bottom: 20px;
     }
 
     #contact-info {
-        color: #3A8DBE;
+        color: #475261;
         position: relative;
         margin: 0;
         text-align: center;
     }
 
+    #contact-info a,
+    #contact-info .fa {
+        color: #475261;
+    }
     .tikal-client {
         font-weight: bold;
     }
