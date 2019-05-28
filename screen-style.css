@@ -59,8 +59,19 @@ h6 {
 }
 body {
   --color-highlight: #5a9fa2;
-  background: #fff;
-  color: #333;
+  --color-highlight-lighter: #475261;
+  --index-high: 1000;
+  --page-bg-color: #fff;
+  --page-text-color: #333;
+  --section-bg-color: #f8f8f8;
+  --box-bg-color: #fafafa;
+  --box-border-color: #ededed;
+  --image-border-color: #dedede;
+  --skill-tag-bg-color: #eee;
+  --skill-tag-border-color: #ccc;
+
+  background: var(--page-bg-color);
+  color: var(--page-text-color);
   font: 16px 'Marvel', sans-serif;
   line-height: 22px;
   margin: 0;
@@ -115,7 +126,6 @@ em {
 .cv-contents {
   padding: 25px;
   max-width: 1280px;
-  display: flex;
   margin: 0 auto;
 }
 .cv-section.cv-section-title {
@@ -132,21 +142,21 @@ em {
   background-size: cover;
 }
 .first-cv-section {
-  background: #f8f8f8 url(http://orizens.github.io/cv/images/orizens-bg.png);
+  background: var(--section-bg-color)
+    url(http://orizens.github.io/cv/images/orizens-bg.png);
   background-blend-mode: color-burn;
   background-size: cover;
   margin: 0;
   padding: 15px;
   position: relative;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid var(--box-border-color);
   /* background-color: #409CD3; */
 }
-.person {
-}
+
 .person img {
   margin: 0 auto;
-  background-color: #fff;
-  border: 1px solid #dedede;
+  background-color: var(--page-bg-color);
+  border: 1px solid var(--image-border-color);
   padding: 10px 8px;
   border-radius: 50%;
 }
@@ -178,9 +188,9 @@ ul#social-media li {
   padding-bottom: 20px;
   position: relative;
   width: auto;
-  background-color: #fafafa;
+  background-color: var(--box-bg-color);
   border-radius: 1px;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid var(--box-border-color);
   padding: 2rem;
   margin-bottom: 20px;
 }
@@ -231,6 +241,11 @@ h2.cv-section-name {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--color-highlight);
+  position: sticky;
+  top: 0;
+  z-index: var(--index-high);
+  background-color: var(--page-bg-color);
+  box-shadow: 0 5px 6px -6px var(--color-highlight);
 }
 
 .item h2 {
@@ -326,27 +341,28 @@ textarea {
     margin-bottom: 0;
   }
   span.skill-tag {
-    border: 1px solid #ccc;
     border-radius: 10px;
     padding: 3px 14px;
-    background-color: #eee;
+    background-color: var(--color-highlight);
     line-height: 2;
+    color: var(--page-bg-color);
   }
+
   .first-cv-section .person {
     width: 100%;
   }
 
   .cv-section-items {
     width: auto;
-    background-color: #fafafa;
+    background-color: var(--box-bg-color);
     border-radius: 1px;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid var(--box-border-color);
     padding: 2rem;
     margin-bottom: 20px;
   }
 
   #contact-info {
-    color: #475261;
+    color: var(--color-highlight-lighter);
     position: relative;
     margin: 0;
     text-align: center;
@@ -354,7 +370,7 @@ textarea {
 
   #contact-info a,
   #contact-info .fa {
-    color: #475261;
+    color: var(--color-highlight-lighter);
   }
   .item-client {
     font-weight: bold;
@@ -363,15 +379,16 @@ textarea {
     width: auto;
   }
   .pub-item.with-media {
-    background-color: #eee;
+    background-color: var(--skill-tag-bg-color);
     margin: 0.5rem 0;
-    border: 1px solid #ccc;
+    border: 1px solid var(--skill-tag-border-color);
     border-radius: 3px;
     padding: 1rem;
   }
   .pub-item .media {
     height: auto;
     max-width: 100%;
+    max-height: 15rem;
   }
 }
 @media (min-width: 600px) {
@@ -392,11 +409,14 @@ textarea {
 }
 
 @media (min-width: 900px) {
+  .cv-contents {
+    display: flex;
+  }
   .profile {
-    flex: 3;
+    flex: 5;
     margin-right: 2rem;
   }
   .skills {
-    flex: 1;
+    flex: 2;
   }
 }

@@ -23,6 +23,8 @@ Check out the screenshots section for a look at the code*/
   h2.cv-section-name,
   .item h2 {
     font-size: 22px;
+    position: static;
+    box-shadow: none;
   }
   .item h3 {
     font-size: 15px;
@@ -77,6 +79,11 @@ Check out the screenshots section for a look at the code*/
     flex: 2;
   }
   .skills {
+    flex: 1;
+    display: flex;
+  }
+  .skills .cv-section {
+    margin-right: 1.5rem;
     flex: 1;
   }
   span.skill-tag {
