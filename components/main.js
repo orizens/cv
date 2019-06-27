@@ -65,7 +65,7 @@ work.innerHTML =
     },
     {
       role: 'Senior Javascript Engineer & Consultant',
-      date: '2016 - 2018',
+      date: '8/2017 - 8/2018',
       company: 'Orizens (Self Owned) , Full-Time',
       tagline: `Developing Web Applications using Javascript, CSS3 & HTML5, Node.js. Writing at the <a
               href="http://www.orizens.com"
@@ -96,6 +96,16 @@ work.innerHTML =
           `https://npmjs.com/orizens`
         ]
       ]
+    },
+    {
+      role: 'Senior Javascript Engineer & Consultant',
+      date: '5/2017 - 8/2017',
+      company: 'Tangent Logic , Full-Time',
+      tagline:
+        'Developing Web Applications using React, Angular, NGRX, Javascript, SASS.',
+      clientTitle: 'Consulting to startups and large companies on:',
+      highlight: true,
+      clients: [['Lifion', 'Senior Front End with: React & Sass, code reviews']]
     },
     {
       role: 'Senior Javascript Engineer, Front End Architect',
@@ -164,20 +174,13 @@ work.innerHTML =
       ]
     },
     {
-      role: `Web Developer & Web Designer Freelance`,
-      date: `2005 - 2010`,
-      company: `Orizens.com, Full-Time`,
-      tagline: `Designing & Developing websites for various customers around the country using: HTML, JS, CSS, PHP, Wordpress,
-          Flash & Actionscript, Swishmax, VBA.`,
-      projectsTitle: `Personal Projects`,
+      role: `Web Developer & Web Designer`,
+      date: `2007 - 2008`,
+      company: `Netcraft`,
+      tagline: `Developing Web Applications using Javascript, CSS3 & HTML5`,
+      projectsTitle: ``,
       highlight: true,
-      projects: [
-        [
-          `VisitWeb`,
-          `free online event management service for planning events, seating arrangements, developed with 
-            Javascript`
-        ]
-      ]
+      projects: []
     }
   ]
     .map(
