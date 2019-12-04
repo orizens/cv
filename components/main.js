@@ -54,17 +54,17 @@ work.innerHTML =
       ` +
   [
     {
-      role: 'Senior Javascript Engineer & Consultant',
+      role: 'Senior Front End Engineer & Consultant',
       date: '2018 - Present',
       company: 'Tangent Logic , Full-Time',
       tagline:
         'Developing Web Applications using React, Angular, NGRX, Javascript, SASS.',
       clientTitle: 'Consulting to startups and large companies on:',
       highlight: true,
-      clients: [['Lifion', 'Senior Front End with: React & Sass, code reviews']]
+      clients: [['Lifion', 'Senior Front End with: React, Jest & Enzyme, Sass, Code Reviews']]
     },
     {
-      role: 'Senior Javascript Engineer & Consultant',
+      role: 'Senior Front End Engineer & Consultant',
       date: '2016 - 2018',
       company: 'Orizens (Self Owned) , Full-Time',
       tagline: `Developing Web Applications using Javascript, CSS3 & HTML5, Node.js. Writing at the <a
@@ -98,7 +98,7 @@ work.innerHTML =
       ]
     },
     {
-      role: 'Senior Javascript Engineer, Front End Architect',
+      role: 'Senior Frond End Engineer, Front End Architect',
       date: '2010 - 2016',
       company: 'Tikal Knowledge, Full-Time',
       tagline: `Developing Web Applications using Javascript, CSS3 & HTML5, Node.js. In addition, Tech Leading Tikal’s Javascript Group
