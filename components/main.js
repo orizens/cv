@@ -61,7 +61,7 @@ work.innerHTML =
         'Developing Web Applications using React, Angular, NGRX, Javascript, SASS.',
       clientTitle: 'Consulting to startups and large companies on:',
       highlight: true,
-      clients: [['Lifion', 'Senior Front End with: React, Jest & Enzyme, Sass, Code Reviews']]
+      clients: [['Lifion', 'Front End Development with: React, Jest & Enzyme, Sass, Code Reviews']]
     },
     {
       role: 'Senior Front End Engineer & Consultant',
