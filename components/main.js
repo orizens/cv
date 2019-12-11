@@ -82,7 +82,7 @@ work.innerHTML =
         ["Javascript Development", "for any projects"],
         ["Angular, NGRX", "Project Development (using best practices)"],
         ["AngularJS", "Migarting To Angular (+2)"],
-        ["GatsbyJ", "Creating React Based Websites"],
+        ["GatsbyJS", "Creating React Based Websites"],
         ["Project Bootstraping with js Testing (bdd/tdd)", "unit & e2e"],
         ["JS UI Architecture Code", "Scalable"],
         ["Code Reviews", "applying all the above"],
