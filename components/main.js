@@ -81,8 +81,9 @@ work.innerHTML =
       clients: [
         ["Javascript Development", "for any projects"],
         ["Angular, NGRX", "Project Development (using best practices)"],
-        ["AngularJS", "Migarting To Angular (+2)"],
+        ["Responsive Web Apps", "Using CSS Responsive Best Practices"],
         ["GatsbyJS", "Creating React Based Websites"],
+        ["AngularJS", "Migarting To Angular (+2)"],
         ["Project Bootstraping with js Testing (bdd/tdd)", "unit & e2e"],
         ["JS UI Architecture Code", "Scalable"],
         ["Code Reviews", "applying all the above"],
