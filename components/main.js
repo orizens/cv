@@ -58,16 +58,16 @@ work.innerHTML =
       date: '2018 - Present',
       company: 'Tangent Logic , Full-Time',
       tagline:
-        'Developing Web Applications using React, Angular, NGRX, Javascript, SASS.',
+        'Developing Web Applications using React, Angular, Typescript, Redux, NGRX, Javascript, SASS',
       clientTitle: 'Consulting to startups and large companies on:',
       highlight: true,
-      clients: [['Lifion', 'Front End Development with: React, Jest & Enzyme, Sass, Code Reviews']]
+      clients: [['Lifion', 'Front End Development with: React, Jest & Enzyme, Typescript, Sass, Code Reviews']]
     },
     {
       role: 'Senior Front End Engineer & Consultant',
       date: '2016 - 2018',
       company: 'Orizens (Self Owned) , Full-Time',
-      tagline: `Developing Web Applications using Javascript, CSS3 & HTML5, Node.js. Writing at the <a
+      tagline: `Developing Web Applications using Javascript and Web Technologies. Writing at the <a
               href="http://www.orizens.com"
               target="_blank">
               Orizens.com Blog
@@ -77,10 +77,10 @@ work.innerHTML =
         ['Javascript Development', 'for any projects'],
         ['Angular, NGRX', 'Project Development (using best practices)'],
         ['AngularJS', 'Migarting To Angular (+2)'],
-        ['Project Bootstraping with js Testing (bdd/tdd)'],
-        ['JS ui architecture code'],
-        ['code reviews', 'applying all the above'],
-        ['conduct workshops on js & angular']
+        ['Project Bootstraping with js Testing (bdd/tdd)', 'unit & e2e'],
+        ['JS UI Architecture Code', 'Scalable'],
+        ['Code Reviews', 'applying all the above'],
+        ['Conduct Workshops', 'javascript & angular']
       ],
       projectsTitle: 'Personal Projects',
       highlight: true,
