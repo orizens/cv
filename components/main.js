@@ -72,7 +72,7 @@ work.innerHTML =
       role: "Senior Front End Engineer & Consultant",
       date: "2016 - 2018",
       company: "Orizens (Self Owned) , Full-Time",
-      tagline: `Developing Web Applications using Javascript and Web Technologies. Writing at the <a
+      tagline: `Developing Web Applications with Javascript and Web Technologies. Writing at the <a
               href="http://www.orizens.com"
               target="_blank">
               Orizens.com Blog
