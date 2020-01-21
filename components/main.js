@@ -1,17 +1,17 @@
 //============================
 //    Contact List
 //============================
-const ul = document.querySelector("#contact-list");
+const ul = document.querySelector('#contact-list');
 ul.innerHTML = [
   {
-    href: "mailto:farhioren@gmail.com",
-    icon: "envelope-o",
-    text: "farhioren@gmail.com"
+    href: 'mailto:farhioren@gmail.com',
+    icon: 'envelope-o',
+    text: 'farhioren@gmail.com'
   },
   {
-    href: "http://orizens.com/cv",
-    icon: "link",
-    text: "orizens.com/cv"
+    href: 'http://orizens.com/cv',
+    icon: 'link',
+    text: 'orizens.com/cv'
   }
 ]
   .map(({ href, icon, text }) => {
@@ -26,16 +26,16 @@ ul.innerHTML = [
 </li>
             `;
   })
-  .join("");
+  .join('');
 [
   {
-    text: "+1 (551) 246 0056"
+    text: '+1 (551) 246 0056'
   },
   {
-    text: "+1 (646) 753 4899"
+    text: '+1 (646) 753 4899'
   }
 ].forEach(({ text }) => {
-  const li = document.createElement("li");
+  const li = document.createElement('li');
   li.innerHTML = `
               <span class="fa fa-phone"></span>
               <strong>${text}</strong>
@@ -45,7 +45,7 @@ ul.innerHTML = [
 //============================
 //    Work Experience
 //============================
-const work = document.querySelector("#work-experience");
+const work = document.querySelector('#work-experience');
 work.innerHTML =
   `
 <h2 class="cv-section-name">
@@ -54,42 +54,42 @@ work.innerHTML =
       ` +
   [
     {
-      role: "Senior Front End Engineer & Consultant",
-      date: "2018 - Present",
-      company: "Tangent Logic , Full-Time",
+      role: 'Senior Front End Engineer & Consultant',
+      date: '2018 - Present',
+      company: 'Tangent Logic , Full-Time',
       tagline:
-        "Developing Web Applications using React, Angular, Typescript, Redux, NGRX, Javascript, SASS",
-      clientTitle: "Consulting to startups and large companies on:",
+        'Developing Web Applications using React, Angular, Typescript, Redux, NGRX, Javascript, SASS',
+      clientTitle: 'Consulting to startups and large companies on:',
       highlight: true,
       clients: [
         [
-          "Lifion",
-          "Front End Development with: React, Jest & Enzyme, Typescript, Sass, Code Reviews"
+          'Lifion',
+          'Front End Development with: React, Node.js, Jest & Enzyme, Typescript, Sass, Code Reviews'
         ]
       ]
     },
     {
-      role: "Senior Front End Engineer & Consultant",
-      date: "2016 - 2018",
-      company: "Orizens (Self Owned) , Full-Time",
-      tagline: `Developing Web Applications with Javascript and Web Technologies. Writing at the <a
+      role: 'Senior Front End Engineer & Consultant',
+      date: '2016 - 2018',
+      company: 'Orizens (Self Owned) , Full-Time',
+      tagline: `Developing Web Applications with  React, Angular, Redux, NgRx, Typescript, CI/CD and Web Technologies. Writing at the <a
               href="http://www.orizens.com"
               target="_blank">
               Orizens.com Blog
-            </a> - Thoughts about Javascript.`,
-      clientTitle: "Consulting to startups and large companies on:",
+            </a> - Thoughts about Javascript Development.`,
+      clientTitle: 'Consulting to startups and large companies on:',
       clients: [
-        ["Javascript Development", "for any projects"],
-        ["Angular, NGRX", "Project Development (using best practices)"],
-        ["Responsive Web Apps", "Using CSS Responsive Best Practices"],
-        ["GatsbyJS", "Creating React Based Websites"],
-        ["AngularJS", "Migarting To Angular (+2)"],
-        ["Project Bootstraping with js Testing (bdd/tdd)", "unit & e2e"],
-        ["JS UI Architecture Code", "Scalable"],
-        ["Code Reviews", "applying all the above"],
-        ["Conduct Workshops", "javascript & angular"]
+        ['Javascript Development', 'for any projects'],
+        ['Angular, NGRX', 'Project Development (using best practices)'],
+        ['Responsive Web Apps', 'Using CSS Responsive Best Practices'],
+        ['GatsbyJS', 'Creating React Based Websites'],
+        ['AngularJS', 'Migarting To Angular (+2)'],
+        ['Project Bootstraping with js Testing (bdd/tdd)', 'unit & e2e'],
+        ['JS UI Architecture Code', 'Scalable'],
+        ['Code Reviews', 'applying all the above'],
+        ['Conduct Workshops', 'javascript & angular']
       ],
-      projectsTitle: "Personal Projects",
+      projectsTitle: 'Personal Projects',
       highlight: true,
       projects: [
         [
@@ -105,9 +105,9 @@ work.innerHTML =
       ]
     },
     {
-      role: "Senior Frond End Engineer, Front End Architect",
-      date: "2010 - 2016",
-      company: "Tikal Knowledge, Full-Time",
+      role: 'Senior Frond End Engineer, Front End Architect',
+      date: '2010 - 2016',
+      company: 'Tikal Knowledge, Full-Time',
       tagline: `Developing Web Applications using Javascript, CSS3 & HTML5, Node.js. In addition, Tech Leading Tikal’s Javascript Group
           - recruiting experts, Speaker, hosting js workshops, writing at the company’s blog about JS & Web Development
           as well as consulting for various customers.`,
@@ -201,7 +201,7 @@ work.innerHTML =
         highlight = false
       }) => {
         const renderSection = function(arr, title, icon) {
-          if (!title) return "";
+          if (!title) return '';
           const renderLabel = (link, name) =>
             link ? `<a href="${link}">${name}</a>` : name;
           const listHtml = arr
@@ -213,13 +213,13 @@ work.innerHTML =
                     highlight
                       ? '<span class="item-client">' +
                         renderLabel(link, name) +
-                        "</span>"
+                        '</span>'
                       : name
                   } - ${desc}
                 </li>
                 `
             )
-            .join("");
+            .join('');
           return `
         <h3>${title}</h3>
         <ul class="list-unstyled">
@@ -241,10 +241,10 @@ work.innerHTML =
           </h4>
         </div>
         <p>${tagline}</p>
-        ${renderSection(clients, clientTitle, "at")}
-        ${renderSection(projects, projectsTitle, "code-fork")}
+        ${renderSection(clients, clientTitle, 'at')}
+        ${renderSection(projects, projectsTitle, 'code-fork')}
       </div>
       `;
       }
     )
-    .join("");
+    .join('');
