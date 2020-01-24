@@ -13,12 +13,14 @@ Check out the screenshots section for a look at the code*/
   }
   .person h1 {
     font-size: 38px;
+    color: #000;
   }
   .item h4 {
     font-size: 14px;
   }
   .person h2 {
     font-size: 15px;
+    color: #000;
   }
   h2.cv-section-name,
   .item h2 {
@@ -51,6 +53,11 @@ Check out the screenshots section for a look at the code*/
     top: 10px;
     position: absolute;
   }
+  #contact-info,
+  #contact-info a {
+    color: #000;
+  }
+
   #contact-info .list-unstyled li {
     font-size: 1rem;
   }
@@ -71,7 +78,8 @@ Check out the screenshots section for a look at the code*/
     font-size: 1rem;
   }
   .first-cv-section {
-    margin-bottom: 60px;
+    margin-bottom: 0px;
+    background-image: none;
   }
 
   .profile {
