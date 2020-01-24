@@ -54,7 +54,8 @@ Check out the screenshots section for a look at the code*/
     position: absolute;
   }
   #contact-info,
-  #contact-info a {
+  #contact-info a,
+  #contact-info .fa {
     color: #000;
   }
 
