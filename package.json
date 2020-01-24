@@ -2,5 +2,8 @@
   "name": "cv",
   "version": "1.0.0",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "scripts": {
+    "start": "npx http-server ./ -c-1"
+  }
 }
