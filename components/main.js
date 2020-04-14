@@ -6,13 +6,13 @@ ul.innerHTML = [
   {
     href: 'mailto:farhioren@gmail.com',
     icon: 'envelope-o',
-    text: 'farhioren@gmail.com'
+    text: 'farhioren@gmail.com',
   },
   {
     href: 'http://orizens.com/cv',
     icon: 'link',
-    text: 'orizens.com/cv'
-  }
+    text: 'orizens.com/cv',
+  },
 ]
   .map(({ href, icon, text }) => {
     return `
@@ -29,11 +29,11 @@ ul.innerHTML = [
   .join('');
 [
   {
-    text: '+1 (551) 246 0056'
+    text: '+1 (551) 246 0056',
   },
   {
-    text: '+1 (646) 753 4899'
-  }
+    text: '+1 (646) 753 4899',
+  },
 ].forEach(({ text }) => {
   const li = document.createElement('li');
   li.innerHTML = `
@@ -64,9 +64,9 @@ work.innerHTML =
       clients: [
         [
           'Lifion',
-          'Front End Development with: React, Node.js, Jest & Enzyme, Typescript, Sass, Code Reviews'
-        ]
-      ]
+          'Front End Development with: React, Node.js, Jest & Enzyme, Typescript, Sass, Code Reviews',
+        ],
+      ],
     },
     {
       role: 'Senior Front End Engineer & Consultant',
@@ -87,22 +87,27 @@ work.innerHTML =
         ['Project Bootstraping with js Testing (bdd/tdd)', 'unit & e2e'],
         ['JS UI Architecture Code', 'Scalable'],
         ['Code Reviews', 'applying all the above'],
-        ['Conduct Workshops', 'javascript & angular']
+        ['Conduct Workshops', 'javascript & angular'],
       ],
       projectsTitle: 'Personal Projects',
       highlight: true,
       projects: [
         [
+          `ReadM (co-founder)`,
+          `A Book reading app that provides real time feedback to readers using speech recognition, while creating a positive and fun experience .`,
+          `https://readm.netlify.app`,
+        ],
+        [
           `Echoes Player`,
           `free & open source media player based on youtube api, developed with Javascript and Angular.`,
-          `https://echoesplayer.com`
+          `https://echoesplayer.com`,
         ],
         [
           `Orizens Npm Packages`,
-          `open source npm packages for Javascript development and Angular.`,
-          `https://npmjs.com/orizens`
-        ]
-      ]
+          `Open Source npm packages (used by Google, Amazon, Disney, Sap and more) for Javascript development and Angular.`,
+          `https://npmjs.com/orizens`,
+        ],
+      ],
     },
     {
       role: 'Senior Frond End Engineer, Front End Architect',
@@ -118,39 +123,39 @@ work.innerHTML =
       clients: [
         [
           `ADP`,
-          `Developing Web Application using: React, Ecmascript 2015, Bootstrap + SASS, Jasmine & karma, Git`
+          `Developing Web Application using: React, Ecmascript 2015, Bootstrap + SASS, Jasmine & karma, Git`,
         ],
         [
           `Takadu`,
           `Designing & Developing Web Application using: Angular.js, Ecmascript 2015, Gulp.js, Bootstrap
-            + SASS, Node.js (for REST), Jasmine & karma, Git &, Mercurial, BitBucket`
+            + SASS, Node.js (for REST), Jasmine & karma, Git &, Mercurial, BitBucket`,
         ],
         [
           `Perion`,
           `Designing & Developing Javascript Web Application using: Angular.js, Gulp.js, Bootstrap + LESS,
-            Node.js (for REST), Jasmine & karma, Git & Github`
+            Node.js (for REST), Jasmine & karma, Git & Github`,
         ],
         [
           `Verix`,
           `Leading Javascript Engineer and Front End Architect with - Angular.js, Backbone.js, Require.js, HTML5,
-            CSS3 & LESS development, Yeoman (Bower, Grunt.js), Jasmine`
+            CSS3 & LESS development, Yeoman (Bower, Grunt.js), Jasmine`,
         ],
         [
           `Optier`,
           `Javascript Engineer and Front End Architect Converting a GWT project to Javascript - Backbone.js,
-            Require.js, HTML5, CSS3 & Sass development`
+            Require.js, HTML5, CSS3 & Sass development`,
         ],
         [
           `Time To Know (ltd)`,
           `Leading Javascript Engineer and Front End Architect with Javascript - Backbone.js, Require.js,
-            HTML5 & CSS3 development`
+            HTML5 & CSS3 development`,
         ],
         [
           `Conduit`,
-          `Front End Architecture, HTML, CSS3 & Javascript Development`
+          `Front End Architecture, HTML, CSS3 & Javascript Development`,
         ],
-        [`Clarizen`, `Javascript Development & Consulting, Usability`]
-      ]
+        [`Clarizen`, `Javascript Development & Consulting, Usability`],
+      ],
     },
     {
       role: `UI Front End Developer`,
@@ -164,11 +169,11 @@ work.innerHTML =
       projects: [
         [
           `Architecture`,
-          `Refactoring Javascript UI to a Component based architecture`
+          `Refactoring Javascript UI to a Component based architecture`,
         ],
         [`Implementation`, `Complete separation of XSLT and JS`],
-        [`Style`, `Leading UI concepts with CSS design`]
-      ]
+        [`Style`, `Leading UI concepts with CSS design`],
+      ],
     },
     {
       role: `Web Developer & Web Designer Freelance`,
@@ -182,10 +187,10 @@ work.innerHTML =
         [
           `VisitWeb`,
           `free online event management service for planning events, seating arrangements, developed with 
-            Javascript`
-        ]
-      ]
-    }
+            Javascript`,
+        ],
+      ],
+    },
   ]
     .map(
       ({
@@ -198,9 +203,9 @@ work.innerHTML =
         clients,
         projects,
         clientTitle,
-        highlight = false
+        highlight = false,
       }) => {
-        const renderSection = function(arr, title, icon) {
+        const renderSection = function (arr, title, icon) {
           if (!title) return '';
           const renderLabel = (link, name) =>
             link ? `<a href="${link}">${name}</a>` : name;
