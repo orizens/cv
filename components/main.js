@@ -64,7 +64,7 @@ work.innerHTML =
       clients: [
         [
           'Lifion',
-          'Front End Development with: React, Node.js, Jest & Enzyme, Typescript, Sass, Code Reviews',
+          'Front End Development with: React, Node.js, Jest, Enzyme, Testing Library, Typescript, Sass, Code Reviews',
         ],
       ],
     },
@@ -75,8 +75,7 @@ work.innerHTML =
       tagline: `Developing Web Applications with  React, Angular, Redux, NgRx, Typescript, CI/CD and Web Technologies. Writing at the <a
               href="http://www.orizens.com"
               target="_blank">
-              Orizens.com Blog
-            </a> - Thoughts about Javascript Development.`,
+              Orizens.com Blog</a> - Thoughts about Javascript Development.`,
       clientTitle: 'Consulting to startups and large companies on:',
       clients: [
         ['Javascript Development', 'for any projects'],

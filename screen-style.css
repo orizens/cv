@@ -14,7 +14,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 /* Fonts Embedding */
-@font-face {
+/* @font-face {
   font-family: 'AllerBold';
   src: url('fonts/aller_bd-webfont.eot');
   src: url('fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
@@ -45,14 +45,14 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     url('fonts/droidsans-webfont.svg#DroidSansRegular') format('svg');
   font-weight: normal;
   font-style: normal;
-}
+} */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: AllerLightRegular;
+  font-family: 'Open Sans';
 }
 :focus {
   outline: 0;
@@ -73,7 +73,7 @@ body {
 
   background: var(--page-bg-color);
   color: var(--page-text-color);
-  font: 16px 'Marvel', sans-serif;
+  font: 16px 'Open Sans', sans-serif;
   line-height: 22px;
   margin: 0;
 }
@@ -101,7 +101,8 @@ a {
   color: var(--color-highlight);
 }
 strong {
-  font-weight: 700;
+  font-weight: 900;
+  color: var(--color-highlight);
 }
 em {
   font-style: italic;
@@ -227,7 +228,7 @@ ul#social-media li {
 }
 .person h2 {
   color: var(--color-highlight-lighter);
-  font-family: AllerLightRegular, Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   /*     font-size: 15px; */
   font-weight: 400;
   letter-spacing: -0.7px;
@@ -264,7 +265,7 @@ h2.cv-section-name {
 }
 .item h3 {
   color: #262625;
-  font-family: 'Marvel';
+  font-family: 'Open Sans';
   /*     font-size:15px; */
   font-style: italic;
   font-weight: 400;
