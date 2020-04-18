@@ -103,8 +103,8 @@ work.innerHTML =
         ],
         [
           `Orizens Npm Packages`,
-          `Open Source npm packages (used by Google, Amazon, Disney, Sap and more) for Javascript development and Angular.`,
-          `https://npmjs.com/orizens`,
+          `Open Source npm packages (used by <strong>Google</strong>, <strong>Microsoft</strong>, <strong>Amazon</strong>, <strong>Disney</strong>, <strong>Sap</strong> and more) for Javascript development and Angular.`,
+          `https://npmjs.com/~orizens`,
         ],
       ],
     },
