@@ -13,11 +13,6 @@ ul.innerHTML = [
     icon: 'link',
     text: 'orizens.com/cv',
   },
-  {
-    href: 'http://orizens.com',
-    icon: 'link',
-    text: 'orizens.com/',
-  },
 ]
   .map(({ href, icon, text }) => {
     return `
