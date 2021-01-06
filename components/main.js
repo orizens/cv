@@ -13,6 +13,11 @@ ul.innerHTML = [
     icon: 'link',
     text: 'orizens.com/cv',
   },
+  {
+    href: 'http://orizens.com',
+    icon: 'link',
+    text: 'orizens.com/',
+  },
 ]
   .map(({ href, icon, text }) => {
     return `
@@ -54,8 +59,24 @@ work.innerHTML =
       ` +
   [
     {
+      role: 'Lead Front End Engineer',
+      date: '2020 - Present',
+      company: 'Stealth Startup',
+      tagline:
+        'Leading Front End Development for Web & Mobile Apps using: React, React Native (Android/iOS), Typescript, Redux, Redux Toolkit, SCSS, Jest, Testing Library, Jira, GraphQL, AWS/Amplify',
+      clientTitle: ``,
+      clients: [],
+      projectsTitle: `Responsibilities:`,
+      projects: [
+        [`Architecture`, `Designing & Developing The Front End Architecture`],
+        [`Product`, `Leading and planning the project tasks with jira`],
+        [`Team Lead`, `Leading and coordinating development in a small team`],
+        [`UX`, `Designing and defining UX solutions`],
+      ],
+    },
+    {
       role: 'Senior Front End Engineer & Consultant',
-      date: '2018 - Present',
+      date: '2018 - 2020',
       company: 'Tangent Logic , Full-Time',
       tagline:
         'Developing Web Applications using React, Angular, Typescript, Redux, NGRX, Javascript, SASS',
