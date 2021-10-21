@@ -29,10 +29,10 @@ ul.innerHTML = [
   .join('');
 [
   {
-    text: '+1 (551) 246 0056',
+    text: '+1 (646) 753 4899',
   },
   {
-    text: '+1 (646) 753 4899',
+    text: '+1 (551) 246 0056',
   },
 ].forEach(({ text }) => {
   const li = document.createElement('li');
@@ -54,11 +54,11 @@ work.innerHTML =
       ` +
   [
     {
-      role: 'Lead Front End Engineer',
+      role: 'Front End Engineer / Tech Lead',
       date: '2020 - Present',
       company: 'Stealth Startup',
       tagline:
-        'Leading Front End Development for Web & Mobile Apps using: React, React Native (Android/iOS), Typescript, Redux, Redux Toolkit, SCSS, Jest, Testing Library, Jira, GraphQL, AWS/Amplify',
+        'Leading Front End Development for Web & Mobile Apps using: React, React Native (Android/iOS), Typescript, Redux, Redux Toolkit, SCSS, Cypress, Cucumber/Gherkin, Jest, Testing Library, Jira, GraphQL, AWS/Amplify, Git',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Responsibilities:`,
