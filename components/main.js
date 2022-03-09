@@ -56,7 +56,7 @@ work.innerHTML =
     {
       role: 'Front End Engineer / Tech Lead',
       date: '2020 - Present',
-      company: 'Stealth Startup',
+      company: '1Care.ai',
       tagline:
         'Leading Front End Development for Web & Mobile Apps using: React, React Native (Android/iOS), Typescript, Redux, Redux Toolkit, SCSS, Cypress, Cucumber/Gherkin, Jest, Testing Library, Jira, GraphQL, AWS/Amplify, Git',
       clientTitle: ``,
@@ -64,7 +64,7 @@ work.innerHTML =
       projectsTitle: `Responsibilities:`,
       projects: [
         [`Architecture`, `Designing & Developing The Front End Architecture`],
-        [`Product`, `Leading and planning the project tasks with jira`],
+        [`Product`, `Leading and planning project with jira`],
         [`Team Lead`, `Leading and coordinating development in a small team`],
         [`UX`, `Designing and defining UX solutions`],
       ],

@@ -150,7 +150,7 @@ em {
   margin: 0;
   padding: 15px;
   position: relative;
-  border-bottom: 1px solid var(--box-border-color);
+  border-bottom: 1px solid var(--color-highlight);
   background-repeat: no-repeat;
   background-position: 0;
 }
@@ -190,7 +190,7 @@ ul#social-media li {
   position: relative;
   width: auto;
   background-color: var(--box-bg-color);
-  border-radius: 1px;
+  border-radius: 10px;
   border-bottom: 1px solid var(--box-border-color);
   padding: 2rem;
 }
@@ -386,7 +386,7 @@ textarea {
   .pub-item.with-media {
     background-color: var(--skill-tag-bg-color);
     margin: 0.5rem 0;
-    border: 1px solid var(--skill-tag-border-color);
+    /* border: 1px solid var(--skill-tag-border-color); */
     border-radius: 3px;
     padding: 1rem;
   }
