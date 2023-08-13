@@ -54,8 +54,24 @@ work.innerHTML =
       ` +
   [
     {
+      role: 'Front End Tech Lead / Engineer',
+      date: '2022 - 2023',
+      company: 'Rivery',
+      tagline:
+        'Leading Front End Development, Design, Implementation and Engineering for big data web app with: React, RTK Toolkit (Redux), Typescript, Chakra UI, SCSS, Cypress (+ Cypress Cloud), Cucumber/Gherkin, Testing Library, StoryBook, Git, Github Actions',
+      clientTitle: ``,
+      clients: [],
+      projectsTitle: `Responsibilities:`,
+      projects: [
+        [`Architecture`, `Designing & Developing The Front End Architecture for complex scenarios`],
+        [`Technical Front End Lead`, `Making sure project is up to date with latest versions, advise for proper solutions and tools to make developer experience robust and easy enough to create high quality product.`],
+        [`Tech Review`, `Responsible to make sure every code meets proper code review, discussing possible solutions and abide coding best practices for the team`],
+        [`E2E`, `Leading, designing, writing tests and supervising e2e efforts and infrastructure for front end testing`],
+      ],
+    },
+    {
       role: 'Front End Engineer / Tech Lead',
-      date: '2020 - Present',
+      date: '2020 - 2022',
       company: '1Care.ai',
       tagline:
         'Leading Front End Development for Web & Mobile Apps using: React, React Native (Android/iOS), Typescript, Redux, Redux Toolkit, SCSS, Cypress, Cucumber/Gherkin, Jest, Testing Library, Jira, GraphQL, AWS/Amplify, Git',
@@ -109,7 +125,7 @@ work.innerHTML =
       projects: [
         [
           `ReadM (co-founder)`,
-          `A Book reading app that provides real time feedback to readers using speech recognition, while creating a positive and fun experience .`,
+          `empowers teachers by providing an automated smart assessment tool for monitoring students' reading fluency (K-4th and ESL/ELL's students), while providing live reports with up to date insights.`,
           `https://readm.netlify.app`,
         ],
         [
@@ -119,7 +135,7 @@ work.innerHTML =
         ],
         [
           `Orizens Npm Packages`,
-          `Open Source npm packages (used by <strong>Google</strong>, <strong>Microsoft</strong>, <strong>Amazon</strong>, <strong>Disney</strong>, <strong>Sap</strong> and more) for Javascript development and Angular.`,
+          `Open Source npm packages (used by <strong>Google</strong>, <strong>Microsoft</strong>, <strong>Amazon</strong>, <strong>Disney</strong>, <strong>Sap</strong> and more) for Javascript development and Angular, downloaded over Million times.`,
           `https://npmjs.com/~orizens`,
         ],
       ],
