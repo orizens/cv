@@ -9,7 +9,7 @@ ul.innerHTML = [
     text: 'farhioren@gmail.com',
   },
   {
-    href: 'http://orizens.com/cv',
+    href: 'https://orizens.com/cv',
     icon: 'link',
     text: 'orizens.com/cv',
   },
@@ -105,7 +105,7 @@ work.innerHTML =
       date: '2016 - 2018',
       company: 'Orizens (Self Owned) , Full-Time',
       tagline: `Developing Web Applications with  React, Angular, Redux, NgRx, Typescript, CI/CD and Web Technologies. Writing at the <a
-              href="http://www.orizens.com"
+              href="https://www.orizens.com"
               target="_blank">
               Orizens.com Blog</a> - Thoughts about Javascript Development.`,
       clientTitle: 'Consulting to startups and large companies on:',
