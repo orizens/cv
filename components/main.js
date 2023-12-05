@@ -54,6 +54,19 @@ work.innerHTML =
       ` +
   [
     {
+      role: 'Tech Application Advisor',
+      date: '2023 - Present',
+      company: 'AKTO SPACE',
+      tagline:
+        'Providing guidance and executing the development of the UI application utilized at Akto Space, employing technologies such as React, Typescript, CSS, ChakraUI, Electron.js, and Node.js. Specializing as a technical advisor for both desktop and web applications written in JS, with a focus on seamlessly integrating video interaction as a core component of the product.',
+      clientTitle: ``,
+      clients: [],
+      projectsTitle: `Responsibilities:`,
+      projects: [
+        [`Architecture & Development`, `Designing & Developing Desktop App with web technologies`],
+      ]
+    },
+    {
       role: 'Front End Tech Lead / Engineer',
       date: '2022 - 2023',
       company: 'Rivery',
@@ -70,7 +83,7 @@ work.innerHTML =
       ],
     },
     {
-      role: 'Front End Engineer / Tech Lead',
+      role: 'Head of Front End Engineering / Tech Lead',
       date: '2020 - 2022',
       company: '1Care.ai',
       tagline:
@@ -126,12 +139,12 @@ work.innerHTML =
         [
           `ReadM (co-founder)`,
           `empowers teachers by providing an automated smart assessment tool for monitoring students' reading fluency (K-4th and ESL/ELL's students), while providing live reports with up to date insights.`,
-          `https://readm.netlify.app`,
+          `https://readm.app`,
         ],
         [
           `Echoes Player`,
           `free & open source media player based on youtube api, developed with Javascript and Angular.`,
-          `https://echoesplayer.com`,
+          `https://echoesplayer.netlify.app`,
         ],
         [
           `Orizens Npm Packages`,
