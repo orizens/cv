@@ -5,39 +5,48 @@ Check out the screenshots section for a look at the code*/
   body {
     font-size: 14px;
   }
+
   #cv {
     border: none;
     width: 100%;
     /*float:none;*/
     margin: 0;
   }
+
   .person h1 {
     font-size: 38px;
     color: #000;
   }
+
   .item h4 {
     font-size: 14px;
   }
+
   .person h2 {
     font-size: 15px;
     color: #000;
   }
+
   h2.cv-section-name,
   .item h2 {
     font-size: 22px;
     position: static;
     box-shadow: none;
   }
+
   .item h3 {
     font-size: 15px;
   }
+
   .item p,
   p {
     font-size: 14px;
   }
+
   .item {
     padding: 0;
   }
+
   .person {
     float: none;
     width: 30%;
@@ -46,6 +55,7 @@ Check out the screenshots section for a look at the code*/
   .person img {
     position: absolute;
     left: 30px;
+    border: 1px solid var(--image-border-color);
   }
 
   #contact-info {
@@ -53,6 +63,7 @@ Check out the screenshots section for a look at the code*/
     top: 10px;
     position: absolute;
   }
+
   #contact-info,
   #contact-info a,
   #contact-info .fa {
@@ -62,10 +73,12 @@ Check out the screenshots section for a look at the code*/
   #contact-info .list-unstyled li {
     font-size: 1rem;
   }
+
   .cv-section {
     margin: 0;
     padding: 0;
   }
+
   .cv-section-items {
     /*width: auto;*/
     background-color: #fafafa;
@@ -74,10 +87,12 @@ Check out the screenshots section for a look at the code*/
     padding: 10px;
     margin-bottom: 0;
   }
+
   .cv-section-items .item p,
   .list-unstyled {
     font-size: 1rem;
   }
+
   .first-cv-section {
     margin-bottom: 0px;
     background-image: none;
@@ -87,14 +102,17 @@ Check out the screenshots section for a look at the code*/
     margin-right: 2rem;
     flex: 2;
   }
+
   .skills {
     flex: 1;
     display: flex;
   }
+
   .skills .cv-section {
     margin-right: 1.5rem;
     flex: 1;
   }
+
   span.skill-tag {
     font-size: 0.7rem;
   }

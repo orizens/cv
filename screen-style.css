@@ -1,7 +1,64 @@
 /* Code is compressed only in the preview version.
 The css files in the download are nicely formated and commented.
 Check out the screenshots section for a look at the code*/
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,/*ul,li*/,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+/*ul,li*/
+,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
   border: 0;
   outline: 0;
   font-weight: inherit;
@@ -54,22 +111,26 @@ h5,
 h6 {
   font-family: 'Open Sans';
 }
+
 :focus {
   outline: 0;
 }
+
 body {
   --color-light: #fff;
-  --color-highlight: #48bb78;
-  --color-highlight-lighter: #ffc107;
+  --color-highlight: #24d5bb;
+  --color-highlight-lighter: var(--color-highlight);
   --index-high: 1000;
   --page-bg-color: rgba(255, 255, 255, 0.75);
   --page-text-color: #333;
   --section-bg-color: #f8f8f8;
-  --box-bg-color: #fafafa;
+  --box-bg-color: #24d5bb1c;
   --box-border-color: #ededed;
-  --image-border-color: #fff;
-  --skill-tag-bg-color: #eee;
-  --skill-tag-border-color: #ccc;
+  --image-border-color: var(--color-highlight);
+  --skill-tag-bg-color: #fff;
+  --skill-tag-border-color: #fff;
+  --paragraph-text-size: 1.1rem;
+  --max-width-container: 980px;
 
   background: var(--page-bg-color);
   color: var(--page-text-color);
@@ -77,36 +138,44 @@ body {
   line-height: 22px;
   margin: 0;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 table {
   border-collapse: separate;
   border-spacing: 0;
 }
+
 caption,
 th,
 td {
   text-align: left;
   font-weight: 400;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
   content: '';
 }
+
 a {
   color: var(--color-highlight);
 }
+
 strong {
   font-weight: 900;
   color: var(--color-highlight);
 }
+
 em {
   font-style: italic;
 }
+
 .fixed:after {
   content: '.';
   display: block;
@@ -114,35 +183,41 @@ em {
   clear: both;
   visibility: hidden;
 }
+
 .fixed {
   display: block;
   min-height: 1%;
 }
+
 * html .fixed {
   height: 1%;
 }
+
 #cv {
   background-color: #fff;
   margin: 0 auto;
 }
+
 .cv-contents {
   padding: 25px;
-  max-width: 1280px;
+  max-width: var(--max-width-container);
   margin: 0 auto;
 }
+
 .cv-section.cv-section-title {
   padding: 10px 25px;
 }
+
 .orizens-logo {
   position: absolute;
   bottom: -2px;
   right: 0;
-  background: url(http://orizens.github.io/cv/images/orizen-logo-wide.png)
-    no-repeat;
+  background: url(http://orizens.github.io/cv/images/orizen-logo-wide.png) no-repeat;
   width: 200px;
   height: 59px;
   background-size: cover;
 }
+
 .first-cv-section {
   background-image: url(./images/orizens-bg.png);
   background-blend-mode: color-burn;
@@ -161,14 +236,16 @@ em {
   border: 4px solid var(--image-border-color);
   border-radius: 50%;
 }
+
 .person h1 {
   margin: 10px auto;
   color: var(--color-highlight-lighter);
   /*     font-size: 38px; */
   line-height: 48px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: -1px;
 }
+
 .unstyled-links {
   text-decoration: none;
 }
@@ -177,6 +254,7 @@ ul#social-media {
   margin-bottom: 18px;
   list-style: none;
 }
+
 ul#social-media li {
   display: inline;
 }
@@ -194,38 +272,46 @@ ul#social-media li {
   border-bottom: 1px solid var(--box-border-color);
   padding: 2rem;
 }
+
 .item h4 {
   color: var(--color-highlight);
   text-transform: uppercase;
   margin: 0;
   float: left;
 }
+
 .item p {
   text-align: justify;
   padding: 0 0 15px;
   line-height: 1.5;
   clear: both;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--paragraph-text-size);
 }
+
 .item ul {
   text-align: left;
 }
-.item p + ul,
-.item h3 + ul {
+
+.item p+ul,
+.item h3+ul {
   padding-left: 20px;
 }
+
 .timeline .item {
   margin-bottom: 20px;
 }
+
 .last-item {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
 }
+
 .person {
   text-align: center;
 }
+
 .person h2 {
   color: var(--color-highlight-lighter);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
@@ -235,6 +321,7 @@ ul#social-media li {
   text-transform: uppercase;
   margin-bottom: 0;
 }
+
 h2.cv-section-name {
   color: #3c4756;
   font-weight: 400;
@@ -259,10 +346,12 @@ h2.cv-section-name {
   letter-spacing: -1px;
   margin-top: 11px;
 }
+
 .item h2 a {
   color: var(--color-highlight);
   text-decoration: none;
 }
+
 .item h3 {
   color: #262625;
   font-family: 'Open Sans';
@@ -275,13 +364,16 @@ h2.cv-section-name {
 .last-cv-section {
   border-bottom: none;
 }
+
 #contact-form {
   width: 210px;
 }
+
 form p {
   clear: both;
   margin-bottom: 10px;
 }
+
 input,
 textarea {
   background-color: #fff;
@@ -294,20 +386,24 @@ textarea {
 .item-client {
   color: var(--color-highlight);
 }
+
 .section-title-icon {
   color: var(--color-highlight);
   margin-right: 5px;
 }
+
 .cv-section-split {
   width: 42%;
   display: inline-block;
 }
+
 .list-unstyled {
   padding-left: 0;
   margin: 0;
   list-style: none;
   line-height: 1.5;
 }
+
 .list-unstyled .fa {
   margin-right: 5px;
   color: var(--color-highlight);
@@ -317,40 +413,48 @@ textarea {
   body {
     font-size: 2rem;
   }
+
   .person h2 {
     font-size: 1.5rem;
   }
+
   .cv-section-name {
     font-size: 2rem;
   }
+
   .profile .item p {
     text-align: left;
   }
+
   .item h2 {
     font-size: 1.5rem;
   }
+
   .item h3 {
-    font-size: 1.5rem;
+    font-size: var(--paragraph-text-size);
     line-height: 1.2;
     margin: 0.5rem 0;
   }
+
   .item .date,
   .item .company {
     font-size: 1rem;
   }
+
   .cv-section-items .item p,
   .list-unstyled {
-    font-size: 1.5rem;
+    font-size: var(--paragraph-text-size);
     text-align: left;
     margin-bottom: 0;
   }
+
   span.skill-tag {
     border-radius: 10px;
     padding: 3px 14px;
     background-color: var(--color-highlight);
     line-height: 2;
     color: var(--page-bg-color);
-    font-size: 1.5rem;
+    font-size: var(--paragraph-text-size);
   }
 
   .first-cv-section .person {
@@ -377,12 +481,15 @@ textarea {
   #contact-info .fa {
     color: var(--color-light);
   }
+
   .item-client {
     font-weight: bold;
   }
+
   .pub-item {
     width: auto;
   }
+
   .pub-item.with-media {
     background-color: var(--skill-tag-bg-color);
     margin: 0.5rem 0;
@@ -390,6 +497,7 @@ textarea {
     border-radius: 3px;
     padding: 1rem;
   }
+
   .pub-item .media {
     height: auto;
     max-width: 100%;
@@ -398,14 +506,17 @@ textarea {
   .item .header {
     display: flex;
   }
+
   .header h2 {
     flex: 4;
     margin-top: 0;
   }
+
   .header h4 {
     flex: 1;
     text-align: right;
   }
+
   .header h4 .fa-calendar {
     margin-right: 0.5rem;
   }
@@ -415,14 +526,17 @@ textarea {
   body {
     font-size: 1rem;
   }
+
   .person h1 {
     font-size: 4rem;
   }
+
   #contact-info {
     position: absolute;
     right: 15px;
     top: 12px;
   }
+
   #contact-info .list-unstyled li {
     font-size: 1.2rem;
   }
@@ -432,10 +546,12 @@ textarea {
   .cv-contents {
     display: flex;
   }
+
   .profile {
     flex: 5;
     margin-right: 2rem;
   }
+
   .skills {
     flex: 2;
   }
