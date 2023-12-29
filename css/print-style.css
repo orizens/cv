@@ -41,10 +41,15 @@ Check out the screenshots section for a look at the code*/
   .item p,
   p {
     font-size: 14px;
+    padding: 0;
   }
 
   .item {
     padding: 0;
+  }
+
+  .item .pub-item {
+    height: 70px;
   }
 
   .person {
