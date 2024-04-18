@@ -54,11 +54,11 @@ work.innerHTML =
       ` +
   [
     {
-      role: 'Tech Application Advisor',
+      role: 'Lead Software Engineer',
       date: '2023 - Present',
       company: 'AKTO SPACE',
       tagline:
-        'Providing guidance and executing the development of the UI application utilized at Akto Space, employing technologies such as React, Typescript, CSS, ChakraUI, Electron.js, and Node.js. Specializing as a technical advisor for both desktop and web applications written in JS, with a focus on seamlessly integrating video interaction as a core component of the product.',
+        'Leading the development of the the desktop application utilized at Akto Space, employing technologies such as React, Typescript, CSS, ChakraUI, Electron.js, and Node.js. Specializing as a technical advisor for both desktop and web applications written in JS, with a focus on seamlessly integrating video interaction as a core component of the product.',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Responsibilities:`,
@@ -67,7 +67,7 @@ work.innerHTML =
       ]
     },
     {
-      role: 'Front End Tech Lead / Engineer',
+      role: 'Senior Front End Tech Lead / Engineer',
       date: '2022 - 2023',
       company: 'Rivery',
       tagline:
