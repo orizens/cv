@@ -282,7 +282,7 @@ ul#social-media li {
 
 .item p {
   text-align: justify;
-  padding: 0 0 15px;
+  padding: 0;
   line-height: 1.5;
   clear: both;
   margin: 0;
@@ -513,7 +513,7 @@ textarea {
   }
 
   .header h4 {
-    flex: 1;
+    flex: 1.5;
     text-align: right;
   }
 
