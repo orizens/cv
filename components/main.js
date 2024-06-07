@@ -58,7 +58,7 @@ work.innerHTML =
       date: '2023 - Present',
       company: 'AKTO SPACE',
       tagline:
-        'Advisingn on tech direction and leading the development of the desktop application from start to finish with elecron.js and react',
+        'Advising on tech direction and leading the development of the desktop application from start to finish with elecron.js and react',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Highlights:`,
