@@ -161,7 +161,7 @@ work.innerHTML =
       role: 'Senior Frond End Engineer, Front End Architect',
       date: '2010 - 2016',
       company: 'Tikal Knowledge, Full-Time',
-      tagline: `Developing Web Applications using Javascript, Angular, Backbone and Readt, CSS & HTML, Node.js. In addition, Tech Leading Tikal’s Javascript Group
+      tagline: `Developing Web Applications using Javascript, Angular, Backbone and React, CSS & HTML, Node.js. In addition, Tech Leading Tikal’s Javascript Group
           - recruiting experts, Speaker, hosting js workshops, writing at the company’s blog about JS & Web Development
           as well as consulting for various customers.`,
       projectsTitle: ``,
