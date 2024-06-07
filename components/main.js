@@ -90,7 +90,7 @@ work.innerHTML =
       date: '2020 - 2022',
       company: '1Care.ai',
       tagline:
-        'Leading front end development with 2 junior engineers and 1 intermidate engineer to create the web & mobile applications.',
+        'Leading front end development with 2 junior engineers and 1 intermediate engineer to create the web & mobile applications.',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Highlights:`,
