@@ -13,6 +13,12 @@ Check out the screenshots section for a look at the code*/
     margin: 0;
   }
 
+  .cv-contents {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 2fr 1fr;
+  }
+
   .person h1 {
     font-size: 38px;
     color: #000;
@@ -32,6 +38,13 @@ Check out the screenshots section for a look at the code*/
     font-size: 22px;
     position: static;
     box-shadow: none;
+    font-weight: bold;
+  }
+
+  h2.cv-section-name {
+    /* border-radius: 20px; */
+    /* border: 1px solid #f0efef; */
+    padding: 8px 10px;
   }
 
   .item h3 {
@@ -48,8 +61,10 @@ Check out the screenshots section for a look at the code*/
     padding: 0;
   }
 
-  .item .pub-item {
-    height: 70px;
+  .item.small h2 {
+    color: black;
+    font-size: 1rem;
+    margin: 0;
   }
 
   .person {
@@ -103,16 +118,6 @@ Check out the screenshots section for a look at the code*/
     background-image: none;
   }
 
-  .profile {
-    margin-right: 2rem;
-    flex: 2;
-  }
-
-  .skills {
-    flex: 1;
-    display: flex;
-  }
-
   .skills .cv-section {
     margin-right: 1.5rem;
     flex: 1;
@@ -121,5 +126,6 @@ Check out the screenshots section for a look at the code*/
   span.skill-tag {
     font-size: 0.7rem;
     color: #000;
+    background-color: transparent;
   }
 }

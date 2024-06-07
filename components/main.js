@@ -54,16 +54,18 @@ work.innerHTML =
       ` +
   [
     {
-      role: 'Lead Software Engineer',
+      role: 'CTO & Lead Software Engineer',
       date: '2023 - Present',
       company: 'AKTO SPACE',
       tagline:
-        'Leading the development of the the desktop application utilized at Akto Space, employing technologies such as React, Typescript, CSS, ChakraUI, Electron.js, and Node.js. Specializing as a technical advisor for both desktop and web applications written in JS, with a focus on seamlessly integrating video interaction as a core component of the product.',
+        'Advisingn on tech direction and leading the development of the desktop application from start to finish with elecron.js and react',
       clientTitle: ``,
       clients: [],
-      projectsTitle: `Responsibilities:`,
+      projectsTitle: `Highlights:`,
       projects: [
         [`Architecture & Development`, `Designing & Developing Desktop App with web technologies`],
+        [`Advistory / CTO`, `Specializing as a technical advisor for both desktop and web applications written in JS & TS, with a focus on seamlessly integrating video interaction as a core component of the product.`],
+        [`Tech`, `React, Typescript, CSS, ChakraUI, Electron.js, and Node.js.`]
       ]
     },
     {
@@ -71,15 +73,16 @@ work.innerHTML =
       date: '2022 - 2023',
       company: 'Rivery',
       tagline:
-        'Leading Front End Development, Design, Implementation and Engineering for big data web app with: React, RTK Toolkit (Redux), Typescript, Chakra UI, SCSS, Cypress (+ Cypress Cloud), Cucumber/Gherkin, Testing Library, StoryBook, Git, Github Actions',
+        'Leading a migration of an old Angular 1 app to React, Redux & RTK-Query with full system design integration with ChakraUI in collaboration with backend team.',
       clientTitle: ``,
       clients: [],
-      projectsTitle: `Responsibilities:`,
+      projectsTitle: `Highlights:`,
       projects: [
-        [`Architecture`, `Designing & Developing The Front End Architecture for complex scenarios`],
-        [`Technical Front End Lead`, `Making sure project is up to date with latest versions, advise for proper solutions and tools to make developer experience robust and easy enough to create high quality product.`],
-        [`Tech Review`, `Responsible to make sure every code meets proper code review, discussing possible solutions and abide coding best practices for the team`],
-        [`E2E`, `Leading, designing, writing tests and supervising e2e efforts and infrastructure for front end testing`],
+        [`Architecture`, `Reduced the mental model for development and adding and updating features.`],
+        [`Technical Front End Lead`, `Reduced defects by updating tech and decreasing dev and prod build times.`],
+        [`Mentoring`, `Mentored 4 team members on react and front end testing with: code review, discussions and following front end best practices.`],
+        [`Tech`, `React, RTK Toolkit (Redux), RTK Query, Typescript, Chakra UI, SCSS, Cypress (+ Cypress Cloud), Cucumber/Gherkin, Testing Library, StoryBook, Git, Github Actions`],
+        [`E2E`, `Increased the e2e coverage, and mentored the team for test driven development - shipped well tested +230 user scenarios with cypress.`],
       ],
     },
     {
@@ -87,15 +90,16 @@ work.innerHTML =
       date: '2020 - 2022',
       company: '1Care.ai',
       tagline:
-        'Leading Front End Development for Web & Mobile Apps using: React, React Native (Android/iOS), Typescript, Redux, Redux Toolkit, SCSS, Cypress, Cucumber/Gherkin, Jest, Testing Library, Jira, GraphQL, AWS/Amplify, Git',
+        'Leading front end development with 2 junior engineers and 1 intermidate engineer to create the web & mobile applications.',
       clientTitle: ``,
       clients: [],
-      projectsTitle: `Responsibilities:`,
+      projectsTitle: `Highlights:`,
       projects: [
-        [`Architecture`, `Designing & Developing The Front End Architecture`],
-        [`Product`, `Leading and planning project with jira`],
-        [`Team Lead`, `Leading and coordinating development in a small team`],
-        [`UX`, `Designing and defining UX solutions`],
+        [`Architecture`, `responsible for making code interchangeable with both web and mobile`],
+        [`Product`, `Planning out tasks to keep the project moving forward each week with jira`],
+        [`Team Lead & Mentoring`, `Leading and coordinating development of a team of 3 developers, code review and discussions.`],
+        [`Tech`, `React, React Native (Android/iOS), Typescript, Redux, Redux Toolkit, Blueprint, SCSS, Cypress, Cucumber/Gherkin, Jest, Testing Library, Jira, GraphQL, AWS/Amplify, Git`],
+        [`UX`, `Designing and defining the UX solutions for the ui challanges and improving the user experience.`],
       ],
     },
     {
@@ -103,7 +107,7 @@ work.innerHTML =
       date: '2018 - 2020',
       company: 'Tangent Logic , Full-Time',
       tagline:
-        'Developing Web Applications using React, Angular, Typescript, Redux, NGRX, Javascript, SASS',
+        'Developing web applications and making sure code is reusable and well tested with React, Redux, Angular, Typescript, Redux, NGRX, Javascript, SASS, CSS.',
       clientTitle: 'Consulting to startups and large companies on:',
       highlight: true,
       clients: [
@@ -157,7 +161,7 @@ work.innerHTML =
       role: 'Senior Frond End Engineer, Front End Architect',
       date: '2010 - 2016',
       company: 'Tikal Knowledge, Full-Time',
-      tagline: `Developing Web Applications using Javascript, CSS3 & HTML5, Node.js. In addition, Tech Leading Tikal’s Javascript Group
+      tagline: `Developing Web Applications using Javascript, Angular, Backbone and Readt, CSS & HTML, Node.js. In addition, Tech Leading Tikal’s Javascript Group
           - recruiting experts, Speaker, hosting js workshops, writing at the company’s blog about JS & Web Development
           as well as consulting for various customers.`,
       projectsTitle: ``,
@@ -167,38 +171,33 @@ work.innerHTML =
       clients: [
         [
           `ADP`,
-          `Developing Web Application using: React, Ecmascript 2015, Bootstrap + SASS, Jasmine & karma, Git`,
+          `Improved test coverage and components accessiblity with storybook and react.`,
         ],
         [
           `Takadu`,
-          `Designing & Developing Web Application using: Angular.js, Ecmascript 2015, Gulp.js, Bootstrap
-            + SASS, Node.js (for REST), Jasmine & karma, Git &, Mercurial, BitBucket`,
+          `Developed web app from start to finish with design system implementation.`,
         ],
         [
           `Perion`,
-          `Designing & Developing Javascript Web Application using: Angular.js, Gulp.js, Bootstrap + LESS,
-            Node.js (for REST), Jasmine & karma, Git & Github`,
+          `Led fullstack app from start to finish with auth and api integration in a front team of 2 people.`,
         ],
         [
           `Verix`,
-          `Leading Javascript Engineer and Front End Architect with - Angular.js, Backbone.js, Require.js, HTML5,
-            CSS3 & LESS development, Yeoman (Bower, Grunt.js), Jasmine`,
+          `Leading web app from start to finish which led to clients growth.`,
         ],
         [
           `Optier`,
-          `Javascript Engineer and Front End Architect Converting a GWT project to Javascript - Backbone.js,
-            Require.js, HTML5, CSS3 & Sass development`,
+          `Designed and developed web app while supporting junior developers`,
         ],
         [
           `Time To Know (ltd)`,
-          `Leading Javascript Engineer and Front End Architect with Javascript - Backbone.js, Require.js,
-            HTML5 & CSS3 development`,
+          `Defined the web app front end architecture and developed it with backbone.js as a base, interating server api's.`,
         ],
         [
           `Conduit`,
-          `Front End Architecture, HTML, CSS3 & Javascript Development`,
+          `Developed new features to ship a desktop application.`,
         ],
-        [`Clarizen`, `Javascript Development & Consulting, Usability`],
+        [`Clarizen`, `Developed new features for the web app and fixed incoming bugs.`],
       ],
     },
     {
@@ -209,7 +208,7 @@ work.innerHTML =
           GUI assignments in a team, writing design documents and providing UI & UX solutions.`,
       clientTitle: ``,
       clients: [],
-      projectsTitle: `Responsibilities:`,
+      projectsTitle: `Highlights:`,
       projects: [
         [
           `Architecture`,

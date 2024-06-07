@@ -130,6 +130,7 @@ body {
   --skill-tag-bg-color: #fff;
   --skill-tag-border-color: #fff;
   --paragraph-text-size: 1.1rem;
+  --paragraph-text-size-default: 1rem;
   --max-width-container: 980px;
 
   background: var(--page-bg-color);
@@ -287,6 +288,10 @@ ul#social-media li {
   clear: both;
   margin: 0;
   font-size: var(--paragraph-text-size);
+}
+
+.item.small h2 {
+  font-size: var(--paragraph-text-size-default);
 }
 
 .item ul {
@@ -450,11 +455,11 @@ textarea {
 
   span.skill-tag {
     border-radius: 10px;
-    padding: 3px 14px;
+    padding: 2px 8px;
     background-color: var(--color-highlight);
     line-height: 2;
     color: var(--page-bg-color);
-    font-size: var(--paragraph-text-size);
+    font-size: var(--paragraph-text-size-default);
   }
 
   .first-cv-section .person {
@@ -544,12 +549,13 @@ textarea {
 
 @media (min-width: 900px) {
   .cv-contents {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
   }
 
   .profile {
     flex: 5;
-    margin-right: 2rem;
   }
 
   .skills {
