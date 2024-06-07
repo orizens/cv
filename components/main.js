@@ -64,7 +64,7 @@ work.innerHTML =
       projectsTitle: `Highlights:`,
       projects: [
         [`Architecture & Development`, `Designing & Developing Desktop App with web technologies`],
-        [`Advistory / CTO`, `Specializing as a technical advisor for both desktop and web applications written in JS & TS, with a focus on seamlessly integrating video interaction as a core component of the product.`],
+        [`Advisory / CTO`, `Specializing as a technical advisor for both desktop and web applications written in JS & TS, with a focus on seamlessly integrating video interaction as a core component of the product.`],
         [`Tech`, `React, Typescript, CSS, ChakraUI, Electron.js, and Node.js.`]
       ]
     },
