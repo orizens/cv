@@ -49,7 +49,7 @@ const work = document.querySelector('#work-experience');
 work.innerHTML =
   `
 <h2 class="cv-section-name">
-  <span class="fa fa-laptop section-title-icon"></span> Work Experience
+  <span class="fa fa-laptop section-title-icon"></span> Experience
 </h2>
       ` +
   [
