@@ -236,6 +236,7 @@ em {
   background-color: var(--page-bg-color);
   border: 4px solid var(--image-border-color);
   border-radius: 50%;
+  width: 120px;
 }
 
 .person h1 {
@@ -292,6 +293,12 @@ ul#social-media li {
 
 .item.small h2 {
   font-size: var(--paragraph-text-size-default);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.item.small div {
+  margin-bottom: 10px
 }
 
 .item ul {
@@ -331,6 +338,7 @@ h2.cv-section-name {
   color: #3c4756;
   font-weight: 400;
   letter-spacing: -1px;
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -424,7 +432,7 @@ textarea {
   }
 
   .cv-section-name {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .profile .item p {
@@ -432,7 +440,7 @@ textarea {
   }
 
   .item h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .item h3 {
@@ -454,7 +462,7 @@ textarea {
   }
 
   span.skill-tag {
-    border-radius: 10px;
+    border-radius: 3px;
     padding: 2px 8px;
     background-color: var(--color-highlight);
     line-height: 2;
@@ -496,15 +504,21 @@ textarea {
   }
 
   .pub-item.with-media {
+    text-align: center;
+  }
+
+  .pub-item.with-media a {
     background-color: var(--skill-tag-bg-color);
-    margin: 0.5rem 0;
-    /* border: 1px solid var(--skill-tag-border-color); */
     border-radius: 3px;
     padding: 1rem;
+    display: block;
+    margin: 0 auto;
+    width: max-content;
   }
 
   .pub-item .media {
     height: auto;
+    max-height: 250px;
     max-width: 100%;
   }
 
@@ -523,7 +537,7 @@ textarea {
   }
 
   .header h4 .fa-calendar {
-    margin-right: 0.5rem;
+    margin-right: 5px;
   }
 }
 

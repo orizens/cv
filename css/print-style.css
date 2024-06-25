@@ -6,6 +6,10 @@ Check out the screenshots section for a look at the code*/
     font-size: 14px;
   }
 
+  .cv-contents {
+    padding: 10px;
+  }
+
   #cv {
     border: none;
     width: 100%;
@@ -15,7 +19,7 @@ Check out the screenshots section for a look at the code*/
 
   .cv-contents {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     grid-template-columns: 2fr 1fr;
   }
 
@@ -24,8 +28,10 @@ Check out the screenshots section for a look at the code*/
     color: #000;
   }
 
-  .item h4 {
+  .item h4.date,
+  .item h4.company {
     font-size: 14px;
+    text-align: unset;
   }
 
   .person h2 {
@@ -33,18 +39,33 @@ Check out the screenshots section for a look at the code*/
     color: #000;
   }
 
+  .item .header {
+    display: grid;
+    font-size: 1rem;
+  }
+
   h2.cv-section-name,
   .item h2 {
-    font-size: 22px;
     position: static;
     box-shadow: none;
     font-weight: bold;
+    margin: 10px 0;
   }
 
   h2.cv-section-name {
     /* border-radius: 20px; */
     /* border: 1px solid #f0efef; */
     padding: 8px 10px;
+    border: none;
+    padding: 10px 0;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--color-highlight);
+  }
+
+  h2.cv-section-name .fa {
+    display: none;
   }
 
   .item h3 {
@@ -63,8 +84,17 @@ Check out the screenshots section for a look at the code*/
 
   .item.small h2 {
     color: black;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .pub-item.with-media {
+    background-color: unset;
+    padding: 0;
+    margin: 0;
+    border: 0;
   }
 
   .person {
@@ -76,6 +106,7 @@ Check out the screenshots section for a look at the code*/
     position: absolute;
     left: 30px;
     border: 1px solid var(--image-border-color);
+    width: 90px;
   }
 
   #contact-info {
@@ -119,7 +150,6 @@ Check out the screenshots section for a look at the code*/
   }
 
   .skills .cv-section {
-    margin-right: 1.5rem;
     flex: 1;
   }
 
@@ -127,5 +157,7 @@ Check out the screenshots section for a look at the code*/
     font-size: 0.7rem;
     color: #000;
     background-color: transparent;
+    border: 1px solid #afacac;
+    border-radius: 4px;
   }
 }

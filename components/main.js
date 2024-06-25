@@ -125,17 +125,8 @@ work.innerHTML =
               href="https://www.orizens.com"
               target="_blank">
               Orizens.com Blog</a> - Thoughts about Javascript Development.`,
-      clientTitle: 'Consulting to startups and large companies on:',
+      clientTitle: '',
       clients: [
-        ['Javascript Development', 'for any projects'],
-        ['Angular, NGRX', 'Project Development (using best practices)'],
-        ['Responsive Web Apps', 'Using CSS Responsive Best Practices'],
-        ['GatsbyJS', 'Creating React Based Websites'],
-        ['AngularJS', 'Migarting To Angular (+2)'],
-        ['Project Bootstraping with js Testing (bdd/tdd)', 'unit & e2e'],
-        ['JS UI Architecture Code', 'Scalable'],
-        ['Code Reviews', 'applying all the above'],
-        ['Conduct Workshops', 'javascript & angular'],
       ],
       projectsTitle: 'Personal Projects',
       highlight: true,
@@ -163,59 +154,23 @@ work.innerHTML =
       company: 'Tikal Knowledge, Full-Time',
       tagline: `Developing Web Applications using Javascript, Angular, Backbone and React, CSS & HTML, Node.js. In addition, Tech Leading Tikal’s Javascript Group
           - recruiting experts, Speaker, hosting js workshops, writing at the company’s blog about JS & Web Development
-          as well as consulting for various customers.`,
+          as well as consulting for various customers, improved test coverage and components accessiblity with storybook and react.`,
       projectsTitle: ``,
       projects: [],
       highlight: true,
-      clientTitle: `Clients i've worked with:`,
-      clients: [
-        [
-          `ADP`,
-          `Improved test coverage and components accessiblity with storybook and react.`,
-        ],
-        [
-          `Takadu`,
-          `Developed web app from start to finish with design system implementation.`,
-        ],
-        [
-          `Perion`,
-          `Led fullstack app from start to finish with auth and api integration in a front team of 2 people.`,
-        ],
-        [
-          `Verix`,
-          `Leading web app from start to finish which led to clients growth.`,
-        ],
-        [
-          `Optier`,
-          `Designed and developed web app while supporting junior developers`,
-        ],
-        [
-          `Time To Know (ltd)`,
-          `Defined the web app front end architecture and developed it with backbone.js as a base, interating server api's.`,
-        ],
-        [
-          `Conduit`,
-          `Developed new features to ship a desktop application.`,
-        ],
-        [`Clarizen`, `Developed new features for the web app and fixed incoming bugs.`],
-      ],
+      clientTitle: ``,
+      clients: []
     },
     {
       role: `UI Front End Developer`,
       date: `2008 - 2010`,
       company: `Comverse, Full-Time`,
       tagline: `Developed Web GUI for an internal web application using OOP Javascript, Ajax, HTML, CSS, XML & XSLT, Regex. Leading
-          GUI assignments in a team, writing design documents and providing UI & UX solutions.`,
+          GUI assignments in a team, writing design documents and providing UI & UX solutions, refactoring Javascript UI to a Component based architecture and leading design system with CSS`,
       clientTitle: ``,
       clients: [],
-      projectsTitle: `Highlights:`,
+      projectsTitle: ``,
       projects: [
-        [
-          `Architecture`,
-          `Refactoring Javascript UI to a Component based architecture`,
-        ],
-        [`Implementation`, `Complete separation of XSLT and JS`],
-        [`Style`, `Leading UI concepts with CSS design`],
       ],
     },
     {
@@ -223,15 +178,10 @@ work.innerHTML =
       date: `2005 - 2010`,
       company: `Orizens.com, Full-Time`,
       tagline: `Designing & Developing websites for various customers around the country using: HTML, JS, CSS, PHP, Wordpress,
-          Flash & Actionscript, Swishmax, VBA.`,
-      projectsTitle: `Personal Projects`,
+          Flash & Actionscript, Swishmax, VBA. Founder of VisitWeb - free online event management service.`,
+      projectsTitle: ``,
       highlight: true,
       projects: [
-        [
-          `VisitWeb`,
-          `free online event management service for planning events, seating arrangements, developed with 
-            Javascript`,
-        ],
       ],
     },
   ]
