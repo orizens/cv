@@ -54,8 +54,22 @@ work.innerHTML =
       ` +
   [
     {
+      role: 'Lead UI Engineer',
+      date: '2025 - Present',
+      company: 'HighRes BioSolutions',
+      tagline:
+        'Leading UI development with test driven development, mentoring team members, and ensuring high quality code with React, Typescript, and Playwright.',
+      clientTitle: ``,
+      clients: [],
+      projectsTitle: `Highlights:`,
+      projects: [
+        [`Architecture & Development`, `Designing & Developing UI with React & Playwright`],
+        [`Tech`, `React, Typescript, CSS, Playwright (component and integration testing).`]
+      ]
+    },
+    {
       role: 'CTO & Lead Software Engineer',
-      date: '2023 - Present',
+      date: '2023 - 2024',
       company: 'AKTO SPACE',
       tagline:
         'Advising on tech direction and leading the development of the desktop application from start to finish with elecron.js and react',
