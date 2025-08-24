@@ -64,7 +64,7 @@ work.innerHTML =
       projectsTitle: `Highlights:`,
       projects: [
         [`Architecture & Development`, `Designing & Developing UI with React & Playwright`],
-        [`Tech`, `React, Typescript, CSS, Playwright (component and integration testing).`]
+        [`Tech`, `React, Typescript, Tanstack-Query, CSS, Playwright (component and integration testing).`]
       ]
     },
     {
