@@ -54,8 +54,22 @@ work.innerHTML =
       ` +
   [
     {
+      role: 'Senior & Lead UI Engineer',
+      date: '2026 - Present',
+      company: 'ZScaler',
+      tagline:
+        'Architected and delivered scalable UI solutions using React, TypeScript, and Playwright, establishing TDD standards across the team and upskilling 5+ engineers through hands-on mentorship.',
+      clientTitle: ``,
+      clients: [],
+      projectsTitle: `Highlights:`,
+      projects: [
+        [`Redesigning E2E infrastructure`, `implementing base fixtures and simplified reusable components for e2e & visual regression tests.`],
+        [`Tech`, `React, Vite, MUI, Typescript, Tanstack-Table, GraphQL, Tanstack-Query, Vitest, Playwright, CSS, GitHub Actions.`]
+      ]
+    },
+    {
       role: 'Lead UI Engineer',
-      date: '2025 - Present',
+      date: '2024 - 2026',
       company: 'HighRes BioSolutions',
       tagline:
         'Leading UI development with test driven development, mentoring team members, and ensuring high quality code with React, Typescript, and Playwright.',
@@ -64,7 +78,7 @@ work.innerHTML =
       projectsTitle: `Highlights:`,
       projects: [
         [`Architecture & Development`, `Designing & Developing UI with React & Playwright`],
-        [`Tech`, `React, Typescript, Tanstack-Query, CSS, Playwright (component and integration testing).`]
+        [`Tech`, `React, Vite, Typescript, Tailwind, Tanstack-Query, CSS, Playwright (component and integration testing).`]
       ]
     },
     {
