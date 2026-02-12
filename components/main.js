@@ -72,7 +72,7 @@ work.innerHTML =
       date: '2024 - 2026',
       company: 'HighRes BioSolutions',
       tagline:
-        'Leading UI development with test driven development, mentoring team members, and ensuring high quality code with React, Typescript, and Playwright.',
+        'Drove UI engineering excellence by implementing BDD with Playwright, reducing UI production bugs, while mentoring team members and establishing React & TypeScript best practices.',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Highlights:`,
