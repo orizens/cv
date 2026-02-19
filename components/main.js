@@ -58,7 +58,7 @@ work.innerHTML =
       date: '2026 - Present',
       company: 'ZScaler',
       tagline:
-        'Architected and delivered scalable UI solutions using React, TypeScript, and Playwright, establishing TDD standards across the team and upskilling 5+ engineers through hands-on mentorship.',
+        'Hands-on architect and implementer of scalable UI solutions using React, TypeScript, and Playwright, while establishing TDD standards and upskilling 5+ engineers through direct mentorship.',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Highlights:`,
@@ -72,12 +72,12 @@ work.innerHTML =
       date: '2024 - 2026',
       company: 'HighRes BioSolutions',
       tagline:
-        'Drove UI engineering excellence by implementing BDD with Playwright, reducing UI production bugs, while mentoring team members and establishing React & TypeScript best practices.',
+        'Hands-on lead engineer driving UI excellence by personally implementing BDD with Playwright, reducing UI production bugs, while mentoring team members and establishing React & TypeScript best practices.',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Highlights:`,
       projects: [
-        [`Architecture & Development`, `Designing & Developing UI with React & Playwright`],
+        [`Hands-on architecture & development`, `designing, building, and shipping UI with React & Playwright.`],
         [`Tech`, `React, Vite, Typescript, Tailwind, Tanstack-Query, CSS, Playwright (component and integration testing).`]
       ]
     },
@@ -86,12 +86,12 @@ work.innerHTML =
       date: '2023 - 2024',
       company: 'AKTO SPACE',
       tagline:
-        'Advising on tech direction and leading the development of the desktop application from start to finish with elecron.js and react',
+        'Advising on tech direction and leading the development, hadns-on, of the desktop application from start to finish with elecron.js and react',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Highlights:`,
       projects: [
-        [`Architecture & Development`, `Designing & Developing Desktop App with web technologies`],
+        [`Architecture & Development`, `Hands-on Designing & Developing Desktop App with web technologies`],
         [`Advisory / CTO`, `Specializing as a technical advisor for both desktop and web applications written in JS & TS, with a focus on seamlessly integrating video interaction as a core component of the product.`],
         [`Tech`, `React, Typescript, CSS, ChakraUI, Electron.js, and Node.js.`]
       ]
@@ -101,16 +101,14 @@ work.innerHTML =
       date: '2022 - 2023',
       company: 'Rivery',
       tagline:
-        'Leading a migration of an old Angular 1 app to React, Redux & RTK-Query with full system design integration with ChakraUI in collaboration with backend team.',
-      clientTitle: ``,
-      clients: [],
+        'Hands-on lead engineer personally driving the migration from Angular 1 to React, Redux & RTK-Query — writing production code, designing the architecture, and integrating ChakraUI in close collaboration with the backend team.',
       projectsTitle: `Highlights:`,
       projects: [
-        [`Architecture`, `Reduced the mental model for development and adding and updating features.`],
-        [`Technical Front End Lead`, `Reduced defects by updating tech and decreasing dev and prod build times.`],
-        [`Mentoring`, `Mentored 4 team members on react and front end testing with: code review, discussions and following front end best practices.`],
+        [`Architecture`, `Personally designed and implemented a new architecture that reduced the mental model for development, making it faster to add and update features.`],
+        [`Technical Front End Lead`, `Hands-on refactoring of the codebase — updated the tech stack and directly reduced defects, dev, and prod build times.`],
+        [`Mentoring`, `Mentored 4 engineers through hands-on code reviews, pairing sessions, and discussions on React and front end testing best practices.`],
+        [`E2E`, `Personally wrote and shipped 230+ tested user scenarios with Cypress, growing e2e coverage from the ground up while coaching the team on TDD.`],
         [`Tech`, `React, RTK Toolkit (Redux), RTK Query, Typescript, Chakra UI, SCSS, Cypress (+ Cypress Cloud), Cucumber/Gherkin, Testing Library, StoryBook, Git, Github Actions`],
-        [`E2E`, `Increased the e2e coverage, and mentored the team for test driven development - shipped well tested +230 user scenarios with cypress.`],
       ],
     },
     {
