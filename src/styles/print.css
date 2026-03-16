@@ -46,7 +46,7 @@ Check out the screenshots section for a look at the code*/
 
   h2.cv-section-name,
   .item h2 {
-    position: static;
+    position: static !important;
     box-shadow: none;
     font-weight: bold;
     margin: 10px 0;
@@ -62,6 +62,9 @@ Check out the screenshots section for a look at the code*/
     font-size: 1rem;
     text-transform: uppercase;
     color: var(--color-highlight);
+    backdrop-filter: none;
+    background-color: white;
+    z-index: auto;
   }
 
   h2.cv-section-name .fa {
