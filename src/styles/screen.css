@@ -212,14 +212,14 @@ em {
   position: absolute;
   bottom: -2px;
   right: 0;
-  background: url(http://orizens.github.io/cv/images/orizen-logo-wide.png) no-repeat;
+  background: url(/images/orizen-logo-wide.png) no-repeat;
   width: 200px;
   height: 59px;
   background-size: cover;
 }
 
 .first-cv-section {
-  background-image: url(/cv/images/orizens-bg.png);
+  background-image: url(/images/orizens-bg.png);
   background-blend-mode: color-burn;
   background-size: cover;
   margin: 0;
