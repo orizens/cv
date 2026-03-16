@@ -208,16 +208,6 @@ em {
   padding: 10px 25px;
 }
 
-.orizens-logo {
-  position: absolute;
-  bottom: -2px;
-  right: 0;
-  background: url(/images/orizen-logo-wide.png) no-repeat;
-  width: 200px;
-  height: 59px;
-  background-size: cover;
-}
-
 .first-cv-section {
   background-image: url(/images/orizens-bg.png);
   background-blend-mode: color-burn;
@@ -516,6 +506,7 @@ textarea {
     display: block;
     margin: 0 auto;
     width: max-content;
+    max-width: 100%;
   }
 
   .pub-item .media {
