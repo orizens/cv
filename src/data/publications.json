@@ -2,7 +2,7 @@
   {
     "title": "Reactive Programming with Angular and ngrx",
     "href": "//www.amazon.com/Reactive-Programming-Angular-ngrx-Extensions/dp/1484226194/ref=sr_1_1?ie=UTF8&qid=1492519061&sr=8-1&keywords=reactive+programming+with+angular",
-    "image": "./images/book.png",
+    "image": "images/book.png",
     "imageAlt": "reactive programming with angular and ngrx"
   }
 ]
