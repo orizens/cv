@@ -1,25 +1,74 @@
 ---
-import CVLayout from '../components/layout/CVLayout.astro';
-import Hero from '../components/sections/Hero.astro';
-import Contact from '../components/sections/Contact.astro';
-import Summary from '../components/sections/Summary.astro';
-import Experience from '../components/sections/Experience.astro';
-import Skills from '../components/sections/Skills.astro';
-import Publications from '../components/sections/Publications.astro';
-import Education from '../components/sections/Education.astro';
-import Social from '../components/sections/Social.astro';
+import CVLayout from "../components/layout/CVLayout.astro";
+import Hero from "../components/sections/Hero.astro";
+import Contact from "../components/sections/Contact.astro";
+import Summary from "../components/sections/Summary.astro";
+import Experience from "../components/sections/Experience.astro";
+import Skills from "../components/sections/Skills.astro";
+import Publications from "../components/sections/Publications.astro";
+import Education from "../components/sections/Education.astro";
+import Social from "../components/sections/Social.astro";
 
-import profile from '../data/profile.json';
-import contact from '../data/contact.json';
-import experience from '../data/experience.json';
-import skills from '../data/skills.json';
-import publications from '../data/publications.json';
-import education from '../data/education.json';
-import social from '../data/social.json';
+import profile from "../data/profile.json";
+import contact from "../data/contact.json";
+import experience from "../data/experience.json";
+import skills from "../data/skills.json";
+import publications from "../data/publications.json";
+import education from "../data/education.json";
+import social from "../data/social.json";
 
-import type { Profile, Contact as ContactType, ExperienceItem, Skills as SkillsType, Publication, EducationItem, SocialLink } from '../types/cv';
+import type {
+  Profile,
+  Contact as ContactType,
+  ExperienceItem,
+  Skills as SkillsType,
+  Publication,
+  EducationItem,
+  SocialLink,
+} from "../types/cv";
+
+const allSkills = [
+  ...(skills as SkillsType).languages,
+  ...(skills as SkillsType).libraries,
+  ...(skills as SkillsType).frameworks,
+  ...(skills as SkillsType).testing,
+  ...(skills as SkillsType).other,
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: (profile as Profile).name,
+  jobTitle: (profile as Profile).title,
+  description:
+    "Senior Front End Engineer and Tech Lead with 20+ years of experience building high-performance web applications.",
+  email: (contact as ContactType).links.find((l) =>
+    l.href.startsWith("mailto:"),
+  )?.text,
+  telephone: (contact as ContactType).phones,
+  url: "https://orizens.github.io/cv",
+  image: `https:${(profile as Profile).avatarUrl}`,
+  sameAs: (social as SocialLink[]).map((s) =>
+    s.href.startsWith("//") ? `https:${s.href}` : s.href,
+  ),
+  knowsAbout: allSkills,
+  hasOccupation: (experience as unknown as ExperienceItem[]).map((e) => ({
+    "@type": "Role",
+    roleName: e.role,
+    startDate: e.date.split(" - ")[0],
+    endDate: e.date.includes("Present") ? undefined : e.date.split(" - ")[1],
+    worksFor: { "@type": "Organization", name: e.company },
+    description: e.tagline,
+  })),
+  alumniOf: (education as EducationItem[]).map((e) => ({
+    "@type": "EducationalOrganization",
+    name: e.institution,
+    description: `${e.degree}, ${e.years}`,
+  })),
+};
 ---
-<CVLayout>
+
+<CVLayout jsonLd={jsonLd}>
   <div class="first-cv-section">
     <Hero profile={profile as Profile} />
     <Contact contact={contact as ContactType} />

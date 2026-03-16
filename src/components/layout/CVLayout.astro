@@ -1,18 +1,21 @@
 ---
-import '../../styles/screen.css';
-import '../../styles/print.css';
+import "../../styles/screen.css";
+import "../../styles/print.css";
 
 interface Props {
   title?: string;
   description?: string;
   keywords?: string;
+  jsonLd?: object;
 }
 const {
   title = ":: Oren Farhi's CV / RESUME ::",
   description = "Oren Farhi's CV Front End Architect",
-  keywords = 'cv, front end, architect, javascript',
+  keywords = "cv, front end, architect, javascript",
+  jsonLd,
 } = Astro.props;
 ---
+
 <html>
   <head>
     <title>{title}</title>
@@ -21,9 +24,25 @@ const {
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
 
-    <link rel="shortcut icon" type="image/x-icon" href="//www.orizens.com/images/favLogo.ico?v=12012" />
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="//maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="//www.orizens.com/images/favLogo.ico?v=12012"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css"
+    />
+    {
+      jsonLd && (
+        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+      )
+    }
   </head>
   <body>
     <slot />
