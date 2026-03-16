@@ -1,0 +1,4 @@
+# Astro is built with base: '/cv' for GitHub Pages compatibility.
+# These rewrites transparently serve /cv/* paths from the dist root on Netlify.
+/cv  /  200
+/cv/*  /:splat  200
