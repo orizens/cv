@@ -1,0 +1,39 @@
+{
+  "languages": [
+    "Typescript",
+    "Javascript",
+    "CSS"
+  ],
+  "libraries": [
+    "React",
+    "Tanstack-Query",
+    "React Native",
+    "Redux Toolkit",
+    "Chakra UI",
+    "PandaCss",
+    "Tailwind",
+    "SASS",
+    "NgRx"
+  ],
+  "frameworks": [
+    "Firebase",
+    "Astro",
+    "Angular",
+    "Electron",
+    "Node.js"
+  ],
+  "testing": [
+    "Playwright",
+    "Vitest",
+    "Jest",
+    "Cypress",
+    "Testing Library"
+  ],
+  "other": [
+    "Architecture",
+    "UX",
+    "Git",
+    "Github",
+    "Github Actions"
+  ]
+}

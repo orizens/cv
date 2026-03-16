@@ -1,0 +1,41 @@
+---
+import CVLayout from '../components/layout/CVLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import Contact from '../components/sections/Contact.astro';
+import Summary from '../components/sections/Summary.astro';
+import Experience from '../components/sections/Experience.astro';
+import Skills from '../components/sections/Skills.astro';
+import Publications from '../components/sections/Publications.astro';
+import Education from '../components/sections/Education.astro';
+import Social from '../components/sections/Social.astro';
+
+import profile from '../data/profile.json';
+import contact from '../data/contact.json';
+import experience from '../data/experience.json';
+import skills from '../data/skills.json';
+import publications from '../data/publications.json';
+import education from '../data/education.json';
+import social from '../data/social.json';
+
+import type { Profile, Contact as ContactType, ExperienceItem, Skills as SkillsType, Publication, EducationItem, SocialLink } from '../types/cv';
+---
+<CVLayout>
+  <div class="first-cv-section">
+    <Hero profile={profile as Profile} />
+    <Contact contact={contact as ContactType} />
+  </div>
+
+  <div class="cv-contents">
+    <section class="profile">
+      <Summary profile={profile as Profile} />
+      <Experience experience={experience as unknown as ExperienceItem[]} />
+    </section>
+
+    <section class="skills">
+      <Skills skills={skills as SkillsType} />
+      <Publications publications={publications as Publication[]} />
+      <Social social={social as SocialLink[]} />
+      <Education education={education as EducationItem[]} />
+    </section>
+  </div>
+</CVLayout>

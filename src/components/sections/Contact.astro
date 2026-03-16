@@ -1,0 +1,26 @@
+---
+import type { Contact } from '../../types/cv';
+
+interface Props {
+  contact: Contact;
+}
+const { contact } = Astro.props;
+---
+<div id="contact-info">
+  <ul class="list-unstyled" id="contact-list">
+    {contact.links.map(({ href, icon, text }) => (
+      <li>
+        <a href={href} class="unstyled-links">
+          <span class={`fa fa-${icon}`}></span>
+          {text}
+        </a>
+      </li>
+    ))}
+    {contact.phones.map((phone) => (
+      <li>
+        <span class="fa fa-phone"></span>
+        <strong>{phone}</strong>
+      </li>
+    ))}
+  </ul>
+</div>
