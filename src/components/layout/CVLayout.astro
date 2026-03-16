@@ -1,6 +1,7 @@
 ---
 import "../../styles/screen.css";
 import "../../styles/print.css";
+import PlanetIcon from "@components/ui/PlanetIcon.astro";
 
 interface Props {
   title?: string;
@@ -24,11 +25,7 @@ const {
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
 
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="//www.orizens.com/images/favLogo.ico?v=12012"
-    />
+    <PlanetIcon />
     <link
       href="//fonts.googleapis.com/css?family=Open+Sans:300"
       rel="stylesheet"

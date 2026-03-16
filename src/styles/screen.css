@@ -209,7 +209,7 @@ em {
 }
 
 .first-cv-section {
-  background-image: url(/images/orizens-bg.png);
+  background-image: url(./images/orizens-bg.png);
   background-blend-mode: color-burn;
   background-size: cover;
   margin: 0;
