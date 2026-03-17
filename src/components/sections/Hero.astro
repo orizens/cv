@@ -1,11 +1,12 @@
 ---
-import type { Profile } from '../../types/cv';
+import type { UserProfile } from "../../types/cv";
 
 interface Props {
-  profile: Profile;
+  profile: UserProfile;
 }
 const { profile } = Astro.props;
 ---
+
 <div class="person">
   <img src={profile.avatarUrl} alt={profile.name} />
   <h1>{profile.name}</h1>

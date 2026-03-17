@@ -2,7 +2,7 @@
 import CVLayout from "../components/layout/CVLayout.astro";
 import Hero from "../components/sections/Hero.astro";
 import Contact from "../components/sections/Contact.astro";
-import Summary from "../components/sections/Summary.astro";
+import Profile from "../components/sections/Profile.astro";
 import Experience from "../components/sections/Experience.astro";
 import Skills from "../components/sections/Skills.astro";
 import Publications from "../components/sections/Publications.astro";
@@ -18,7 +18,7 @@ import education from "../data/education.json";
 import social from "../data/social.json";
 
 import type {
-  Profile,
+  UserProfile,
   Contact as ContactType,
   ExperienceItem,
   Skills as SkillsType,
@@ -38,8 +38,8 @@ const allSkills = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: (profile as Profile).name,
-  jobTitle: (profile as Profile).title,
+  name: (profile as UserProfile).name,
+  jobTitle: (profile as UserProfile).title,
   description:
     "Senior Front End Engineer and Tech Lead with 20+ years of experience building high-performance web applications.",
   email: (contact as ContactType).links.find((l) =>
@@ -47,7 +47,7 @@ const jsonLd = {
   )?.text,
   telephone: (contact as ContactType).phones,
   url: "https://orizens.github.io/cv",
-  image: `https:${(profile as Profile).avatarUrl}`,
+  image: `https:${(profile as UserProfile).avatarUrl}`,
   sameAs: (social as SocialLink[]).map((s) =>
     s.href.startsWith("//") ? `https:${s.href}` : s.href,
   ),
@@ -69,14 +69,17 @@ const jsonLd = {
 ---
 
 <CVLayout jsonLd={jsonLd}>
-  <div class="first-cv-section" style={`background-image: url(${import.meta.env.BASE_URL.replace(/\/$/, '')}/images/orizens-bg.png)`}>
-    <Hero profile={profile as Profile} />
+  <div
+    class="first-cv-section"
+    style={`background-image: url(${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/orizens-bg.png)`}
+  >
+    <Hero profile={profile as UserProfile} />
     <Contact contact={contact as ContactType} />
   </div>
 
   <div class="cv-contents">
     <section class="profile">
-      <Summary profile={profile as Profile} />
+      <Profile profile={profile as UserProfile} />
       <Experience experience={experience as unknown as ExperienceItem[]} />
     </section>
 
