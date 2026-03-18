@@ -7,13 +7,15 @@
   "libraries": [
     "React",
     "Tanstack-Query",
+    "Tailwind",
+    "Shad-CN",
     "React Native",
     "Redux Toolkit",
     "Chakra UI",
     "PandaCss",
-    "Tailwind",
     "SASS",
-    "NgRx"
+    "NgRx",
+    "Storybook"
   ],
   "frameworks": [
     "Firebase",
@@ -30,10 +32,10 @@
     "Testing Library"
   ],
   "other": [
-    "Architecture",
-    "UX",
-    "Git",
     "Github",
-    "Github Actions"
+    "Github Actions",
+    "UX",
+    "Architecture",
+    "Git"
   ]
 }
