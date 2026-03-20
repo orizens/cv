@@ -1,0 +1,22 @@
+---
+import SectionTitle from "../ui/SectionTitle.astro";
+import type { UserProfile } from "../../types/cv";
+
+interface Props {
+  profile: UserProfile;
+}
+const { profile } = Astro.props;
+---
+
+<div class="cv-section">
+  <SectionTitle icon="user" title="Profile" />
+  <div class="item">
+    <p set:html={profile.summary} />
+    <p>
+      {profile.cofounding.description}{" "}
+      <a href={profile.cofounding.url} target="_blank"
+        >"{profile.cofounding.label}"</a
+      >
+    </p>
+  </div>
+</div>

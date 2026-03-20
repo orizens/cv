@@ -1,0 +1,24 @@
+---
+import SectionTitle from '../ui/SectionTitle.astro';
+import type { SocialLink } from '../../types/cv';
+
+interface Props {
+  social: SocialLink[];
+}
+const { social } = Astro.props;
+---
+<div class="cv-section">
+  <SectionTitle icon="feed" title="Web" />
+  <div class="item">
+    <ul class="list-unstyled">
+      {social.map(({ href, icon, text }) => (
+        <li>
+          <a href={href} class="unstyled-links" target="_blank">
+            <span class={`fa fa-${icon}`}></span>
+            {text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>

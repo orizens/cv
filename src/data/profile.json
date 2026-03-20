@@ -1,0 +1,11 @@
+{
+  "name": "Oren Farhi",
+  "title": "Principal Front End Engineer / Tech Lead",
+  "avatarUrl": "//www.gravatar.com/avatar/10036b8b167326fa6edfd2ad38c01ddc?s=512",
+  "summary": "As a seasoned front-end engineer with over two decades of experience, I build high-performance, scalable, and user-friendly web applications. I have a strong foundation in software architecture and hands-on experience with modern technologies including TypeScript, React, React Query, Node.js, Redux (RTK), and styling solutions such as Chakra UI (with Emotion), Tailwind, and Shad-CN.<br />In recent years, I’ve been incorporating AI-assisted coding tools like GitHub Copilot and <strong>Claude Code</strong> into my workflow to move faster, explore solutions, and reduce friction - while still relying on solid engineering judgment to ensure quality and maintainability.<br />I care about writing clean, reliable code and creating user experiences that feel fast and intuitive across devices.<br/>I’m also the <strong>author</strong> of <a href=\"https://link.springer.com/book/10.1007/978-1-4842-2620-9\" target=\"_blank\">\"Reactive Programming with Angular and NGRX\"</a>.<br />",
+  "cofounding": {
+    "label": "ReadM",
+    "url": "https://readm.app",
+    "description": "Co-Founder & Lead Software Engineer of"
+  }
+}

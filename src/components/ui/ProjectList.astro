@@ -1,0 +1,31 @@
+---
+import type { ProjectEntry } from '../../types/cv';
+
+interface Props {
+  title: string;
+  items: ProjectEntry[];
+  icon: string;
+  highlight?: boolean;
+}
+const { title, items, icon, highlight = false } = Astro.props;
+
+function renderLabel(name: string, link?: string) {
+  return link ? `<a href="${link}">${name}</a>` : name;
+}
+---
+{title && items.length > 0 && (
+  <div>
+    <h3>{title}</h3>
+    <ul class="list-unstyled">
+      {items.map(([name, desc, link]) => (
+        <li>
+          <span class={`fa fa-${icon}`}></span>
+          {highlight
+            ? <span class="item-client" set:html={renderLabel(name, link)} />
+            : name
+          } - <span set:html={desc} />
+        </li>
+      ))}
+    </ul>
+  </div>
+)}

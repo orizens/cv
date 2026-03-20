@@ -1,0 +1,72 @@
+# Oren Farhi — CV / Resume
+
+> Senior Front End Engineer and Tech Lead with 20+ years of experience building high-performance, scalable web applications.
+
+## Contact
+
+- Email: farhioren@gmail.com
+- Website: https://orizens.github.io/cv
+- Blog: https://orizens.com
+- GitHub: https://github.com/orizens
+- LinkedIn: https://linkedin.com/in/orenfarhi/
+- Twitter: https://twitter.com/@orizens
+- Phone: +1 (646) 753 4899 | +1 (551) 246 0056
+
+## Summary
+
+Seasoned front-end engineer specialising in software architecture, TypeScript, React, CSS, and modern testing practices. Author of "Reactive Programming with Angular and NGRX" (Apress). Co-Founder & Lead Software Engineer of ReadM (https://readm.app), an AI-powered reading fluency assessment tool for K–4 students.
+
+## Experience
+
+**Senior & Lead UI Engineer — ZScaler** (2026 – Present)
+Hands-on architect and implementer of scalable UI solutions using React, TypeScript, and Playwright, while establishing TDD standards and upskilling 5+ engineers through direct mentorship.
+Tech: React, Vite, MUI, TypeScript, Tanstack-Table, GraphQL, Tanstack-Query, Vitest, Playwright, CSS, GitHub Actions.
+
+**Lead UI Engineer — HighRes BioSolutions** (2024 – 2026)
+Hands-on lead engineer driving UI excellence by implementing BDD with Playwright, reducing UI production bugs, and mentoring team members on React & TypeScript best practices.
+Tech: React, Vite, TypeScript, Tailwind, Tanstack-Query, CSS, Playwright.
+
+**CTO & Lead Software Engineer — AKTO SPACE** (2023 – 2024)
+Advised on tech direction and led hands-on development of a desktop application from start to finish with Electron.js and React.
+Tech: React, TypeScript, CSS, ChakraUI, Electron.js, Node.js.
+
+**Senior Front End Tech Lead / Engineer — Rivery** (2022 – 2023)
+Hands-on lead personally driving the migration from Angular 1 to React/Redux/RTK-Query, designing the architecture, and integrating ChakraUI.
+Tech: React, RTK Toolkit, RTK Query, TypeScript, Chakra UI, SCSS, Cypress, Testing Library, StoryBook, GitHub Actions.
+
+**Head of Front End Engineering / Tech Lead — 1Care.ai** (2020 – 2022)
+Led front-end development with a team of 3 engineers to create web & mobile applications.
+Tech: React, React Native (Android/iOS), TypeScript, Redux Toolkit, Blueprint, SCSS, Cypress, Jest, Testing Library, GraphQL, AWS/Amplify.
+
+**Senior Front End Engineer & Consultant — Tangent Logic** (2018 – 2020)
+Developed web applications focused on reusability and testing with React, Angular, TypeScript, Redux, NGRX.
+Notable client: Lifion — React, Node.js, Jest, Enzyme, Testing Library, TypeScript, Sass.
+
+**Senior Front End Engineer & Consultant — Orizens (Self-Owned)** (2016 – 2018)
+Built web applications with React, Angular, Redux, NgRx, TypeScript. Personal projects include ReadM, Echoes Player, and open-source npm packages used by Google, Microsoft, Amazon, Disney, and SAP.
+
+**Senior Front End Engineer, Front End Architect — Tikal Knowledge** (2010 – 2016)
+Developed web applications with Angular, Backbone, React, Node.js. Led Tikal's JavaScript Group, ran workshops, and consulted for enterprise customers.
+
+**UI Front End Developer — Comverse** (2008 – 2010)
+Developed web GUI for internal applications using OOP JavaScript, Ajax, HTML, CSS, XML & XSLT. Refactored UI to a component-based architecture.
+
+**Web Developer & Designer Freelance — Orizens.com** (2005 – 2010)
+Designed and developed websites using HTML, JS, CSS, PHP, WordPress, Flash & ActionScript.
+
+## Skills
+
+Languages: TypeScript, JavaScript, CSS
+Libraries: React, Tanstack-Query, React Native, Redux Toolkit, Chakra UI, PandaCSS, Tailwind, SASS, NgRx
+Frameworks: Firebase, Astro, Angular, Electron, Node.js
+Testing: Playwright, Vitest, Jest, Cypress, Testing Library
+Other: Architecture, UX, Git, GitHub, GitHub Actions
+
+## Education
+
+B.A. Computer Science & Management — The Open University (2001 – 2007)
+
+## Publications
+
+"Reactive Programming with Angular and NGRX" — Apress
+https://www.amazon.com/Reactive-Programming-Angular-ngrx-Extensions/dp/1484226194

@@ -1,0 +1,20 @@
+---
+import SectionTitle from '../ui/SectionTitle.astro';
+import type { EducationItem } from '../../types/cv';
+
+interface Props {
+  education: EducationItem[];
+}
+const { education } = Astro.props;
+---
+<div class="cv-section">
+  <SectionTitle icon="graduation-cap" title="Education" />
+  <div class="item">
+    {education.map(({ institution, degree, years }) => (
+      <div>
+        <h2>{institution}</h2>
+        <h3>{degree}, {years}</h3>
+      </div>
+    ))}
+  </div>
+</div>
