@@ -249,6 +249,27 @@ ul#social-media li {
   display: inline;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.social-icons li {
+  display: inline;
+}
+
+.social-icons a {
+  color: var(--color-light);
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: var(--color-highlight);
+}
+
 .cv-section-items {
   padding-left: 125px;
 }
