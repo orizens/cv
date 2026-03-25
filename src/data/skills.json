@@ -17,6 +17,11 @@
     "NgRx",
     "Storybook"
   ],
+  "ai": [
+    "Claude Code",
+    "Github Copilot",
+    "Gemini"
+  ],
   "frameworks": [
     "Firebase",
     "Astro",

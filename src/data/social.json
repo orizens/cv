@@ -2,11 +2,17 @@
   {
     "href": "//orizens.com",
     "icon": "link",
+    "isLa": true,
     "text": "orizens.com"
   },
   {
     "href": "//github.com/orizens",
     "icon": "github-alt",
+    "text": "@orizens"
+  },
+  {
+    "href": "//www.npmjs.com/~orizens",
+    "icon": "npm",
     "text": "@orizens"
   },
   {

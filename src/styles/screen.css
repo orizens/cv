@@ -131,6 +131,15 @@ body {
   --paragraph-text-size: 1.1rem;
   --paragraph-text-size-default: 1rem;
   --max-width-container: 980px;
+  
+  /* Spacing variables */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  
+  /* Text size variables */
+  --text-sm: 0.9rem;
 
   background: var(--page-bg-color);
   color: var(--page-text-color);
@@ -248,7 +257,11 @@ ul#social-media {
 ul#social-media li {
   display: inline;
 }
-
+.social-links a {
+  .las, .lab {
+    color: var(--color-highlight);
+  }
+}
 .social-icons {
   display: flex;
   justify-content: center;
@@ -261,15 +274,14 @@ ul#social-media li {
 }
 
 .social-icons a {
-  color: var(--color-light);
   font-size: 1.5rem;
   transition: color 0.2s;
+  color: var(--color-light);
 }
 
-.social-icons a:hover {
+.skills .social-icons a {
   color: var(--color-highlight);
 }
-
 .cv-section-items {
   padding-left: 125px;
 }
@@ -334,6 +346,8 @@ ul#social-media li {
 
 .person {
   text-align: center;
+  display: grid;
+  gap: var(--spacing-3);
 }
 
 .person h2 {
@@ -422,6 +436,47 @@ textarea {
   display: inline-block;
 }
 
+/* Utility classes */
+.text-sm {
+  font-size: var(--text-sm);
+}
+
+.mt-2 {
+  margin-top: var(--spacing-2);
+}
+
+.mt-3 {
+  margin-top: var(--spacing-3);
+}
+
+.mb-4 {
+  margin-bottom: var(--spacing-4);
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* Achievement specific classes */
+.achievements-list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 1.5;
+}
+
+.achievement-item {
+  /* Specific styling for achievement list items */
+}
+
+.achievement-badge {
+  /* Badge container styling */
+}
+
+.achievement-detail {
+  /* Detail text styling */
+}
+
 .list-unstyled {
   padding-left: 0;
   margin: 0;
@@ -429,9 +484,9 @@ textarea {
   line-height: 1.5;
 }
 
-.list-unstyled .fa {
+.list-unstyled .las, .lab{
   margin-right: 5px;
-  color: var(--color-highlight);
+  /* color: var(--color-highlight); */
 }
 
 @media (min-width: 360px) {
@@ -503,7 +558,7 @@ textarea {
   }
 
   #contact-info a,
-  #contact-info .fa {
+  #contact-info .las, .lab{
     color: var(--color-light);
   }
 

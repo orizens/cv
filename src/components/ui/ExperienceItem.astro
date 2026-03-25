@@ -1,26 +1,49 @@
 ---
-import type { ExperienceItem } from '../../types/cv';
-import ProjectList from './ProjectList.astro';
+import type { ExperienceItem } from "../../types/cv";
+import Icon from "./Icon.astro";
+import ProjectList from "./ProjectList.astro";
 
 interface Props {
   item: ExperienceItem;
 }
 const { item } = Astro.props;
-const { role, date, company, tagline, projectsTitle, clients, projects, clientTitle, highlight = false } = item;
+const {
+  role,
+  date,
+  company,
+  tagline,
+  projectsTitle,
+  clients,
+  projects,
+  clientTitle,
+  highlight = false,
+} = item;
 ---
+
 <div class="item">
   <section class="header">
     <h2>{role}</h2>
     <h4 class="date">
-      <span class="fa fa-calendar"></span>{date}
+      <Icon icon="calendar" />{date}
     </h4>
   </section>
   <div class="row">
     <h4 class="company">
-      <span class="fa fa-building-o"></span> {company}
+      <Icon icon="building-o" />
+      {company}
     </h4>
   </div>
   <p set:html={tagline} />
-  <ProjectList title={clientTitle} items={clients} icon="at" highlight={highlight} />
-  <ProjectList title={projectsTitle} items={projects} icon="code-fork" highlight={highlight} />
+  <ProjectList
+    title={clientTitle}
+    items={clients}
+    icon="at"
+    highlight={highlight}
+  />
+  <ProjectList
+    title={projectsTitle}
+    items={projects}
+    icon="code-fork"
+    highlight={highlight}
+  />
 </div>

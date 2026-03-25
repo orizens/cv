@@ -14,6 +14,7 @@ export interface ContactLink {
   href: string;
   icon: string;
   text: string;
+  isLa?: boolean;
 }
 
 export interface Contact {
@@ -25,6 +26,7 @@ export interface SocialLink {
   href: string;
   icon: string;
   text: string;
+  isLa?: boolean;
 }
 
 export interface Skills {
@@ -33,6 +35,7 @@ export interface Skills {
   frameworks: string[];
   testing: string[];
   other: string[];
+  ai: string[];
 }
 
 /** [name, description, optionalLink?] */
@@ -61,4 +64,12 @@ export interface EducationItem {
   institution: string;
   degree: string;
   years: string;
+}
+
+export interface Achievement {
+  title: string;
+  description?: string;
+  href?: string;
+  badge?: string;
+  details?: string[];
 }

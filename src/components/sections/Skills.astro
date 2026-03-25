@@ -1,7 +1,7 @@
 ---
-import SectionTitle from '../ui/SectionTitle.astro';
-import SkillTag from '../ui/SkillTag.astro';
-import type { Skills } from '../../types/cv';
+import SectionTitle from "../ui/SectionTitle.astro";
+import SkillTag from "../ui/SkillTag.astro";
+import type { Skills } from "../../types/cv";
 
 interface Props {
   skills: Skills;
@@ -9,23 +9,29 @@ interface Props {
 const { skills } = Astro.props;
 
 const groups: { label: string; items: string[] }[] = [
-  { label: 'Languages', items: skills.languages },
-  { label: 'Libraries', items: skills.libraries },
-  { label: 'Frameworks', items: skills.frameworks },
-  { label: 'Testing', items: skills.testing },
+  { label: "Languages", items: skills.languages },
+  { label: "Ai Code Assitants", items: skills.ai },
+  { label: "Libraries", items: skills.libraries },
+  { label: "Frameworks", items: skills.frameworks },
+  { label: "Testing", items: skills.testing },
 ];
 ---
+
 <div class="cv-section">
   <SectionTitle icon="code" title="My Skills" />
   <div class="item small">
-    {groups.map(({ label, items }) => (
-      <div>
-        <h2>{label}</h2>
+    {
+      groups.map(({ label, items }) => (
         <div>
-          {items.map((skill) => <SkillTag label={skill} />)}
+          <h2>{label}</h2>
+          <div>
+            {items.map((skill) => (
+              <SkillTag label={skill} />
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
+      ))
+    }
     <div>
       {skills.other.map((skill) => <SkillTag label={skill} />)}
     </div>

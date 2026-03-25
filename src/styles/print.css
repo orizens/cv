@@ -67,7 +67,7 @@ Check out the screenshots section for a look at the code*/
     z-index: auto;
   }
 
-  h2.cv-section-name .fa {
+  h2.cv-section-name .las, .lab{
     display: none;
   }
 
@@ -120,12 +120,16 @@ Check out the screenshots section for a look at the code*/
 
   #contact-info,
   #contact-info a,
-  #contact-info .fa {
+  #contact-info .las, .lab{
     color: #000;
   }
 
   #contact-info .list-unstyled li {
     font-size: 1rem;
+  }
+
+  .print-hide {
+    display: none;
   }
 
   .cv-section {

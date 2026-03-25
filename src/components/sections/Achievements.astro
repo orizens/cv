@@ -1,0 +1,44 @@
+---
+import SectionTitle from "../ui/SectionTitle.astro";
+import type { Achievement } from "../../types/cv";
+
+interface Props {
+  achievements: Achievement[];
+}
+const { achievements } = Astro.props;
+---
+
+<div class="cv-section">
+  <SectionTitle icon="trophy" title="Achievements" />
+  <div class="item">
+    <ul class="achievements-list text-sm">
+      {
+        achievements.map(({ title, description, href, badge, details }) => (
+          <li class="achievement-item mb-4">
+            {href ? (
+              <a href={href} class="unstyled-links" target="_blank">
+                <strong>{title}</strong>
+              </a>
+            ) : (
+              <strong>{title}</strong>
+            )}
+            {description && (
+              <div>
+                <em>{description}</em>
+              </div>
+            )}
+            {badge && (
+              <div class="achievement-badge mt-2">
+                <img src={badge} alt="npm downloads" class="inline-block" />
+              </div>
+            )}
+            {details &&
+              details.map((detail) => (
+                <div class="achievement-detail mt-3">{detail}</div>
+              ))}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

@@ -2,13 +2,15 @@
   "links": [
     {
       "href": "mailto:farhioren@gmail.com",
-      "icon": "envelope-o",
-      "text": "farhioren@gmail.com"
+      "icon": "envelope",
+      "text": "farhioren@gmail.com",
+      "isLa": true
     },
     {
       "href": "https://orizens.com/cv",
       "icon": "link",
-      "text": "orizens.com/cv"
+      "text": "orizens.com/cv",
+      "isLa": true
     }
   ],
   "phones": [
