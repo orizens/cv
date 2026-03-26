@@ -5,6 +5,10 @@ interface Props {
 }
 const { icon, title } = Astro.props;
 ---
-<h2 class="cv-section-name">
-  <span class={`fa fa-${icon} section-title-icon`}></span> {title}
+
+<h2
+  class="text-gray-700 font-normal tracking-tight uppercase m-0 mb-5 pb-5 pt-5 border-b border-cv-highlight sticky top-0 z-[1000] bg-cv-bg shadow-section backdrop-blur-section print-static print-no-shadow print-border-none print-bg-white print-z-auto print-text-base print-pt-0 print-pb-0 print-mb-5px print:text-black print:font-bold"
+>
+  <span class={`fa fa-${icon} text-cv-highlight mr-1.5 print:hidden`}></span>
+  {title}
 </h2>

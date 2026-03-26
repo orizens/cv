@@ -9,14 +9,20 @@ interface Props {
 const { social } = Astro.props;
 ---
 
-<div class="cv-section">
+<div>
   <SectionTitle icon="feed" title="Web" />
-  <div class="item social-links">
-    <ul class="list-unstyled">
+  <div
+    class="pb-5 relative w-auto bg-cv-box-bg rounded-[10px] border-b border-cv-box-border p-8 print:p-0 print:bg-transparent print:border-none print:rounded-none print:mb-10px"
+  >
+    <ul class="pl-0 m-0 list-none leading-relaxed print:text-sm">
       {
         social.map(({ href, icon, text, isLa }) => (
           <li>
-            <a href={href} class="unstyled-links" target="_blank">
+            <a
+              href={href}
+              class="text-cv-highlight no-underline print:text-black"
+              target="_blank"
+            >
               <Icon icon={icon} isLa={isLa} />
               {text}
             </a>

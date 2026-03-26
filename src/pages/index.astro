@@ -104,26 +104,30 @@ const jsonLd = {
 ---
 
 <CVLayout jsonLd={jsonLd}>
-  <div
-    class="first-cv-section"
-    style={`background-image: url(${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/orizens-bg.png)`}
-  >
-    <Hero profile={profile as UserProfile} social={social as SocialLink[]} />
-    <Contact contact={contact as ContactType} />
-  </div>
+  <div id="cv" class="bg-white mx-auto">
+    <div
+      class="bg-blend-color-burn bg-cover m-0 p-4 relative border-b border-cv-highlight bg-no-repeat bg-[position:0] print:bg-none print:border-b print:border-black print:p-10px print:grid print:grid-cols-2 print:gap-2"
+      style={`background-image: url(${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/orizens-bg.png)`}
+    >
+      <Hero profile={profile as UserProfile} social={social as SocialLink[]} />
+      <Contact contact={contact as ContactType} />
+    </div>
 
-  <div class="cv-contents">
-    <section class="profile">
-      <Profile profile={profile as UserProfile} />
-      <Experience experience={experience as unknown as ExperienceItem[]} />
-    </section>
+    <div
+      class="p-6 max-w-cv mx-auto md:grid md:grid-cols-[2fr_1fr] md:gap-8 print:grid print:grid-cols-2 print:gap-4 print:p-2.5"
+    >
+      <section class="md:min-w-0">
+        <Profile profile={profile as UserProfile} />
+        <Experience experience={experience as unknown as ExperienceItem[]} />
+      </section>
 
-    <section class="skills">
-      <Skills skills={skills as SkillsType} />
-      <Achievements achievements={achievements as Achievement[]} />
-      <Publications publications={publications as Publication[]} />
-      <Social social={social as SocialLink[]} />
-      <Education education={education as EducationItem[]} />
-    </section>
+      <section class="md:min-w-0">
+        <Skills skills={skills as SkillsType} />
+        <Achievements achievements={achievements as Achievement[]} />
+        <Publications publications={publications as Publication[]} />
+        <Social social={social as SocialLink[]} />
+        <Education education={education as EducationItem[]} />
+      </section>
+    </div>
   </div>
 </CVLayout>

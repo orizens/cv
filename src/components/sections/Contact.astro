@@ -8,12 +8,18 @@ interface Props {
 const { contact } = Astro.props;
 ---
 
-<div id="contact-info">
-  <ul class="list-unstyled" id="contact-list">
+<div
+  id="contact-info"
+  class="text-cv-light relative m-0 text-center sm:absolute sm:right-4 sm:top-3 print:static print:text-left print:m-0 print:col-span-2 print:mt-2"
+>
+  <ul
+    class="pl-0 m-0 list-none leading-relaxed sm:text-xl print:text-sm"
+    id="contact-list"
+  >
     {
       contact.links.map(({ href, icon, text, isLa }) => (
         <li>
-          <a href={href} class="unstyled-links">
+          <a href={href} class="text-cv-light no-underline print:text-black">
             <Icon icon={icon} isLa={isLa} />
             {text}
           </a>
@@ -24,7 +30,7 @@ const { contact } = Astro.props;
       contact.phones.map((phone) => (
         <li>
           <Icon icon="phone" isLa />
-          <strong>{phone}</strong>
+          <strong class="print:text-black">{phone}</strong>
         </li>
       ))
     }

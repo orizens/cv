@@ -9,17 +9,33 @@ interface Props {
 const { profile, social } = Astro.props;
 ---
 
-<div class="person">
-  <img src={profile.avatarUrl} alt={profile.name} />
-  <h1>{profile.name}</h1>
-  <h2>{profile.title}</h2>
-  <ul class="social-icons print-hide list-unstyled">
+<div
+  class="text-center grid gap-3 print:grid print:grid-cols-[1fr_auto] print:gap-2 print:text-left"
+>
+  <h1
+    class="my-2.5 mx-auto text-cv-highlight-lighter leading-[48px] font-bold tracking-tight xs:text-[4rem] print:text-38px print:text-black print:my-0 print:mx-0 print:col-start-1 print:row-start-1"
+  >
+    {profile.name}
+  </h1>
+  <img
+    src={profile.avatarUrl}
+    alt={profile.name}
+    class="mx-auto bg-cv-bg border-4 border-cv-highlight rounded-full w-[120px] print:w-80px print:border-2 print:border-black print:col-start-2 print:row-start-1 print:row-span-2 print:mx-0"
+  />
+  <h2
+    class="text-cv-highlight-lighter font-normal tracking-tight uppercase mb-0 xs:text-2xl print:text-15px print:text-black print:col-start-1 print:row-start-2 print:mx-0"
+  >
+    {profile.title}
+  </h2>
+  <ul
+    class="flex justify-center gap-4 mt-3 print:hidden pl-0 m-0 list-none leading-relaxed"
+  >
     {
       social.map(({ href, icon, isLa }) => (
-        <li>
+        <li class="inline">
           <a
             href={href}
-            class="unstyled-links"
+            class="text-cv-light transition-colors duration-200 no-underline xs:text-2xl"
             target="_blank"
             rel="noopener noreferrer"
           >

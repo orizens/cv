@@ -1,16 +1,15 @@
 ---
-import SectionTitle from '../ui/SectionTitle.astro';
-import ExperienceItem from '../ui/ExperienceItem.astro';
-import type { ExperienceItem as ExperienceItemType } from '../../types/cv';
+import SectionTitle from "../ui/SectionTitle.astro";
+import ExperienceItem from "../ui/ExperienceItem.astro";
+import type { ExperienceItem as ExperienceItemType } from "../../types/cv";
 
 interface Props {
   experience: ExperienceItemType[];
 }
 const { experience } = Astro.props;
 ---
-<div class="cv-section timeline" id="work-experience">
+
+<div id="work-experience">
   <SectionTitle icon="laptop" title="Experience" />
-  {experience.map((item) => (
-    <ExperienceItem item={item} />
-  ))}
+  {experience.map((item) => <ExperienceItem item={item} />)}
 </div>

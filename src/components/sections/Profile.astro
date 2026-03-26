@@ -8,11 +8,18 @@ interface Props {
 const { profile } = Astro.props;
 ---
 
-<div class="cv-section">
+<div>
   <SectionTitle icon="user" title="Profile" />
-  <div class="item">
-    <p set:html={profile.summary} />
-    <p>
+  <div
+    class="pb-5 relative w-auto bg-cv-box-bg rounded-[10px] border-b border-cv-box-border p-8 print:p-0 print:bg-transparent print:border-none print:rounded-none print:mb-10px"
+  >
+    <p
+      class="text-justify p-0 leading-relaxed clear-both m-0 text-para xs:text-left print:text-sm print:text-left"
+      set:html={profile.summary}
+    />
+    <p
+      class="text-justify p-0 leading-relaxed clear-both m-0 text-para xs:text-left print:text-sm print:text-left"
+    >
       {profile.cofounding.description}{" "}
       <a href={profile.cofounding.url} target="_blank"
         >"{profile.cofounding.label}"</a

@@ -20,20 +20,33 @@ const {
 } = item;
 ---
 
-<div class="item">
-  <section class="header">
-    <h2>{role}</h2>
-    <h4 class="date">
+<div
+  class="pb-5 relative w-auto bg-cv-box-bg rounded-[10px] border-b border-cv-box-border p-8 mb-5 print:p-0 print:bg-transparent print:border-none print:rounded-none print:mb-10px print:break-inside-avoid"
+>
+  <section class="flex xs:flex-row">
+    <h2
+      class="flex-[4] text-cv-highlight font-normal tracking-tight mt-0 xs:text-xl print:text-black print:text-15px print:font-bold print:m-0"
+    >
+      {role}
+    </h2>
+    <h4
+      class="flex-[1.5] text-right text-cv-highlight uppercase m-0 float-left xs:text-base print:text-black print:text-sm"
+    >
       <Icon icon="calendar" />{date}
     </h4>
   </section>
-  <div class="row">
-    <h4 class="company">
+  <div class="flex">
+    <h4
+      class="text-cv-highlight uppercase m-0 float-left xs:text-base print:text-black print:text-sm"
+    >
       <Icon icon="building-o" />
       {company}
     </h4>
   </div>
-  <p set:html={tagline} />
+  <p
+    class="text-justify p-0 leading-relaxed clear-both m-0 text-para xs:text-left xs:mb-0 print:text-sm print:text-left"
+    set:html={tagline}
+  />
   <ProjectList
     title={clientTitle}
     items={clients}

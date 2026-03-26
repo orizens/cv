@@ -4,4 +4,8 @@ interface Props {
 }
 const { label } = Astro.props;
 ---
-<span class="skill-tag">{label}</span>
+
+<span
+  class="rounded px-2 bg-cv-highlight text-cv-light text-para-default leading-normal inline-block print:bg-white print:text-black print:border print:border-black print:text-sm print:px-1"
+  >{label}</span
+>

@@ -8,15 +8,21 @@ interface Props {
 const { achievements } = Astro.props;
 ---
 
-<div class="cv-section">
+<div>
   <SectionTitle icon="trophy" title="Achievements" />
-  <div class="item">
-    <ul class="achievements-list text-sm">
+  <div
+    class="pb-5 relative w-auto bg-cv-box-bg rounded-[10px] border-b border-cv-box-border p-8 print:p-0 print:bg-transparent print:border-none print:rounded-none print:mb-10px"
+  >
+    <ul class="pl-0 m-0 list-none leading-relaxed text-[0.9rem] print:text-sm">
       {
         achievements.map(({ title, description, href, badge, details }) => (
-          <li class="achievement-item mb-4">
+          <li class="mb-4">
             {href ? (
-              <a href={href} class="unstyled-links" target="_blank">
+              <a
+                href={href}
+                class="text-cv-highlight no-underline print:text-black"
+                target="_blank"
+              >
                 <strong>{title}</strong>
               </a>
             ) : (
@@ -28,14 +34,12 @@ const { achievements } = Astro.props;
               </div>
             )}
             {badge && (
-              <div class="achievement-badge mt-2">
+              <div class="mt-2 print:hidden">
                 <img src={badge} alt="npm downloads" class="inline-block" />
               </div>
             )}
             {details &&
-              details.map((detail) => (
-                <div class="achievement-detail mt-3">{detail}</div>
-              ))}
+              details.map((detail) => <div class="mt-3">{detail}</div>)}
           </li>
         ))
       }

@@ -17,14 +17,18 @@ const groups: { label: string; items: string[] }[] = [
 ];
 ---
 
-<div class="cv-section">
+<div>
   <SectionTitle icon="code" title="My Skills" />
-  <div class="item small">
+  <div
+    class="pb-5 relative w-auto bg-cv-box-bg rounded-[10px] border-b border-cv-box-border p-8 print:p-0 print:bg-transparent print:border-none print:rounded-none print:mb-10px"
+  >
     {
       groups.map(({ label, items }) => (
         <div>
-          <h2>{label}</h2>
-          <div>
+          <h2 class="text-para-default uppercase m-0 print:text-black print:text-sm print:font-bold">
+            {label}
+          </h2>
+          <div class="mb-2.5 flex flex-wrap gap-1.5">
             {items.map((skill) => (
               <SkillTag label={skill} />
             ))}
@@ -32,7 +36,7 @@ const groups: { label: string; items: string[] }[] = [
         </div>
       ))
     }
-    <div>
+    <div class="mb-2.5 flex flex-wrap gap-1.5">
       {skills.other.map((skill) => <SkillTag label={skill} />)}
     </div>
   </div>
