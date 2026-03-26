@@ -26,6 +26,9 @@ Check out the screenshots section for a look at the code*/
   .person h1 {
     font-size: 38px;
     color: #000;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 
   .item h4.date,
@@ -37,6 +40,8 @@ Check out the screenshots section for a look at the code*/
   .person h2 {
     font-size: 15px;
     color: #000;
+    text-align: left;
+    letter-spacing:0;
   }
 
   .item .header {
@@ -56,19 +61,16 @@ Check out the screenshots section for a look at the code*/
     /* border-radius: 20px; */
     /* border: 1px solid #f0efef; */
     padding: 8px 10px;
-    border: none;
+    /* border: none; */
     padding: 10px 0;
     margin-bottom: 5px;
+    box-shadow: none;
     font-size: 1rem;
     text-transform: uppercase;
     color: var(--color-highlight);
     backdrop-filter: none;
     background-color: white;
     z-index: auto;
-  }
-
-  h2.cv-section-name .las, .lab{
-    display: none;
   }
 
   .item h3 {
@@ -103,19 +105,23 @@ Check out the screenshots section for a look at the code*/
   .person {
     float: none;
     width: 30%;
+    gap: 0;
   }
 
   .person img {
     position: absolute;
-    left: 30px;
+    left: unset;
+    right: 0;
     border: 1px solid var(--image-border-color);
     width: 90px;
   }
 
   #contact-info {
-    right: 15px;
-    top: 10px;
-    position: absolute;
+    position: unset;
+    ul {
+      display: flex;
+      gap: 0.5rem;
+    }
   }
 
   #contact-info,
@@ -125,7 +131,7 @@ Check out the screenshots section for a look at the code*/
   }
 
   #contact-info .list-unstyled li {
-    font-size: 1rem;
+    font-size: .75rem;
   }
 
   .print-hide {
