@@ -1,5 +1,6 @@
 ---
-import type { ProjectEntry } from '../../types/cv';
+import type { ProjectEntry } from "../../types/cv";
+import Icon from "./Icon.astro";
 
 interface Props {
   title: string;
@@ -13,19 +14,24 @@ function renderLabel(name: string, link?: string) {
   return link ? `<a href="${link}">${name}</a>` : name;
 }
 ---
-{title && items.length > 0 && (
-  <div>
-    <h3>{title}</h3>
-    <ul class="list-unstyled">
-      {items.map(([name, desc, link]) => (
-        <li>
-          <span class={`fa fa-${icon}`}></span>
-          {highlight
-            ? <span class="item-client" set:html={renderLabel(name, link)} />
-            : name
-          } - <span set:html={desc} />
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
+
+{
+  title && items.length > 0 && (
+    <div>
+      <h3>{title}</h3>
+      <ul class="list-unstyled">
+        {items.map(([name, desc, link]) => (
+          <li>
+            <Icon icon={icon} isLa />
+            {highlight ? (
+              <span class="item-client" set:html={renderLabel(name, link)} />
+            ) : (
+              name
+            )}{" "}
+            - <span set:html={desc} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}

@@ -1,10 +1,14 @@
 ---
+import Icon from "./Icon.astro";
+
 interface Props {
   icon: string;
   title: string;
 }
 const { icon, title } = Astro.props;
 ---
+
 <h2 class="cv-section-name">
-  <span class={`fa fa-${icon} section-title-icon`}></span> {title}
+  <Icon icon={icon} isLa />
+  {title}
 </h2>
