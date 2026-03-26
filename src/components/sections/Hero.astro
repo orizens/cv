@@ -7,11 +7,12 @@ interface Props {
   social: SocialLink[];
 }
 const { profile, social } = Astro.props;
+const [firstName, lastName] = profile.name.split(" ");
 ---
 
 <div class="person">
   <img src={profile.avatarUrl} alt={profile.name} />
-  <h1>{profile.name}</h1>
+  <h1 class="my-name"><span>{firstName}</span>{lastName}</h1>
   <h2>{profile.title}</h2>
   <ul class="social-icons print-hide list-unstyled">
     {

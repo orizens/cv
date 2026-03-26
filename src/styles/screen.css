@@ -243,6 +243,13 @@ em {
   line-height: 48px;
   font-weight: 700;
   letter-spacing: -1px;
+  font-style: italic;
+  span {
+    font-style: normal;
+    margin-right: .5rem;
+    color: var(--color-light);
+    font-weight: 400;
+  }
 }
 
 .unstyled-links {
