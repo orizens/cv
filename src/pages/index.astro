@@ -104,17 +104,35 @@ const jsonLd = {
 ---
 
 <CVLayout jsonLd={jsonLd}>
-  <div id="cv" class="bg-white mx-auto">
+  <header
+    class="border-b-2 border-ink bg-blend-color-burn bg-cover bg-no-repeat bg-[position:0] print:bg-none print:border-b print:border-black"
+    style={`background-image: url(${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/orizens-bg.png)`}
+  >
     <div
-      class="bg-blend-color-burn bg-cover m-0 p-4 relative border-b border-cv-highlight bg-no-repeat bg-[position:0] print:bg-none print:border-b print:border-black print:p-10px print:grid print:grid-cols-2 print:gap-2"
-      style={`background-image: url(${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/orizens-bg.png)`}
+      class="relative grid gap-8 px-14 pt-12 pb-8 max-w-4xl mx-auto print:p-2.5 print:grid print:grid-cols-[1fr_auto] print:gap-2"
+      style="grid-template-columns: 1fr auto;"
     >
-      <Hero profile={profile as UserProfile} social={social as SocialLink[]} />
-      <Contact contact={contact as ContactType} />
+      <div>
+        <Hero profile={profile as UserProfile} />
+        <Contact
+          contact={contact as ContactType}
+          social={social as SocialLink[]}
+        />
+      </div>
+      <img
+        src={(profile as UserProfile).avatarUrl}
+        alt={(profile as UserProfile).name}
+        class="w-28 h-28 object-cover border-2 border-ink flex-shrink-0 rounded-full print:w-20 print:h-20 print:border-2 print:border-black"
+      />
     </div>
+  </header>
 
+  <div
+    id="cv"
+    class="max-w-4xl mx-auto bg-paper shadow-2xl relative print:shadow-none print:overflow-visible"
+  >
     <div
-      class="p-6 max-w-cv mx-auto md:grid md:grid-cols-[2fr_1fr] md:gap-8 print:grid print:grid-cols-2 print:gap-4 print:p-2.5"
+      class="p-6 max-w-4xl mx-auto md:grid md:grid-cols-[2fr_1fr] md:gap-8 print:grid print:grid-cols-[2fr_1fr] print:gap-4 print:p-2.5"
     >
       <section class="md:min-w-0">
         <Profile profile={profile as UserProfile} />

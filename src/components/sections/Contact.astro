@@ -1,38 +1,56 @@
 ---
-import Icon from "../ui/Icon.astro";
-import type { Contact } from "../../types/cv";
+import type { Contact, SocialLink } from "../../types/cv";
 
 interface Props {
   contact: Contact;
+  social: SocialLink[];
 }
-const { contact } = Astro.props;
+const { contact, social } = Astro.props;
+
+// Get email and website from contact
+const email = contact.links.find((link) => link.href.startsWith("mailto:"));
+const website = contact.links.find((link) => !link.href.startsWith("mailto:"));
+
+// Get LinkedIn from social
+const linkedin = social.find((link) => link.href.includes("linkedin"));
+
+// Get first phone number
+const phone = contact.phones[0];
 ---
 
 <div
-  id="contact-info"
-  class="text-cv-light relative m-0 text-center sm:absolute sm:right-4 sm:top-3 print:static print:text-left print:m-0 print:col-span-2 print:mt-2"
+  class="grid gap-x-8 gap-y-1 mt-5 text-xs"
+  style="grid-template-columns:1fr 1fr;"
 >
-  <ul
-    class="pl-0 m-0 list-none leading-relaxed sm:text-xl print:text-sm"
-    id="contact-list"
-  >
-    {
-      contact.links.map(({ href, icon, text, isLa }) => (
-        <li>
-          <a href={href} class="text-cv-light no-underline print:text-black">
-            <Icon icon={icon} isLa={isLa} />
-            {text}
-          </a>
-        </li>
-      ))
-    }
-    {
-      contact.phones.map((phone) => (
-        <li>
-          <Icon icon="phone" isLa />
-          <strong class="print:text-black">{phone}</strong>
-        </li>
-      ))
-    }
-  </ul>
+  {
+    email && (
+      <a
+        href={email.href}
+        class="border-b border-border no-underline text-paper print:text-gray-600 hover:text-cv-highlight hover:border-cv-highlight transition-colors"
+      >
+        {email.text}
+      </a>
+    )
+  }
+  {
+    website && (
+      <a
+        href={website.href}
+        class="border-b border-border no-underline text-paper print:text-gray-600 hover:text-cv-highlight hover:border-cv-highlight transition-colors"
+      >
+        {website.text}
+      </a>
+    )
+  }
+  <span class="text-paper print:text-gray-600">{phone}</span>
+  {
+    linkedin && (
+      <a
+        href={linkedin.href}
+        class="border-b border-border no-underline text-paper print:text-gray-600 hover:text-cv-highlight hover:border-cv-highlight transition-colors"
+      >
+        {linkedin.text}
+      </a>
+    )
+  }
 </div>

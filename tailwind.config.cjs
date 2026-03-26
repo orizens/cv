@@ -13,6 +13,11 @@ module.exports = {
         'cv-box-bg': '#24d5bb1c',
         'cv-box-border': '#ededed',
         'cv-border': '#f0efef',
+        // New header colors
+        'ink': '#333',
+        'paper': '#fff',
+        'muted': '#666',
+        'border': '#e0e0e0',
       },
       maxWidth: {
         'cv': '980px',
@@ -25,6 +30,7 @@ module.exports = {
       fontSize: {
         'para': '1.1rem',
         'para-default': '1rem',
+        '2xs': '0.625rem',
       },
       boxShadow: {
         'section': '0 5px 6px -6px #24d5bb',
