@@ -9,40 +9,41 @@ interface Props {
   keywords?: string;
   jsonLd?: object;
 }
+
 const {
-  title = ":: Oren Farhi's CV / RESUME ::",
-  description = "Oren Farhi's CV Front End Architect",
-  keywords = "cv, front end, architect, javascript",
+  title = "Oren Farhi | Principal / Staff Frontend Engineer",
+  description = "Oren Farhi - Principal / Staff Frontend Engineer and UI Architect with 20+ years of experience in frontend architecture, TypeScript, React, testing infrastructure and technical leadership.",
+  keywords = "Oren Farhi, Principal Engineer, Staff Engineer, Frontend Architect, UI Architect, React, TypeScript, Playwright, Frontend Architecture",
   jsonLd,
 } = Astro.props;
 ---
 
-<html>
+<html lang="en">
   <head>
     <title>{title}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
+    <meta name="author" content="Oren Farhi" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Oren Farhi" />
 
     <PlanetIcon />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" />
     {
-      jsonLd && (
-        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-      )
+      jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     }
   </head>
   <body>
-    <slot />
+    <div class="site-shell">
+      <slot />
+    </div>
   </body>
 </html>
