@@ -1,47 +1,226 @@
+.print-only {
+  display: none;
+}
+
 @page {
-  size: Letter;
-  margin: 0.48in 0.52in;
+  size: A4;
+  margin: 12mm 14mm;
 }
 
 @media print {
-  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-  html, body { width: 100%; background: white !important; }
-  body { color: #111827 !important; font-size: 9.5pt !important; line-height: 1.38 !important; }
-  .site-shell { width: 100%; max-width: none; margin: 0; box-shadow: none; }
-  .first-cv-section { padding: 0 0 12pt !important; background: #0b1220 !important; border-bottom: 2px solid #2563eb !important; }
-  .first-cv-section::before, .first-cv-section::after { display: none; }
-  .person { display: grid; grid-template-columns: 52pt 1fr; gap: 9pt 13pt; max-width: none; }
-  .person img { width: 52pt; height: 52pt; border: 1pt solid #93c5fd; border-radius: 8pt; }
-  .person h1 { font-size: 31pt !important; line-height: .95 !important; color: white !important; letter-spacing: -1.5pt; }
-  .person h1 span { color: white !important; }
-  .person h2 { margin-top: 5pt; color: #bfdbfe !important; font-size: 8pt !important; letter-spacing: .9pt; }
-  .social-icons { display: none !important; }
-  #contact-info { position: static !important; margin: 9pt 0 0 65pt !important; color: #dbeafe !important; text-align: left !important; }
-  #contact-info .list-unstyled { display: flex; flex-wrap: wrap; gap: 2pt 12pt; line-height: 1.35; }
-  #contact-info .list-unstyled li { font-size: 7.5pt !important; }
-  #contact-info a, #contact-info .las, #contact-info .lab { color: #dbeafe !important; }
-  .cv-contents { display: grid !important; grid-template-columns: minmax(0, 1fr) 155pt !important; gap: 22pt !important; max-width: none; padding: 17pt 0 0 !important; }
-  h2.cv-section-name { margin: 0 0 9pt !important; padding: 0 0 4pt !important; border-bottom: 1pt solid #111827 !important; color: #111827 !important; background: white !important; box-shadow: none !important; font-size: 7.5pt !important; line-height: 1.2 !important; letter-spacing: 1pt !important; }
-  .section-title-icon { color: #2563eb !important; }
-  .cv-section { margin: 0 0 17pt !important; }
-  .item { margin: 0 0 9pt !important; padding: 0 0 8pt !important; border-bottom: .6pt solid #e2e8f0 !important; background: transparent !important; break-inside: avoid; }
-  .item:last-child { border-bottom: 0 !important; }
-  .item .header { display: grid !important; grid-template-columns: 1fr auto !important; gap: 6pt !important; }
-  .item .header h2 { font-size: 10.5pt !important; line-height: 1.15 !important; color: #111827 !important; margin: 0 !important; }
-  .item h3 { margin: 2pt 0 4pt !important; color: #2563eb !important; font-size: 7.8pt !important; line-height: 1.25 !important; }
-  .item h4 { font-size: 6.8pt !important; color: #64748b !important; letter-spacing: .3pt; }
-  .item p { margin: 0 0 4pt !important; color: #334155 !important; font-size: 8pt !important; line-height: 1.4 !important; }
-  .item ul { padding-left: 10pt !important; color: #334155 !important; font-size: 7.7pt !important; line-height: 1.35 !important; }
-  .item li { margin-bottom: 2pt !important; }
-  .item-client { color: #2563eb !important; }
-  #work-experience .item::before, #work-experience::before { display: none !important; }
-  .skills { display: block !important; padding-left: 13pt !important; border-left: .6pt solid #e2e8f0 !important; }
-  .skills .cv-section { margin-bottom: 13pt !important; }
-  .skills .cv-section-name { margin-bottom: 6pt !important; }
-  .skills .item { margin-bottom: 7pt !important; padding: 0 !important; border: 0 !important; }
-  .skills .item h2 { font-size: 7pt !important; margin-bottom: 3pt !important; }
-  span.skill-tag { padding: 2pt 4pt !important; border: .5pt solid #cbd5e1 !important; border-radius: 3pt !important; background: #f8fafc !important; color: #334155 !important; font-size: 6.5pt !important; line-height: 1.25 !important; }
-  .pub-item .media { max-height: 85pt !important; }
-  .print-hide { display: none !important; }
-  a { color: inherit !important; text-decoration: none !important; }
+  html {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111827 !important;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none;
+  }
+
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* Compact identity header replaces the cosmic hero */
+  .print-header {
+    background: rgb(24, 40, 60) !important;
+    color: var(--on-night) !important;
+    margin: 0 0 10pt;
+    padding: 10pt 12pt;
+    border-radius: 4pt;
+    border-bottom: none;
+  }
+
+  .print-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12pt;
+  }
+
+  .print-header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20pt;
+    margin: 0 0 2pt;
+    color: var(--on-night) !important;
+  }
+
+  .print-role {
+    font-size: 10pt;
+    color: var(--on-night-muted) !important;
+  }
+
+  .print-portrait {
+    width: 48pt;
+    height: 48pt;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5pt solid rgba(255, 255, 255, 0.4);
+  }
+
+  .print-contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4pt 14pt;
+    margin-top: 6pt;
+    font-size: 8.5pt;
+    color: var(--on-night-muted) !important;
+  }
+
+  .cv-body {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .cv-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10pt;
+    align-items: start;
+  }
+
+  .cv-aside {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .cv-main,
+  .cv-aside {
+    gap: 10pt;
+  }
+
+  .section-heading {
+    font-size: 12.5pt;
+    margin-bottom: 6pt;
+    color: #111827 !important;
+  }
+
+  .section-eyebrow {
+    display: none;
+  }
+
+  .card,
+  .impact-card,
+  .project-card,
+  .timeline-card {
+    box-shadow: none !important;
+    border: 0.75pt solid #d1d5db !important;
+    border-radius: 4pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .card {
+    padding: 8pt 10pt;
+  }
+
+  .card-title {
+    font-size: 9pt;
+    margin-bottom: 6pt;
+  }
+
+  /* Expand every collapsed role for print */
+  details.timeline-card {
+    display: block;
+  }
+
+  details.timeline-card > * {
+    display: block !important;
+  }
+
+  .timeline-summary {
+    cursor: default;
+    padding: 6pt 8pt;
+    list-style: none;
+  }
+
+  .timeline-toggle-icon {
+    display: none;
+  }
+
+  .timeline-body {
+    padding: 0 8pt 8pt;
+  }
+
+  .timeline-list::before {
+    display: none;
+  }
+
+  .timeline-item {
+    padding-left: 0;
+  }
+
+  .timeline-marker {
+    display: none;
+  }
+
+  .role-title {
+    font-size: 10.5pt;
+  }
+
+  .role-tagline,
+  .impact-summary,
+  .project-summary {
+    font-size: 9.5pt;
+  }
+
+  .project-list-items li {
+    font-size: 9pt;
+  }
+
+  .tech-tags,
+  .skill-tags {
+    gap: 3pt;
+  }
+
+  .tech-tag,
+  .skill-tag {
+    border: 0.75pt solid #9ca3af;
+    background: transparent !important;
+    color: #111827 !important;
+    font-size: 8pt;
+    padding: 1pt 4pt;
+  }
+
+  .impact-grid,
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6pt;
+  }
+
+  .profile-callout {
+    border: 0.75pt solid #d1d5db;
+    background: transparent;
+  }
+
+  .icon-lucide,
+  .lab {
+    display: none;
+  }
+
+  /* Icon-only profile links are redundant with the plain-text list in .print-header */
+  .contact-socials-label,
+  .contact-socials {
+    display: none;
+  }
+
+  /* Avoid orphaned headings and split cards across pages */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
 }

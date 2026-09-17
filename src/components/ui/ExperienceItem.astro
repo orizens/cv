@@ -5,9 +5,12 @@ import ProjectList from "./ProjectList.astro";
 
 interface Props {
   item: ExperienceItem;
+  expanded?: boolean;
+  current?: boolean;
 }
-const { item } = Astro.props;
+const { item, expanded = false, current = false } = Astro.props;
 const {
+  id,
   role,
   date,
   company,
@@ -18,32 +21,65 @@ const {
   clientTitle,
   highlight = false,
 } = item;
+
+const techEntry = projects.find(([name]) => name.toLowerCase() === "tech");
+const techTags = techEntry
+  ? techEntry[1]
+      .replace(/\.$/, "")
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean)
+  : [];
+const otherProjects = projects.filter(
+  ([name]) => name.toLowerCase() !== "tech",
+);
 ---
 
-<div class="item">
-  <section class="header">
-    <h2>{role}</h2>
-    <h4 class="date">
-      <Icon icon="calendar" isLa />{date}
-    </h4>
-  </section>
-  <div class="row">
-    <h4 class="company">
-      <Icon icon="building" isLa />
-      {company}
-    </h4>
-  </div>
-  <p set:html={tagline} />
-  <ProjectList
-    title={clientTitle}
-    items={clients}
-    icon="at"
-    highlight={highlight}
-  />
-  <ProjectList
-    title={projectsTitle}
-    items={projects}
-    icon="code-branch"
-    highlight={highlight}
-  />
-</div>
+<article
+  class:list={["timeline-item", { "is-current": current }]}
+  id={id}
+>
+  <span class="timeline-marker" aria-hidden="true"></span>
+  <details class="timeline-card" open={expanded}>
+    <summary class="timeline-summary">
+      <div class="timeline-summary-main">
+        <h3 class="role-title">{role}</h3>
+        <p class="role-company">
+          <Icon icon="building" isLa />
+          {company}
+        </p>
+      </div>
+      <div class="role-meta">
+        <span class="role-date">
+          <Icon icon="calendar" isLa />
+          {date}
+        </span>
+        <Icon icon="chevron-down" isLa class="timeline-toggle-icon" />
+      </div>
+    </summary>
+    <div class="timeline-body">
+      <p class="role-tagline" set:html={tagline} />
+      <ProjectList
+        title={clientTitle}
+        items={clients}
+        icon="at-sign"
+        highlight={highlight}
+      />
+      <ProjectList
+        title={projectsTitle}
+        items={otherProjects}
+        icon="git-branch"
+        highlight={highlight}
+      />
+      {
+        techTags.length > 0 && (
+          <div class="tech-tags">
+            {techTags.map((tag) => (
+              <span class="tech-tag">{tag}</span>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </details>
+</article>

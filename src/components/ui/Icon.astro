@@ -1,9 +1,104 @@
 ---
+import userIcon from "lucide-static/icons/user.svg?raw";
+import briefcaseIcon from "lucide-static/icons/briefcase.svg?raw";
+import laptopIcon from "lucide-static/icons/laptop.svg?raw";
+import codeIcon from "lucide-static/icons/code.svg?raw";
+import trophyIcon from "lucide-static/icons/trophy.svg?raw";
+import bookIcon from "lucide-static/icons/book.svg?raw";
+import rssIcon from "lucide-static/icons/rss.svg?raw";
+import calendarIcon from "lucide-static/icons/calendar.svg?raw";
+import buildingIcon from "lucide-static/icons/building.svg?raw";
+import atSignIcon from "lucide-static/icons/at-sign.svg?raw";
+import gitBranchIcon from "lucide-static/icons/git-branch.svg?raw";
+import mailIcon from "lucide-static/icons/mail.svg?raw";
+import linkIcon from "lucide-static/icons/link.svg?raw";
+import phoneIcon from "lucide-static/icons/phone.svg?raw";
+import downloadIcon from "lucide-static/icons/download.svg?raw";
+import printerIcon from "lucide-static/icons/printer.svg?raw";
+import externalLinkIcon from "lucide-static/icons/external-link.svg?raw";
+import mapPinIcon from "lucide-static/icons/map-pin.svg?raw";
+import usersIcon from "lucide-static/icons/users.svg?raw";
+import rocketIcon from "lucide-static/icons/rocket.svg?raw";
+import shieldCheckIcon from "lucide-static/icons/shield-check.svg?raw";
+import sparklesIcon from "lucide-static/icons/sparkles.svg?raw";
+import layersIcon from "lucide-static/icons/layers.svg?raw";
+import targetIcon from "lucide-static/icons/target.svg?raw";
+import arrowRightIcon from "lucide-static/icons/arrow-right.svg?raw";
+import arrowDownIcon from "lucide-static/icons/arrow-down.svg?raw";
+import awardIcon from "lucide-static/icons/award.svg?raw";
+import packageIcon from "lucide-static/icons/package.svg?raw";
+import graduationCapIcon from "lucide-static/icons/graduation-cap.svg?raw";
+import globeIcon from "lucide-static/icons/globe.svg?raw";
+import chevronDownIcon from "lucide-static/icons/chevron-down.svg?raw";
+import xIcon from "lucide-static/icons/x.svg?raw";
+import clockIcon from "lucide-static/icons/clock.svg?raw";
+import code2Icon from "lucide-static/icons/code-2.svg?raw";
+import brainIcon from "lucide-static/icons/brain.svg?raw";
+
 interface Props {
   icon: string;
   isLa?: boolean;
+  class?: string;
 }
-const { icon, isLa = false } = Astro.props;
+const { icon, isLa = false, class: className = "" } = Astro.props;
+
+/** Legacy line-awesome names carried over from the data files, mapped to lucide names. */
+const nameMap: Record<string, string> = {
+  envelope: "mail",
+  at: "at-sign",
+  "code-branch": "git-branch",
+  feed: "rss",
+};
+
+const icons: Record<string, string> = {
+  user: userIcon,
+  briefcase: briefcaseIcon,
+  laptop: laptopIcon,
+  code: codeIcon,
+  trophy: trophyIcon,
+  book: bookIcon,
+  rss: rssIcon,
+  calendar: calendarIcon,
+  building: buildingIcon,
+  "at-sign": atSignIcon,
+  "git-branch": gitBranchIcon,
+  mail: mailIcon,
+  link: linkIcon,
+  phone: phoneIcon,
+  download: downloadIcon,
+  printer: printerIcon,
+  "external-link": externalLinkIcon,
+  "map-pin": mapPinIcon,
+  users: usersIcon,
+  rocket: rocketIcon,
+  "shield-check": shieldCheckIcon,
+  sparkles: sparklesIcon,
+  layers: layersIcon,
+  target: targetIcon,
+  "arrow-right": arrowRightIcon,
+  "arrow-down": arrowDownIcon,
+  award: awardIcon,
+  package: packageIcon,
+  "graduation-cap": graduationCapIcon,
+  globe: globeIcon,
+  "chevron-down": chevronDownIcon,
+  x: xIcon,
+  clock: clockIcon,
+  "code-2": code2Icon,
+  brain: brainIcon,
+};
+
+/** Icon names that always render as the lucide glyph, regardless of isLa — used to force the X logo over the retired bird mark. */
+const forceLucide = new Set(["twitter", "x"]);
+
+const resolvedName = nameMap[icon] ?? (forceLucide.has(icon) ? "x" : icon);
+const svg = isLa || forceLucide.has(icon) ? icons[resolvedName] : undefined;
 ---
 
-<span class={`${isLa ? "las" : "lab"} la-${icon}`}></span>
+{
+  svg ? (
+    <span class={`icon-lucide ${className}`} set:html={svg} />
+  ) : (
+    <span class={`lab la-${icon} ${className}`} />
+  )
+}

@@ -1,0 +1,48 @@
+---
+import Icon from "@components/ui/Icon.astro";
+import type { UserProfile } from "../../types/cv";
+
+interface Props {
+  profile: UserProfile;
+}
+const { profile } = Astro.props;
+
+const links = [
+  { href: "#profile", label: "Profile" },
+  { href: "#work-experience", label: "Experience" },
+  { href: "#skills", label: "Skills" },
+  { href: "#contact-cta", label: "Contact" },
+];
+
+const logoSrc = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/logo-white.webp`;
+---
+
+<header class="cv-nav print-hide">
+  <div class="cv-nav-inner">
+    <a href="#main-content" class="cv-nav-mark unstyled-links">
+      <img src={logoSrc} alt={profile.name} class="cv-nav-logo" />
+    </a>
+    <nav class="cv-nav-links" aria-label="Section navigation">
+      {links.map((l) => <a class="cv-nav-link" href={l.href}>{l.label}</a>)}
+    </nav>
+    <div class="cv-nav-actions">
+      <button
+        type="button"
+        class="cv-nav-toggle"
+        aria-expanded="false"
+        aria-controls="cv-nav-mobile"
+        aria-label="Toggle navigation menu"
+      >
+        <Icon icon="chevron-down" isLa />
+      </button>
+    </div>
+  </div>
+  <nav
+    id="cv-nav-mobile"
+    class="cv-nav-mobile"
+    data-open="false"
+    aria-label="Section navigation (mobile)"
+  >
+    {links.map((l) => <a href={l.href}>{l.label}</a>)}
+  </nav>
+</header>

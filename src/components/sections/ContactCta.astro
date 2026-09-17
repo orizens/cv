@@ -1,0 +1,55 @@
+---
+import Icon from "@components/ui/Icon.astro";
+import type { Contact } from "../../types/cv";
+
+interface Props {
+  contact: Contact;
+}
+const { contact } = Astro.props;
+const email = contact.links.find((l) => l.href.startsWith("mailto:"));
+---
+
+<section class="contact-cta print-hide" id="contact-cta">
+  <div class="contact-cta-inner">
+    <h2 class="contact-cta-title">Let's build something reliable.</h2>
+    <p class="contact-cta-subtitle">
+      Open to Principal / Staff Frontend Engineer and UI Architect roles
+      where hands-on architecture, engineering quality, and mentorship
+      matter.
+    </p>
+    <div class="contact-cta-actions">
+      {
+        email && (
+          <a href={email.href} class="btn btn-primary">
+            <Icon icon="mail" isLa />
+            {email.text}
+          </a>
+        )
+      }
+      <button type="button" class="btn btn-secondary" data-print-trigger>
+        <Icon icon="printer" isLa />
+        Print / Save as PDF
+      </button>
+    </div>
+    <div class="contact-cta-list">
+      {
+        contact.phones.map((phone) => (
+          <a href={`tel:${phone.replace(/[^+\d]/g, "")}`}>
+            <Icon icon="phone" isLa />
+            {phone}
+          </a>
+        ))
+      }
+      {
+        contact.links
+          .filter((l) => !l.href.startsWith("mailto:"))
+          .map((l) => (
+            <a href={l.href} target="_blank" rel="noopener noreferrer">
+              <Icon icon={l.icon} isLa={l.isLa} />
+              {l.text}
+            </a>
+          ))
+      }
+    </div>
+  </div>
+</section>

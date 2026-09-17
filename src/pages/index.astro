@@ -1,14 +1,20 @@
 ---
 import CVLayout from "../components/layout/CVLayout.astro";
+import CvNav from "../components/sections/CvNav.astro";
 import Hero from "../components/sections/Hero.astro";
-import Contact from "../components/sections/Contact.astro";
+import CredibilityMetrics from "../components/sections/CredibilityMetrics.astro";
+import PrintHeader from "../components/sections/PrintHeader.astro";
 import Profile from "../components/sections/Profile.astro";
+import ImpactHighlights from "../components/sections/ImpactHighlights.astro";
 import Experience from "../components/sections/Experience.astro";
+import ProjectsSection from "../components/sections/ProjectsSection.astro";
 import Skills from "../components/sections/Skills.astro";
 import Achievements from "../components/sections/Achievements.astro";
 import Publications from "../components/sections/Publications.astro";
 import Education from "../components/sections/Education.astro";
-import Social from "../components/sections/Social.astro";
+import Contact from "../components/sections/Contact.astro";
+import ContactCta from "../components/sections/ContactCta.astro";
+import CvFooter from "../components/sections/CvFooter.astro";
 
 import profile from "../data/profile.json";
 import contact from "../data/contact.json";
@@ -18,6 +24,8 @@ import achievements from "../data/achievements.json";
 import publications from "../data/publications.json";
 import education from "../data/education.json";
 import social from "../data/social.json";
+import metrics from "../data/metrics.json";
+import impact from "../data/impact.json";
 
 import type {
   UserProfile,
@@ -28,33 +36,102 @@ import type {
   Publication,
   EducationItem,
   SocialLink,
+  Metric,
+  ImpactHighlight,
 } from "../types/cv";
 
-const allSkills = [
-  ...(skills as SkillsType).languages,
-  ...(skills as SkillsType).libraries,
-  ...(skills as SkillsType).frameworks,
-  ...(skills as SkillsType).testing,
-  ...(skills as SkillsType).other,
-];
+const experienceData = experience as unknown as ExperienceItem[];
+const achievementsData = achievements as Achievement[];
+const book = achievementsData.find((a) => a.title.includes("Author"));
+const npmModule = achievementsData.find((a) =>
+  a.title.includes("ngx-infinite-scroll"),
+);
 
-const achievements_data = achievements as Achievement[];
-const book = achievements_data.find((a) => a.title.includes("Author"));
-const npmModule = achievements_data.find((a) => a.title.includes("ngx-infinite-scroll"));
+const orizensConsulting = experienceData.find(
+  (e) => e.id === "orizens-consultant",
+);
+const findProject = (name: string) =>
+  orizensConsulting?.projects.find(([n]) => n === name);
+const readm = findProject("ReadM (co-founder)");
+const echoesPlayer = findProject("Echoes Player");
+const orizensNpm = findProject("Orizens Npm Packages");
+
+const featuredProjects = [
+  readm && {
+    role: (profile as UserProfile).cofounding.description,
+    title: (profile as UserProfile).cofounding.label,
+    summary: readm[1],
+    links: [
+      {
+        label: "Visit ReadM",
+        url: readm[2] ?? (profile as UserProfile).cofounding.url,
+      },
+    ],
+  },
+  echoesPlayer && {
+    role: "Personal Project",
+    title: "Echoes Player",
+    summary: echoesPlayer[1],
+    links: echoesPlayer[2]
+      ? [{ label: "Open Project", url: echoesPlayer[2] }]
+      : [],
+  },
+  npmModule && {
+    role: "Open Source Maintainer",
+    title: npmModule.title,
+    summary: `${npmModule.description}. ${npmModule.details?.join(", ") ?? ""}`,
+    links: npmModule.href
+      ? [{ label: "View on npm", url: npmModule.href }]
+      : [],
+  },
+  orizensNpm && {
+    role: "Open Source",
+    title: "Orizens npm Packages",
+    summary: orizensNpm[1],
+    links: orizensNpm[2] ? [{ label: "View on npm", url: orizensNpm[2] }] : [],
+  },
+  book && {
+    role: "Author",
+    title: book.title.replace("Author of ", ""),
+    summary:
+      "Published technical book on reactive state management patterns with Angular and NgRx.",
+    links: book.href ? [{ label: "View Book", url: book.href }] : [],
+  },
+].filter(Boolean) as {
+  role?: string;
+  title: string;
+  summary: string;
+  links?: { label: string; url: string }[];
+}[];
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: (profile as UserProfile).name,
-  jobTitle: (profile as UserProfile).title,
-  description: "Principal / Staff Frontend Engineer and UI Architect with 20+ years of experience in frontend architecture, developer experience, testing infrastructure and technical leadership.",
-  email: (contact as ContactType).links.find((l) => l.href.startsWith("mailto:"))?.text,
+  jobTitle:
+    "Principal / Staff Frontend Engineer, UI Architect & Product Builder",
+  description:
+    "Principal / Staff Frontend Engineer and UI Architect with 20+ years of experience building high-performance web applications, leading engineering quality, and mentoring teams.",
+  email: (contact as ContactType).links.find((l) =>
+    l.href.startsWith("mailto:"),
+  )?.text,
   telephone: (contact as ContactType).phones,
   url: "https://orencv.netlify.app",
   image: `https:${(profile as UserProfile).avatarUrl}`,
-  sameAs: (social as SocialLink[]).map((s) => s.href.startsWith("//") ? `https:${s.href}` : s.href),
-  knowsAbout: allSkills,
-  hasOccupation: (experience as unknown as ExperienceItem[]).map((e) => ({
+  sameAs: (social as SocialLink[]).map((s) =>
+    s.href.startsWith("//") ? `https:${s.href}` : s.href,
+  ),
+  knowsAbout: [
+    ...(skills as SkillsType).languages,
+    ...(skills as SkillsType).libraries,
+    ...(skills as SkillsType).frameworks,
+    ...(skills as SkillsType).testing,
+    ...(skills as SkillsType).other,
+    "Frontend Architecture",
+    "Technical Leadership",
+    "End-to-End Testing (E2E)",
+  ],
+  hasOccupation: experienceData.map((e) => ({
     "@type": "Role",
     roleName: e.role,
     startDate: e.date.split(" - ")[0],
@@ -67,35 +144,71 @@ const jsonLd = {
     name: e.institution,
     description: `${e.degree}, ${e.years}`,
   })),
-  author: book ? [{ "@type": "Book", name: book.title.replace("Author of ", ""), url: book.href }] : undefined,
-  award: npmModule ? [{
-    "@type": "CreativeWork",
-    name: npmModule.title,
-    description: npmModule.description,
-    url: npmModule.href,
-    additionalProperty: npmModule.details ? { "@type": "PropertyValue", name: "usage", value: npmModule.details.join(", ") } : undefined,
-  }] : undefined,
+  author: book
+    ? [
+        {
+          "@type": "Book",
+          name: book.title.replace("Author of ", ""),
+          url: book.href,
+        },
+      ]
+    : undefined,
+  award: npmModule
+    ? [
+        {
+          "@type": "CreativeWork",
+          name: npmModule.title,
+          description: npmModule.description,
+          url: npmModule.href,
+          additionalProperty: npmModule.details
+            ? {
+                "@type": "PropertyValue",
+                name: "usage",
+                value: npmModule.details.join(", "),
+              }
+            : undefined,
+        },
+      ]
+    : undefined,
 };
 ---
 
 <CVLayout jsonLd={jsonLd}>
-  <div class="first-cv-section">
+  <CvNav profile={profile as UserProfile} />
+
+  <main id="main-content">
     <Hero profile={profile as UserProfile} social={social as SocialLink[]} />
-    <Contact contact={contact as ContactType} />
-  </div>
+    <CredibilityMetrics metrics={metrics as Metric[]} />
+    <PrintHeader
+      profile={profile as UserProfile}
+      contact={contact as ContactType}
+      social={social as SocialLink[]}
+    />
 
-  <div class="cv-contents">
-    <section class="profile">
-      <Profile profile={profile as UserProfile} />
-      <Experience experience={experience as unknown as ExperienceItem[]} />
-    </section>
+    <div class="cv-body">
+      <div class="cv-grid">
+        <div class="cv-main">
+          <Profile profile={profile as UserProfile} />
+          <ImpactHighlights impact={impact as ImpactHighlight[]} />
+          <Experience experience={experienceData} />
+          <ProjectsSection projects={featuredProjects} />
+        </div>
 
-    <section class="skills">
-      <Skills skills={skills as SkillsType} />
-      <Achievements achievements={achievements as Achievement[]} />
-      <Publications publications={publications as Publication[]} />
-      <Social social={social as SocialLink[]} />
-      <Education education={education as EducationItem[]} />
-    </section>
-  </div>
+        <aside class="cv-aside">
+          <Contact
+            contact={contact as ContactType}
+            social={social as SocialLink[]}
+          />
+          <Skills skills={skills as SkillsType} />
+          <Achievements achievements={achievementsData} />
+          <Publications publications={publications as Publication[]} />
+          <Education education={education as EducationItem[]} />
+        </aside>
+      </div>
+    </div>
+
+    <ContactCta contact={contact as ContactType} />
+  </main>
+
+  <CvFooter />
 </CVLayout>

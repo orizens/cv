@@ -1,0 +1,23 @@
+[
+  {
+    "icon": "layers",
+    "title": "Frontend Modernization",
+    "summary": "Hands-on migration from Angular 1 to React, Redux Toolkit & RTK-Query at Rivery — personally designing the architecture and integrating Chakra UI with the backend team.",
+    "signal": "Reduced dev & prod build times",
+    "experienceId": "rivery"
+  },
+  {
+    "icon": "shield-check",
+    "title": "Quality at Scale",
+    "summary": "Built E2E and BDD test infrastructure from the ground up with Playwright and Cypress, coaching teams on TDD while personally writing production coverage.",
+    "signal": "230+ E2E scenarios shipped",
+    "experienceId": "rivery"
+  },
+  {
+    "icon": "package",
+    "title": "Open-Source Influence",
+    "summary": "Author of Orizens npm packages for JavaScript and Angular development, adopted across the ecosystem and downloaded over a million times.",
+    "signal": "Used by Google, Microsoft, Amazon, Disney, SAP",
+    "experienceId": "orizens-consultant"
+  }
+]

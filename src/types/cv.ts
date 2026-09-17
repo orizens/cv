@@ -42,6 +42,7 @@ export interface Skills {
 export type ProjectEntry = [string, string, string?];
 
 export interface ExperienceItem {
+  id: string;
   role: string;
   date: string;
   company: string;
@@ -72,4 +73,19 @@ export interface Achievement {
   href?: string;
   badge?: string;
   details?: string[];
+}
+
+export interface Metric {
+  value: string;
+  label: string;
+  description: string;
+  icon: string;
+}
+
+export interface ImpactHighlight {
+  icon: string;
+  title: string;
+  summary: string;
+  signal?: string;
+  experienceId: string;
 }

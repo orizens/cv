@@ -1,22 +1,25 @@
 ---
-import SectionTitle from "../ui/SectionTitle.astro";
 import type { UserProfile } from "../../types/cv";
 
 interface Props {
   profile: UserProfile;
 }
 const { profile } = Astro.props;
+
+const paragraphs = profile.summary
+  .split(/<br\s*\/?>/i)
+  .map((p) => p.trim())
+  .filter(Boolean);
 ---
 
-<div class="cv-section">
-  <SectionTitle icon="user" title="Profile" />
-  <div class="item">
-    <p set:html={profile.summary} />
-    <p>
-      {profile.cofounding.description}{" "}
-      <a href={profile.cofounding.url} target="_blank"
-        >"{profile.cofounding.label}"</a
-      >
-    </p>
+<section class="profile-section" id="profile">
+  <span class="section-eyebrow">Profile</span>
+  <h2 class="section-heading">Summary</h2>
+  {paragraphs.map((p) => <p set:html={p} />)}
+  <div class="profile-callout">
+    {profile.cofounding.description}{" "}
+    <a href={profile.cofounding.url} target="_blank" rel="noopener noreferrer"
+      >{profile.cofounding.label}</a
+    >
   </div>
-</div>
+</section>

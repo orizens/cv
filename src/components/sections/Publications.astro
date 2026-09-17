@@ -1,21 +1,33 @@
 ---
-import SectionTitle from '../ui/SectionTitle.astro';
-import type { Publication } from '../../types/cv';
+import Icon from "@components/ui/Icon.astro";
+import type { Publication } from "../../types/cv";
 
 interface Props {
   publications: Publication[];
 }
 const { publications } = Astro.props;
 ---
-<div class="cv-section">
-  <SectionTitle icon="book" title="Publications" />
-  <div class="item">
-    {publications.map(({ href, image, imageAlt }) => (
-      <div class="pub-item with-media">
-        <a href={href} target="_blank">
-          <img src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/${image}`} class="media" alt={imageAlt} />
+
+<div class="card">
+  <h2 class="card-title">
+    <Icon icon="book" isLa />
+    Publication
+  </h2>
+  {
+    publications.map(({ href, image, imageAlt, title }) => (
+      <div class="publication-item">
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <img
+            src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/${image}`}
+            alt={imageAlt}
+          />
         </a>
+        <div>
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
+        </div>
       </div>
-    ))}
-  </div>
+    ))
+  }
 </div>

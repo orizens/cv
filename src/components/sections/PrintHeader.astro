@@ -1,0 +1,31 @@
+---
+import type { UserProfile, Contact, SocialLink } from "../../types/cv";
+
+interface Props {
+  profile: UserProfile;
+  contact: Contact;
+  social: SocialLink[];
+}
+const { profile, contact, social } = Astro.props;
+const email = contact.links.find((l) => l.href.startsWith("mailto:"));
+const otherLinks = contact.links.filter((l) => l !== email);
+---
+
+<header class="print-header print-only">
+  <div class="print-header-row">
+    <div>
+      <h1>{profile.name}</h1>
+      <p class="print-role">
+        Principal / Staff Frontend Engineer — UI Architect &amp; Product
+        Builder
+      </p>
+    </div>
+    <img src={profile.avatarUrl} alt="" class="print-portrait" />
+  </div>
+  <ul class="print-contact-list">
+    {email && <li>{email.text}</li>}
+    {contact.phones.map((phone) => <li>{phone}</li>)}
+    {otherLinks.map((l) => <li>{l.href.replace(/^\/\//, "")}</li>)}
+    {social.map((s) => <li>{s.href.replace(/^\/\//, "")}</li>)}
+  </ul>
+</header>

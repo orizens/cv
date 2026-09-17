@@ -1,0 +1,35 @@
+---
+import Icon from "@components/ui/Icon.astro";
+import type { ImpactHighlight } from "../../types/cv";
+
+interface Props {
+  impact: ImpactHighlight[];
+}
+const { impact } = Astro.props;
+---
+
+<section class="impact-section" aria-labelledby="impact-heading">
+  <span class="section-eyebrow">Selected Engineering Impact</span>
+  <h2 class="section-heading" id="impact-heading">
+    <Icon icon="target" isLa />
+    Where I've Made a Difference
+  </h2>
+  <div class="impact-grid">
+    {
+      impact.map((item) => (
+        <article class="impact-card">
+          <span class="impact-icon">
+            <Icon icon={item.icon} isLa />
+          </span>
+          <h3 class="impact-title">{item.title}</h3>
+          <p class="impact-summary">{item.summary}</p>
+          {item.signal && <p class="impact-signal">{item.signal}</p>}
+          <a class="impact-link" href={`#${item.experienceId}`}>
+            See in experience
+            <Icon icon="arrow-right" isLa />
+          </a>
+        </article>
+      ))
+    }
+  </div>
+</section>

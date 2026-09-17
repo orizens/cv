@@ -1,0 +1,34 @@
+---
+import Icon from "./Icon.astro";
+
+interface ProjectLink {
+  label: string;
+  url: string;
+}
+
+interface Props {
+  role?: string;
+  title: string;
+  summary: string;
+  links?: ProjectLink[];
+}
+const { role, title, summary, links = [] } = Astro.props;
+---
+
+<article class="project-card">
+  {role && <span class="project-role">{role}</span>}
+  <h3 class="project-title">{title}</h3>
+  <p class="project-summary" set:html={summary} />
+  {
+    links.length > 0 && (
+      <div class="project-links">
+        {links.map((l) => (
+          <a href={l.url} target="_blank" rel="noopener noreferrer">
+            {l.label}
+            <Icon icon="external-link" isLa />
+          </a>
+        ))}
+      </div>
+    )
+  }
+</article>

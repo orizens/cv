@@ -1,0 +1,27 @@
+---
+import Icon from "@components/ui/Icon.astro";
+import ProjectCard from "@components/ui/ProjectCard.astro";
+
+interface ProjectView {
+  role?: string;
+  title: string;
+  summary: string;
+  links?: { label: string; url: string }[];
+}
+
+interface Props {
+  projects: ProjectView[];
+}
+const { projects } = Astro.props;
+---
+
+<section aria-labelledby="projects-heading">
+  <span class="section-eyebrow">Personal Projects &amp; Open Source</span>
+  <h2 class="section-heading" id="projects-heading">
+    <Icon icon="rocket" isLa />
+    Projects &amp; Open Source
+  </h2>
+  <div class="projects-grid">
+    {projects.map((p) => <ProjectCard {...p} />)}
+  </div>
+</section>

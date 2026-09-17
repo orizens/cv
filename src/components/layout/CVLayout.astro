@@ -11,9 +11,9 @@ interface Props {
 }
 
 const {
-  title = "Oren Farhi | Principal / Staff Frontend Engineer",
-  description = "Oren Farhi - Principal / Staff Frontend Engineer and UI Architect with 20+ years of experience in frontend architecture, TypeScript, React, testing infrastructure and technical leadership.",
-  keywords = "Oren Farhi, Principal Engineer, Staff Engineer, Frontend Architect, UI Architect, React, TypeScript, Playwright, Frontend Architecture",
+  title = "Oren Farhi | Principal Frontend Engineer & UI Architect",
+  description = "Oren Farhi — Principal / Staff Frontend Engineer, UI Architect & Product Builder. 20+ years building high-performance React & TypeScript systems, leading engineering quality, and mentoring teams.",
+  keywords = "cv, resume, front end, architect, react, typescript, tech lead, javascript",
   jsonLd,
 } = Astro.props;
 ---
@@ -35,15 +35,53 @@ const {
     <PlanetIcon />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+    />
     {
-      jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+      jsonLd && (
+        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+      )
     }
   </head>
   <body>
-    <div class="site-shell">
-      <slot />
-    </div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <slot />
+    <script>
+      const nav = document.querySelector(".cv-nav");
+      if (nav) {
+        const toggleNavBg = () => {
+          nav.classList.toggle("is-scrolled", window.scrollY > 40);
+        };
+        toggleNavBg();
+        window.addEventListener("scroll", toggleNavBg, { passive: true });
+      }
+
+      const navToggle = document.querySelector(".cv-nav-toggle");
+      const navPanel = document.querySelector(".cv-nav-mobile");
+      if (navToggle && navPanel) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navPanel.getAttribute("data-open") === "true";
+          navPanel.setAttribute("data-open", String(!isOpen));
+          navToggle.setAttribute("aria-expanded", String(!isOpen));
+        });
+        navPanel.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navPanel.setAttribute("data-open", "false");
+            navToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+
+      const printTriggers = document.querySelectorAll("[data-print-trigger]");
+      printTriggers.forEach((btn) => {
+        btn.addEventListener("click", () => window.print());
+      });
+    </script>
   </body>
 </html>

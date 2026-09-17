@@ -7,27 +7,73 @@ interface Props {
   social: SocialLink[];
 }
 const { profile, social } = Astro.props;
-const [firstName, lastName] = profile.name.split(" ");
+
+const primarySocial = social.filter((s) =>
+  ["github-alt", "linkedin"].includes(s.icon),
+);
+
+const heroBg = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/header-new.png`;
+const avatarImg = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/avatar.png`;
+
+const nameParts = profile.name.trim().split(/\s+/);
+const lastName = nameParts.pop();
+const firstNames = nameParts.join(" ");
 ---
 
-<div class="person">
-  <img src={profile.avatarUrl} alt={profile.name} />
-  <h1 class="my-name"><span>{firstName}</span>{lastName}</h1>
-  <h2>{profile.title}</h2>
-  <ul class="social-icons print-hide list-unstyled">
-    {
-      social.map(({ href, icon, isLa }) => (
-        <li>
-          <a
-            href={href}
-            class="unstyled-links"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon icon={icon} isLa={isLa} />
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-</div>
+<section
+  class="hero print-hide"
+  id="hero"
+  style={`background-image: url(${heroBg});`}
+>
+  <span class="hero-starfield" aria-hidden="true"></span>
+  <span class="hero-glow" aria-hidden="true"></span>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Online Résumé</p>
+      <h1 class="hero-name">
+        {firstNames && `${firstNames} `}<span class="brand-text"
+          >{lastName}</span
+        >
+      </h1>
+      <p class="hero-title">Principal / Staff Frontend Engineer</p>
+      <p class="hero-subtitle">UI Architect &amp; Product Builder</p>
+      <p class="hero-lede">
+        I build resilient frontend systems and lead the engineering quality
+        behind them — hands-on architecture, React &amp; TypeScript at scale,
+        and testing practices that let teams ship with confidence.
+      </p>
+      <div class="hero-actions">
+        <a href="#work-experience" class="btn btn-primary">
+          <Icon icon="arrow-down" isLa />
+          View Experience
+        </a>
+        <button type="button" class="btn btn-secondary" data-print-trigger>
+          <Icon icon="printer" isLa />
+          Print / Save as PDF
+        </button>
+      </div>
+      <ul class="hero-social list-unstyled">
+        {
+          primarySocial.map(({ href, icon, text }) => (
+            <li>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={text}
+              >
+                <Icon icon={icon} />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-avatar-wrap">
+        <span class="hero-avatar-glow" aria-hidden="true"></span>
+        <img class="hero-avatar" src={avatarImg} alt="" loading="eager" />
+      </div>
+    </div>
+  </div>
+</section>

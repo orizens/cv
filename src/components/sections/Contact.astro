@@ -1,15 +1,20 @@
 ---
 import Icon from "../ui/Icon.astro";
-import type { Contact } from "../../types/cv";
+import type { Contact, SocialLink } from "../../types/cv";
 
 interface Props {
   contact: Contact;
+  social: SocialLink[];
 }
-const { contact } = Astro.props;
+const { contact, social } = Astro.props;
 ---
 
-<div id="contact-info">
-  <ul class="list-unstyled" id="contact-list">
+<div class="card" id="contact-info">
+  <h2 class="card-title">
+    <Icon icon="mail" isLa />
+    Contact
+  </h2>
+  <ul class="contact-card-list list-unstyled" id="contact-list">
     {
       contact.links.map(({ href, icon, text, isLa }) => (
         <li>
@@ -25,6 +30,24 @@ const { contact } = Astro.props;
         <li>
           <Icon icon="phone" isLa />
           <strong>{phone}</strong>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="contact-socials-label">Profiles</p>
+  <ul class="contact-socials list-unstyled">
+    {
+      social.map(({ href, icon, text, isLa }) => (
+        <li>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={text}
+            title={text}
+          >
+            <Icon icon={icon} isLa={isLa} />
+          </a>
         </li>
       ))
     }

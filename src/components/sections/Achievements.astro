@@ -1,5 +1,5 @@
 ---
-import SectionTitle from "../ui/SectionTitle.astro";
+import Icon from "@components/ui/Icon.astro";
 import type { Achievement } from "../../types/cv";
 
 interface Props {
@@ -8,37 +8,34 @@ interface Props {
 const { achievements } = Astro.props;
 ---
 
-<div class="cv-section">
-  <SectionTitle icon="trophy" title="Achievements" />
-  <div class="item">
-    <ul class="achievements-list text-sm">
-      {
-        achievements.map(({ title, description, href, badge, details }) => (
-          <li class="achievement-item mb-4">
-            {href ? (
-              <a href={href} class="unstyled-links" target="_blank">
-                <strong>{title}</strong>
-              </a>
-            ) : (
+<div class="card">
+  <h2 class="card-title">
+    <Icon icon="award" isLa />
+    Achievements
+  </h2>
+  <ul class="achievements-list text-sm list-unstyled">
+    {
+      achievements.map(({ title, description, href, badge, details }) => (
+        <li class="achievement-item">
+          {href ? (
+            <a href={href} class="unstyled-links" target="_blank" rel="noopener noreferrer">
               <strong>{title}</strong>
-            )}
-            {description && (
-              <div>
-                <em>{description}</em>
-              </div>
-            )}
-            {badge && (
-              <div class="achievement-badge mt-2">
-                <img src={badge} alt="npm downloads" class="inline-block" />
-              </div>
-            )}
-            {details &&
-              details.map((detail) => (
-                <div class="achievement-detail mt-3">{detail}</div>
-              ))}
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+            </a>
+          ) : (
+            <strong>{title}</strong>
+          )}
+          {description && <em>{description}</em>}
+          {badge && (
+            <div class="achievement-badge mt-2">
+              <img src={badge} alt="npm downloads" class="inline-block" />
+            </div>
+          )}
+          {details &&
+            details.map((detail) => (
+              <div class="achievement-detail mt-2">{detail}</div>
+            ))}
+        </li>
+      ))
+    }
+  </ul>
 </div>

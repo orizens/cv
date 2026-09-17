@@ -1,0 +1,28 @@
+---
+import Icon from "@components/ui/Icon.astro";
+import type { Metric } from "../../types/cv";
+
+interface Props {
+  metrics: Metric[];
+}
+const { metrics } = Astro.props;
+---
+
+<section class="metrics print-hide" aria-label="Credibility metrics">
+  <div class="metrics-grid">
+    {
+      metrics.map((m) => (
+        <div class="metric">
+          <span class="metric-icon">
+            <Icon icon={m.icon} isLa />
+          </span>
+          <div class="metric-header">
+            <p class="metric-value">{m.value}</p>
+            <p class="metric-label">{m.label}</p>
+          </div>
+          <p class="metric-description">{m.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

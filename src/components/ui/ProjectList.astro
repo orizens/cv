@@ -11,24 +11,28 @@ interface Props {
 const { title, items, icon, highlight = false } = Astro.props;
 
 function renderLabel(name: string, link?: string) {
-  return link ? `<a href="${link}">${name}</a>` : name;
+  return link
+    ? `<a href="${link}" target="_blank" rel="noopener noreferrer">${name}</a>`
+    : name;
 }
 ---
 
 {
   title && items.length > 0 && (
     <div>
-      <h3>{title}</h3>
-      <ul class="list-unstyled">
+      <h4 class="project-list-title">{title}</h4>
+      <ul class="project-list-items list-unstyled">
         {items.map(([name, desc, link]) => (
           <li>
             <Icon icon={icon} isLa />
-            {highlight ? (
-              <span class="item-client" set:html={renderLabel(name, link)} />
-            ) : (
-              name
-            )}{" "}
-            - <span set:html={desc} />
+            <span>
+              {highlight ? (
+                <span class="item-client" set:html={renderLabel(name, link)} />
+              ) : (
+                <strong class="item-client">{name}</strong>
+              )}{" "}
+              — <span set:html={desc} />
+            </span>
           </li>
         ))}
       </ul>
