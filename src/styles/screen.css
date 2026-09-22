@@ -733,6 +733,8 @@ strong {
   align-items: center;
   gap: 0.6rem;
   margin-bottom: 1.5rem;
+  position: sticky;
+  top: 60px;
 }
 
 .section-heading .icon-lucide,
@@ -903,6 +905,8 @@ strong {
 .timeline-item {
   position: relative;
   padding-left: 2rem;
+  position: sticky;
+  top: 60px;
 }
 
 .timeline-marker {
