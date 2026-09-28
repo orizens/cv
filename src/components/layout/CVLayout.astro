@@ -16,6 +16,13 @@ const {
   keywords = "cv, resume, front end, architect, react, typescript, tech lead, javascript",
   jsonLd,
 } = Astro.props;
+
+// Same og image as orizens.com. The CV is served from orencv.netlify.app
+// (orizens.com/cv redirects there), so link previews need that absolute host.
+const ogImage = new URL(
+  `${import.meta.env.BASE_URL}/images/og-image.webp`.replace(/\/+/g, "/"),
+  "https://orencv.netlify.app",
+).href;
 ---
 
 <html lang="en">
@@ -31,6 +38,11 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="profile" />
     <meta property="og:site_name" content="Oren Farhi" />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <PlanetIcon />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
