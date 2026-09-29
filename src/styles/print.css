@@ -86,7 +86,7 @@
 
   .cv-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10pt;
     align-items: start;
   }
@@ -99,13 +99,17 @@
 
   .cv-main,
   .cv-aside {
-    gap: 10pt;
+    gap: 16pt;
   }
 
   .section-heading {
-    font-size: 12.5pt;
-    margin-bottom: 6pt;
-    color: #111827 !important;
+    font-weight: 700;
+    font-size: 14pt;
+    margin: 14pt 0 6pt;
+    padding-bottom: 3pt;
+    border-bottom: 1.5pt solid rgb(24, 40, 60);
+    color: rgb(24, 40, 60) !important;
+    break-after: avoid;
   }
 
   .section-eyebrow {
@@ -117,19 +121,28 @@
   .project-card,
   .timeline-card {
     box-shadow: none !important;
-    border: 0.75pt solid #d1d5db !important;
+    border: 0.75pt solid #9ca3af !important;
     border-radius: 4pt;
     break-inside: avoid;
     page-break-inside: avoid;
   }
+  .impact-card {
+    padding: 10pt;
+  }
 
   .card {
     padding: 8pt 10pt;
+    border-top: 2.5pt solid rgb(24, 40, 60) !important;
   }
 
   .card-title {
-    font-size: 9pt;
+    font-weight: 700;
+    font-size: 10pt;
     margin-bottom: 6pt;
+    padding-bottom: 3pt;
+    border-bottom: 1pt solid rgb(24, 40, 60);
+    color: rgb(24, 40, 60) !important;
+    break-after: avoid;
   }
 
   /* Expand every collapsed role for print */
@@ -222,5 +235,13 @@
   h2,
   h3 {
     break-after: avoid;
+  }
+
+  #contact-info {
+    display: none;
+  }
+
+  span.impact-icon {
+    display: none;
   }
 }

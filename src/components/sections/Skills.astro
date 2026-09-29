@@ -8,15 +8,22 @@ interface Props {
 const { skills } = Astro.props;
 
 const libraryNames = new Set(skills.libraries);
-const architectureLibs = ["Redux Toolkit", "NgRx"].filter((s) =>
-  libraryNames.has(s),
-);
+const architectureLibs = [].filter((s) => libraryNames.has(s));
 const frameworkLibs = skills.libraries.filter(
   (s) => !architectureLibs.includes(s),
 );
 
 const groups: { label: string; items: string[] }[] = [
-  { label: "Architecture", items: ["Architecture", ...architectureLibs] },
+  {
+    label: "Architecture",
+    items: [
+      "TDD",
+      "Design Systems",
+      "Modular",
+      "Micro Frontends",
+      ...architectureLibs,
+    ],
+  },
   { label: "Core Technologies", items: skills.languages },
   {
     label: "Frameworks & Platforms",
