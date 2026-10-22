@@ -10,7 +10,7 @@
 - GitHub: https://github.com/orizens
 - LinkedIn: https://linkedin.com/in/orenfarhi/
 - Twitter: https://twitter.com/@orizens
-- Phone: +1 (646) 753 4899 | +1 (551) 246 0056
+- Phone: +1 (646) 753 4899
 
 ## Summary
 
@@ -18,20 +18,20 @@ Seasoned front-end engineer specialising in software architecture, TypeScript, R
 
 ## Experience
 
-**Senior & Lead UI Engineer — ZScaler** (2026 – Present)
-Hands-on architect and implementer of scalable UI solutions using React, TypeScript, and Playwright, while establishing TDD standards and upskilling 5+ engineers through direct mentorship.
+**Senior & Lead UI Engineer — ZScaler** (Jan 2026 – Present)
+Hands-on architect of scalable UI solutions with React, TypeScript and Playwright; set TDD standards and mentor 5+ engineers.
 Tech: React, Vite, MUI, TypeScript, Tanstack-Table, GraphQL, Tanstack-Query, Vitest, Playwright, CSS, GitHub Actions.
 
 **Lead UI Engineer — HighRes BioSolutions** (2024 – 2026)
-Hands-on lead engineer driving UI excellence by implementing BDD with Playwright, reducing UI production bugs, and mentoring team members on React & TypeScript best practices.
+Reduced UI production bugs by introducing BDD with Playwright; mentored the team and established React and TypeScript best practices.
 Tech: React, Vite, TypeScript, Tailwind, Tanstack-Query, CSS, Playwright.
 
 **CTO & Lead Software Engineer — AKTO SPACE** (2023 – 2024)
-Advised on tech direction and led hands-on development of a desktop application from start to finish with Electron.js and React.
+Led development of the desktop application from start to finish with Electron.js and React, and advised on technical direction as CTO.
 Tech: React, TypeScript, CSS, ChakraUI, Electron.js, Node.js.
 
 **Senior Front End Tech Lead / Engineer — Rivery** (2022 – 2023)
-Hands-on lead personally driving the migration from Angular 1 to React/Redux/RTK-Query, designing the architecture, and integrating ChakraUI.
+Led the migration from Angular 1 to React, Redux and RTK Query; wrote 230+ Cypress user scenarios; mentored 4 engineers; cut dev build time by [X]% and prod build time by [Y]%.
 Tech: React, RTK Toolkit, RTK Query, TypeScript, Chakra UI, SCSS, Cypress, Testing Library, StoryBook, GitHub Actions.
 
 **Head of Front End Engineering / Tech Lead — 1Care.ai** (2020 – 2022)
@@ -43,7 +43,7 @@ Developed web applications focused on reusability and testing with React, Angula
 Notable client: Lifion — React, Node.js, Jest, Enzyme, Testing Library, TypeScript, Sass.
 
 **Senior Front End Engineer & Consultant — Orizens (Self-Owned)** (2016 – 2018)
-Built web applications with React, Angular, Redux, NgRx, TypeScript. Personal projects include ReadM, Echoes Player, and open-source npm packages used by Google, Microsoft, Amazon, Disney, and SAP.
+Built web applications with React, Angular, Redux, NgRx, TypeScript. Personal projects include ReadM, Echoes Player, and open-source npm packages (1.3M+ monthly downloads; used by Google, Microsoft, Amazon, Disney and SAP).
 
 **Senior Front End Engineer, Front End Architect — Tikal Knowledge** (2010 – 2016)
 Developed web applications with Angular, Backbone, React, Node.js. Led Tikal's JavaScript Group, ran workshops, and consulted for enterprise customers.
@@ -52,15 +52,16 @@ Developed web applications with Angular, Backbone, React, Node.js. Led Tikal's J
 Developed web GUI for internal applications using OOP JavaScript, Ajax, HTML, CSS, XML & XSLT. Refactored UI to a component-based architecture.
 
 **Web Developer & Designer Freelance — Orizens.com** (2005 – 2010)
-Designed and developed websites using HTML, JS, CSS, PHP, WordPress, Flash & ActionScript.
+Designed and developed websites using HTML, JS, CSS, PHP and WordPress.
 
 ## Skills
 
 Languages: TypeScript, JavaScript, CSS
-Libraries: React, Tanstack-Query, React Native, Redux Toolkit, Chakra UI, PandaCSS, Tailwind, SASS, NgRx
-Frameworks: Firebase, Astro, Angular, Electron, Node.js
-Testing: Playwright, Vitest, Jest, Cypress, Testing Library
-Other: Architecture, UX, Git, GitHub, GitHub Actions
+Libraries: React, React Native, TanStack Query, Redux Toolkit, NgRx, Tailwind, Chakra UI
+Frameworks: Angular, Electron, Node.js
+Testing: Playwright, Cypress, Vitest, Jest, Testing Library
+AI-assisted engineering: Claude Code, GitHub Copilot
+Other: GitHub Actions, Technical Leadership, Mentoring, Architecture
 
 ## Education
 

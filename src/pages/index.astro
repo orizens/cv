@@ -26,6 +26,7 @@ import education from "../data/education.json";
 import social from "../data/social.json";
 import metrics from "../data/metrics.json";
 import impact from "../data/impact.json";
+import projects from "../data/projects.json";
 
 import type {
   UserProfile,
@@ -47,57 +48,7 @@ const npmModule = achievementsData.find((a) =>
   a.title.includes("ngx-infinite-scroll"),
 );
 
-const orizensConsulting = experienceData.find(
-  (e) => e.id === "orizens-consultant",
-);
-const findProject = (name: string) =>
-  orizensConsulting?.projects.find(([n]) => n === name);
-const readm = findProject("ReadM (co-founder)");
-const echoesPlayer = findProject("Echoes Player");
-const orizensNpm = findProject("Orizens Npm Packages");
-
-const featuredProjects = [
-  readm && {
-    role: (profile as UserProfile).cofounding.description,
-    title: (profile as UserProfile).cofounding.label,
-    summary: readm[1],
-    links: [
-      {
-        label: "Visit ReadM",
-        url: readm[2] ?? (profile as UserProfile).cofounding.url,
-      },
-    ],
-  },
-  echoesPlayer && {
-    role: "Personal Project",
-    title: "Echoes Player",
-    summary: echoesPlayer[1],
-    links: echoesPlayer[2]
-      ? [{ label: "Open Project", url: echoesPlayer[2] }]
-      : [],
-  },
-  npmModule && {
-    role: "Open Source Maintainer",
-    title: npmModule.title,
-    summary: `${npmModule.description}. ${npmModule.details?.join(", ") ?? ""}`,
-    links: npmModule.href
-      ? [{ label: "View on npm", url: npmModule.href }]
-      : [],
-  },
-  orizensNpm && {
-    role: "Open Source",
-    title: "Orizens npm Packages",
-    summary: orizensNpm[1],
-    links: orizensNpm[2] ? [{ label: "View on npm", url: orizensNpm[2] }] : [],
-  },
-  book && {
-    role: "Author",
-    title: book.title.replace("Author of ", ""),
-    summary:
-      "Published technical book on reactive state management patterns with Angular and NgRx.",
-    links: book.href ? [{ label: "View Book", url: book.href }] : [],
-  },
-].filter(Boolean) as {
+const featuredProjects = projects as {
   role?: string;
   title: string;
   summary: string;

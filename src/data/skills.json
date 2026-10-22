@@ -1,46 +1,38 @@
 {
   "languages": [
-    "Typescript",
-    "Javascript",
+    "TypeScript",
+    "JavaScript",
     "CSS"
   ],
   "libraries": [
     "React",
-    "Tanstack-Query",
-    "Tailwind",
-    "Shad-CN",
     "React Native",
+    "TanStack Query",
     "Redux Toolkit",
-    "Chakra UI",
-    "PandaCss",
-    "SASS",
     "NgRx",
-    "Storybook"
+    "Tailwind",
+    "Chakra UI"
   ],
   "ai": [
     "Claude Code",
-    "Github Copilot",
-    "Gemini"
+    "GitHub Copilot"
   ],
   "frameworks": [
-    "Firebase",
-    "Astro",
     "Angular",
     "Electron",
     "Node.js"
   ],
   "testing": [
     "Playwright",
+    "Cypress",
     "Vitest",
     "Jest",
-    "Cypress",
     "Testing Library"
   ],
   "other": [
-    "Github",
-    "Github Actions",
-    "UX",
-    "Architecture",
-    "Git"
+    "GitHub Actions",
+    "Technical Leadership",
+    "Mentoring",
+    "Architecture"
   ]
 }

@@ -16,8 +16,8 @@
   body {
     background: #fff !important;
     color: #111827 !important;
-    font-size: 10.5pt;
-    line-height: 1.45;
+    font-size: 10pt;
+    line-height: 1.4;
   }
 
   a {
@@ -33,14 +33,13 @@
     display: block !important;
   }
 
-  /* Compact identity header replaces the cosmic hero */
+  /* Plain, ink-friendly identity header; no photo (parsers and printers both prefer text) */
   .print-header {
-    background: rgb(24, 40, 60) !important;
-    color: var(--on-night) !important;
-    margin: 0 0 10pt;
-    padding: 10pt 12pt;
-    border-radius: 4pt;
-    border-bottom: none;
+    background: transparent !important;
+    color: #111827 !important;
+    margin: 0 0 8pt;
+    padding: 0 0 6pt;
+    border-bottom: 1.5pt solid rgb(24, 40, 60);
   }
 
   .print-header-row {
@@ -52,36 +51,39 @@
 
   .print-header h1 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 20pt;
+    font-size: 22pt;
     margin: 0 0 2pt;
-    color: var(--on-night) !important;
+    color: #111827 !important;
   }
 
   .print-role {
-    font-size: 10pt;
-    color: var(--on-night-muted) !important;
+    font-size: 10.5pt;
+    color: #374151 !important;
   }
 
   .print-portrait {
-    width: 48pt;
-    height: 48pt;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1.5pt solid rgba(255, 255, 255, 0.4);
+    display: none;
   }
 
   .print-contact-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 4pt 14pt;
+    gap: 2pt 14pt;
     margin-top: 6pt;
-    font-size: 8.5pt;
-    color: var(--on-night-muted) !important;
+    font-size: 9pt;
+    color: #111827 !important;
   }
 
   .cv-body {
     padding: 0;
     max-width: 100%;
+  }
+
+  /* Block flow (not grid/flex) lets sections split across pages instead of jumping whole */
+  .cv-grid,
+  .cv-main,
+  .cv-aside {
+    display: block !important;
   }
 
   .cv-grid {
@@ -131,6 +133,7 @@
   }
 
   .card {
+    margin-bottom: 8pt;
     padding: 8pt 10pt;
     border-top: 2.5pt solid rgb(24, 40, 60) !important;
   }
@@ -210,8 +213,12 @@
 
   .impact-grid,
   .projects-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 6pt;
+  }
+
+  .impact-link {
+    display: none;
   }
 
   .profile-callout {
@@ -243,5 +250,45 @@
 
   span.impact-icon {
     display: none;
+  }
+
+  /* One home per fact: the Projects section, Publication card and print header already cover these */
+  .card:has(.achievements-list),
+  .profile-callout,
+  .impact-section {
+    display: none !important;
+  }
+
+  /* Keep each role together with its heading and bullets */
+  .timeline-card {
+    break-inside: avoid;
+  }
+
+  .impact-signal {
+    font-weight: 700;
+  }
+
+  .timeline-list {
+    display: block;
+  }
+
+  /* Flat role entries: a hairline instead of a box saves roughly a page */
+  .timeline-card {
+    border: none !important;
+    border-bottom: 0.5pt solid #d1d5db !important;
+    border-radius: 0;
+    margin-bottom: 4pt;
+  }
+
+  .timeline-summary {
+    padding: 2pt 0;
+  }
+
+  .timeline-body {
+    padding: 0 0 4pt;
+  }
+
+  .section-heading {
+    margin-top: 10pt;
   }
 }

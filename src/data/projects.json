@@ -1,0 +1,35 @@
+[
+  {
+    "role": "Co-Founder & Lead Software Engineer",
+    "title": "ReadM",
+    "summary": "Automated reading-fluency assessment for K-4 and ESL/ELL students, giving teachers live reports and up-to-date insights.",
+    "links": [
+      {
+        "label": "Visit ReadM",
+        "url": "https://readm.app"
+      }
+    ]
+  },
+  {
+    "role": "Open Source Maintainer",
+    "title": "ngx-infinite-scroll & Orizens npm packages",
+    "summary": "1.3M+ monthly downloads; used by Google, Microsoft, Amazon, Disney and SAP.",
+    "links": [
+      {
+        "label": "View on npm",
+        "url": "https://www.npmjs.com/package/ngx-infinite-scroll"
+      }
+    ]
+  },
+  {
+    "role": "Personal Project",
+    "title": "Echoes Player",
+    "summary": "Free, open-source media player built on the YouTube API with Angular.",
+    "links": [
+      {
+        "label": "Open Project",
+        "url": "https://echoesplayer.netlify.app"
+      }
+    ]
+  }
+]
