@@ -3,7 +3,7 @@
     "icon": "layers",
     "title": "Frontend Modernization",
     "summary": "Led the migration from Angular 1 to React, Redux Toolkit and RTK Query at Rivery, designing the architecture and integrating Chakra UI with the backend team.",
-    "signal": "Dev build [X]% faster, prod build [Y]% faster",
+    "signal": "Dev build time -35%, prod build time -55%",
     "experienceId": "rivery"
   },
   {

@@ -31,7 +31,7 @@ Led development of the desktop application from start to finish with Electron.js
 Tech: React, TypeScript, CSS, ChakraUI, Electron.js, Node.js.
 
 **Senior Front End Tech Lead / Engineer — Rivery** (2022 – 2023)
-Led the migration from Angular 1 to React, Redux and RTK Query; wrote 230+ Cypress user scenarios; mentored 4 engineers; cut dev build time by [X]% and prod build time by [Y]%.
+Led the migration from Angular 1 to React, Redux and RTK Query; wrote 230+ Cypress user scenarios; mentored 4 engineers; cut dev build time by 35% and prod build time by 55%.
 Tech: React, RTK Toolkit, RTK Query, TypeScript, Chakra UI, SCSS, Cypress, Testing Library, StoryBook, GitHub Actions.
 
 **Head of Front End Engineering / Tech Lead — 1Care.ai** (2020 – 2022)
