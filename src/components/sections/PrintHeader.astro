@@ -8,6 +8,7 @@ interface Props {
 }
 const { profile, contact, social } = Astro.props;
 const email = contact.links.find((l) => l.href.startsWith("mailto:"));
+const avatarImg = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/avatar.png`;
 const otherLinks = contact.links.filter((l) => l !== email);
 ---
 
@@ -19,7 +20,7 @@ const otherLinks = contact.links.filter((l) => l !== email);
         Principal Frontend Engineer — AI Product Engineer &amp; UI Architect
       </p>
     </div>
-    <img src={profile.avatarUrl} alt="" class="print-portrait" />
+    <img src={avatarImg} alt="" class="print-portrait" />
   </div>
   <ul class="print-contact-list">
     {email && <li>{email.text}</li>}

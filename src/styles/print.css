@@ -33,13 +33,14 @@
     display: block !important;
   }
 
-  /* Plain, ink-friendly identity header; no photo (parsers and printers both prefer text) */
+  /* Compact identity header replaces the cosmic hero */
   .print-header {
-    background: transparent !important;
-    color: #111827 !important;
-    margin: 0 0 8pt;
-    padding: 0 0 6pt;
-    border-bottom: 1.5pt solid rgb(24, 40, 60);
+    background: rgb(24, 40, 60) !important;
+    color: var(--on-night) !important;
+    margin: 0 0 10pt;
+    padding: 10pt 12pt;
+    border-radius: 4pt;
+    border-bottom: none;
   }
 
   .print-header-row {
@@ -51,27 +52,31 @@
 
   .print-header h1 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 22pt;
+    font-size: 20pt;
     margin: 0 0 2pt;
-    color: #111827 !important;
+    color: var(--on-night) !important;
   }
 
   .print-role {
-    font-size: 10.5pt;
-    color: #374151 !important;
+    font-size: 10pt;
+    color: var(--on-night-muted) !important;
   }
 
   .print-portrait {
-    display: none;
+    width: 48pt;
+    height: 48pt;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5pt solid rgba(255, 255, 255, 0.4);
   }
 
   .print-contact-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 2pt 14pt;
+    gap: 4pt 14pt;
     margin-top: 6pt;
-    font-size: 9pt;
-    color: #111827 !important;
+    font-size: 8.5pt;
+    color: var(--on-night-muted) !important;
   }
 
   .cv-body {
