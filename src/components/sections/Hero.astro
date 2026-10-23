@@ -9,7 +9,7 @@ interface Props {
 const { profile, social } = Astro.props;
 
 const primarySocial = social.filter((s) =>
-  ["github-alt", "linkedin"].includes(s.icon),
+  ["link", "github-alt", "linkedin"].includes(s.icon),
 );
 
 const heroBg = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/header-new.png`;
@@ -56,15 +56,17 @@ const firstNames = nameParts.join(" ");
       </div>
       <ul class="hero-social list-unstyled">
         {
-          primarySocial.map(({ href, icon, text }) => (
+          primarySocial.map(({ href, icon, text, isLa }) => (
             <li>
               <a
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={text}
+                class={icon === "link" ? "hero-social-site" : undefined}
               >
-                <Icon icon={icon} />
+                <Icon icon={icon} isLa={isLa} />
+                {icon === "link" && <span>{text}</span>}
               </a>
             </li>
           ))

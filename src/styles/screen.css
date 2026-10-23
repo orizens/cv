@@ -502,6 +502,14 @@ strong {
   font-size: 1.2rem;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
+.hero-social a.hero-social-site {
+  width: auto;
+  padding: 0 1.1rem;
+  gap: 0.5rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
 .hero-social a:hover {
   color: var(--accent-light);
   border-color: var(--accent-light);
