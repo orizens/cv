@@ -31,6 +31,10 @@
     overflow: visible !important;
   }
 
+  .nowrap {
+    white-space: nowrap;
+  }
+
   /* Real bullet characters so each highlight reads as one list item */
   .project-list-items li::before {
     content: "\2022";
