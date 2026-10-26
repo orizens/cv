@@ -59,7 +59,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: (profile as UserProfile).name,
-  jobTitle: "Principal Frontend Engineer — AI Product Engineer & UI Architect",
+  jobTitle: (profile as UserProfile).title,
+  alternateName: (profile as UserProfile).subtitle,
   description:
     "Principal Frontend Engineer, AI Product Engineer and UI Architect with 20+ years of experience building high-performance web applications, leading engineering quality, and mentoring teams.",
   email: (contact as ContactType).links.find((l) =>

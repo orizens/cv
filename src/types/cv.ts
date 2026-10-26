@@ -1,6 +1,7 @@
 export interface UserProfile {
   name: string;
   title: string;
+  subtitle: string;
   avatarUrl: string;
   summary: string;
   cofounding: {

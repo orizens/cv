@@ -2,7 +2,7 @@
   {
     "id": "zscaler",
     "role": "Senior & Lead UI Engineer",
-    "date": "Jan 2026 - Present",
+    "date": "2026 - Present",
     "company": "ZScaler",
     "tagline": "Hands-on architect of scalable UI solutions with React, TypeScript and Playwright; set TDD standards and mentor 5+ engineers.",
     "clientTitle": "",
@@ -171,8 +171,7 @@
     "clients": [],
     "projectsTitle": "",
     "projects": [],
-    "highlight": true,
-    "earlier": true
+    "highlight": true
   },
   {
     "id": "comverse",

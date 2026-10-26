@@ -16,9 +16,8 @@ const otherLinks = contact.links.filter((l) => l !== email);
   <div class="print-header-row">
     <div>
       <h1>{profile.name}</h1>
-      <p class="print-role">
-        Principal Frontend Engineer — AI Product Engineer &amp; UI Architect
-      </p>
+      <p class="print-role">{profile.title}</p>
+      <p class="print-role">{profile.subtitle}</p>
     </div>
     <img src={portraitImg} alt="" class="print-portrait" />
   </div>
