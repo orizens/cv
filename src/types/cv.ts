@@ -19,6 +19,7 @@ export interface ContactLink {
 }
 
 export interface Contact {
+  location?: string;
   links: ContactLink[];
   phones: string[];
 }

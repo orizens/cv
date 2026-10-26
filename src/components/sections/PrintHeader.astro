@@ -24,6 +24,7 @@ const otherLinks = contact.links.filter((l) => l !== email);
   <ul class="print-contact-list">
     {email && <li>{email.text}</li>}
     {contact.phones.map((phone) => <li>{phone}</li>)}
+    {contact.location && <li>{contact.location}</li>}
     {otherLinks.map((l) => <li>{l.href.replace(/^\/\//, "")}</li>)}
     {social
       .filter((s) => ["github-alt", "linkedin", "npm"].includes(s.icon))

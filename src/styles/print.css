@@ -4,7 +4,7 @@
 
 @page {
   size: A4;
-  margin: 12mm 14mm;
+  margin: 10mm 13mm;
 }
 
 @media print {
@@ -13,11 +13,30 @@
     -webkit-print-color-adjust: exact;
   }
 
+  /* Standard system fonts: embedded as plain TrueType, not Type 3, so every ATS can read the text */
+  html:root {
+    --font-display: Georgia, "Times New Roman", serif;
+    --font-body: Georgia, "Times New Roman", serif;
+    --font-sans: Arial, Helvetica, sans-serif;
+    --font-mono: "Courier New", monospace;
+  }
+
+  /* Real bullet characters so each highlight reads as one list item */
+  .project-list-items li::before {
+    content: "\2022";
+    flex-shrink: 0;
+  }
+
+  /* The book is already named (in bold) in the Summary */
+  .card:has(.publication-item) {
+    display: none !important;
+  }
+
   body {
     background: #fff !important;
     color: #111827 !important;
     font-size: 10pt;
-    line-height: 1.4;
+    line-height: 1.35;
   }
 
   a {
@@ -319,6 +338,14 @@
   }
 
   .section-heading {
-    margin-top: 10pt;
+    margin-top: 8pt;
+  }
+
+  .card {
+    margin-bottom: 4pt;
+  }
+
+  .project-list-items li {
+    padding: 0;
   }
 }
