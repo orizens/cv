@@ -4,7 +4,7 @@
 
 @page {
   size: A4;
-  margin: 10mm 13mm;
+  margin: 9mm 12mm;
 }
 
 @media print {
@@ -35,7 +35,7 @@
   body {
     background: #fff !important;
     color: #111827 !important;
-    font-size: 10pt;
+    font-size: 9.5pt;
     line-height: 1.35;
   }
 
@@ -56,8 +56,8 @@
   .print-header {
     background: rgb(24, 40, 60) !important;
     color: var(--on-night) !important;
-    margin: 0 0 10pt;
-    padding: 10pt 12pt;
+    margin: 0 0 6pt;
+    padding: 8pt 12pt;
     border-radius: 4pt;
     border-bottom: none;
   }
@@ -130,8 +130,8 @@
 
   .section-heading {
     font-weight: 700;
-    font-size: 14pt;
-    margin: 14pt 0 6pt;
+    font-size: 12.5pt;
+    margin: 10pt 0 4pt;
     padding-bottom: 3pt;
     border-bottom: 1.5pt solid rgb(24, 40, 60);
     color: rgb(24, 40, 60) !important;
@@ -214,11 +214,11 @@
   .role-tagline,
   .impact-summary,
   .project-summary {
-    font-size: 9.5pt;
+    font-size: 9pt;
   }
 
   .project-list-items li {
-    font-size: 9pt;
+    font-size: 8.5pt;
   }
 
   .tech-tags,
@@ -246,18 +246,18 @@
   }
 
   .project-card {
-    margin-bottom: 4pt;
-    padding: 4pt 8pt;
+    margin-bottom: 3pt;
+    padding: 3pt 8pt;
   }
 
   .tech-plain,
   .skills-plain {
-    font-size: 9pt;
+    font-size: 8.5pt;
     margin: 2pt 0 0;
   }
 
   .project-url {
-    font-size: 8.5pt;
+    font-size: 8pt;
     margin: 0;
   }
 
@@ -334,7 +334,7 @@
   }
 
   .timeline-body {
-    padding: 0 0 4pt;
+    padding: 0 0 3pt;
   }
 
   .section-heading {
@@ -342,7 +342,8 @@
   }
 
   .card {
-    margin-bottom: 4pt;
+    margin-bottom: 3pt;
+    padding: 5pt 10pt;
   }
 
   .project-list-items li {
