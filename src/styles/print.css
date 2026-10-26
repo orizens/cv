@@ -21,6 +21,16 @@
     --font-mono: "Courier New", monospace;
   }
 
+  /* Linear text order: positioned elements (the timeline) are painted after
+     static blocks, so a parser read the Skills and Education cards before the
+     last roles. Keep everything in normal flow so content order = reading order. */
+  .cv-body,
+  .cv-body * {
+    position: static !important;
+    transform: none !important;
+    overflow: visible !important;
+  }
+
   /* Real bullet characters so each highlight reads as one list item */
   .project-list-items li::before {
     content: "\2022";
