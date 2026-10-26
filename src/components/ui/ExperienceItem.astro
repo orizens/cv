@@ -20,6 +20,7 @@ const {
   projects,
   clientTitle,
   highlight = false,
+  earlier = false,
 } = item;
 
 const techEntry = projects.find(([name]) => name.toLowerCase() === "tech");
@@ -36,7 +37,7 @@ const otherProjects = projects.filter(
 ---
 
 <article
-  class:list={["timeline-item", { "is-current": current }]}
+  class:list={["timeline-item", { "is-current": current, "is-earlier": earlier }]}
   id={id}
 >
   <span class="timeline-marker" aria-hidden="true"></span>
@@ -73,11 +74,16 @@ const otherProjects = projects.filter(
       />
       {
         techTags.length > 0 && (
-          <div class="tech-tags">
-            {techTags.map((tag) => (
-              <span class="tech-tag">{tag}</span>
-            ))}
-          </div>
+          <>
+            <div class="tech-tags print-hide">
+              {techTags.map((tag) => (
+                <span class="tech-tag">{tag}</span>
+              ))}
+            </div>
+            <p class="tech-plain print-only">
+              Technologies: {techTags.join(", ")}
+            </p>
+          </>
         )
       }
     </div>

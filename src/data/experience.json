@@ -171,7 +171,8 @@
     "clients": [],
     "projectsTitle": "",
     "projects": [],
-    "highlight": true
+    "highlight": true,
+    "earlier": true
   },
   {
     "id": "comverse",
@@ -183,7 +184,8 @@
     "clients": [],
     "projectsTitle": "",
     "projects": [],
-    "highlight": false
+    "highlight": false,
+    "earlier": true
   },
   {
     "id": "orizens-freelance",
@@ -195,6 +197,7 @@
     "clients": [],
     "projectsTitle": "",
     "projects": [],
-    "highlight": true
+    "highlight": true,
+    "earlier": true
   }
 ]

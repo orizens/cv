@@ -52,6 +52,8 @@ export interface ExperienceItem {
   projectsTitle: string;
   projects: ProjectEntry[];
   highlight?: boolean;
+  /** Pre-2016 roles print as a single summary line (ATS-friendly, saves pages) */
+  earlier?: boolean;
 }
 
 export interface Publication {

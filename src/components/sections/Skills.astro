@@ -42,9 +42,12 @@ const groups: { label: string; items: string[] }[] = [
     <Icon icon="brain" isLa />
     Skills
   </h2>
+  <p class="skills-plain print-only">
+    {groups.flatMap((g) => g.items).join(", ")}
+  </p>
   {
     groups.map(({ label, items }) => (
-      <div class="skill-group">
+      <div class="skill-group print-hide">
         <p class="skill-group-label">{label}</p>
         <div class="skill-tags">
           {items.map((skill) => (

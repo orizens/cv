@@ -20,8 +20,13 @@ const { role, title, summary, links = [] } = Astro.props;
   <h3 class="project-title">{title}</h3>
   <p class="project-summary" set:html={summary} />
   {
+    links.map((l) => (
+      <p class="project-url print-only">{l.url.replace(/^https?:\/\//, "")}</p>
+    ))
+  }
+  {
     links.length > 0 && (
-      <div class="project-links">
+      <div class="project-links print-hide">
         {links.map((l) => (
           <a href={l.url} target="_blank" rel="noopener noreferrer">
             {l.label}

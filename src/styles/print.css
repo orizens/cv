@@ -216,10 +216,35 @@
     padding: 1pt 4pt;
   }
 
-  .impact-grid,
-  .projects-grid {
+  .impact-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 6pt;
+  }
+
+  /* Single column: multi-column layouts interleave when an ATS extracts text */
+  .projects-grid {
+    display: block;
+  }
+
+  .project-card {
+    margin-bottom: 4pt;
+    padding: 4pt 8pt;
+  }
+
+  .tech-plain,
+  .skills-plain {
+    font-size: 9pt;
+    margin: 2pt 0 0;
+  }
+
+  .project-url {
+    font-size: 8.5pt;
+    margin: 0;
+  }
+
+  /* Pre-2016 roles collapse to one summary line */
+  .timeline-item.is-earlier .timeline-body {
+    display: none !important;
   }
 
   .impact-link {
