@@ -1374,3 +1374,16 @@ details[open] > .timeline-summary .timeline-toggle-icon {
 .cv-footer a {
   color: var(--on-night-muted);
 }
+
+.summary-list {
+  list-style: disc;
+  padding-inline-start: 1.25rem;
+  max-width: 68ch;
+}
+
+.summary-list li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}

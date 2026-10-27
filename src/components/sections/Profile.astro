@@ -6,16 +6,14 @@ interface Props {
 }
 const { profile } = Astro.props;
 
-const paragraphs = profile.summary
-  .split(/<br\s*\/?>/i)
-  .map((p) => p.trim())
-  .filter(Boolean);
 ---
 
 <section class="profile-section" id="profile">
   <span class="section-eyebrow">Profile</span>
   <h2 class="section-heading">Summary</h2>
-  {paragraphs.map((p) => <p set:html={p} />)}
+  <ul class="summary-list">
+    {profile.summary.map((p) => <li set:html={p} />)}
+  </ul>
   <div class="profile-callout">
     {profile.cofounding.description}{" "}
     <a href={profile.cofounding.url} target="_blank" rel="noopener noreferrer"

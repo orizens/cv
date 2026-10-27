@@ -1,9 +1,9 @@
 export interface UserProfile {
   name: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   avatarUrl: string;
-  summary: string;
+  summary: string[];
   cofounding: {
     label: string;
     url: string;
@@ -48,6 +48,7 @@ export interface ExperienceItem {
   role: string;
   date: string;
   company: string;
+  location?: string;
   tagline: string;
   clientTitle: string;
   clients: ProjectEntry[];
