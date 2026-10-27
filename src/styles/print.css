@@ -17,7 +17,7 @@
   html:root {
     --font-display: Georgia, "Times New Roman", serif;
     --font-body: Georgia, "Times New Roman", serif;
-    --font-sans: Arial, Helvetica, sans-serif;
+    --font-sans: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif;
     --font-mono: "Courier New", monospace;
   }
 
@@ -467,19 +467,19 @@
     content: ")";
   }
 
-  /* Minimal type system for ATS and readability: one family (Arial), one text
+  /* Minimal type system for ATS and readability: one family (Calibri), one text
      colour, two weights (regular/bold), no italics, no uppercase or
-     letter-spacing, and three sizes: 20pt name, 11pt headings, 9pt text. */
+     letter-spacing, and three sizes: 20pt name, 12pt headings, 10pt text. */
   html:root {
-    --font-display: Arial, Helvetica, sans-serif;
-    --font-body: Arial, Helvetica, sans-serif;
-    --font-sans: Arial, Helvetica, sans-serif;
-    --font-mono: Arial, Helvetica, sans-serif;
+    --font-display: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif;
+    --font-body: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif;
+    --font-sans: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif;
+    --font-mono: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif;
   }
 
   body,
   body * {
-    font-family: Arial, Helvetica, sans-serif !important;
+    font-family: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif !important;
     font-style: normal !important;
     text-transform: none !important;
     letter-spacing: normal !important;
@@ -505,12 +505,12 @@
   .card-title,
   .print-role,
   .print-contact-list {
-    font-size: 9pt !important;
+    font-size: 10pt !important;
   }
 
   .section-heading,
   .card-title {
-    font-size: 11pt !important;
+    font-size: 12pt !important;
   }
 
   .print-header h1 {
@@ -518,7 +518,7 @@
   }
 
   .print-role {
-    font-size: 11pt !important;
+    font-size: 12pt !important;
   }
 
   .role-title,
