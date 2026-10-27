@@ -23,6 +23,17 @@
   },
   {
     "role": "Personal Project",
+    "title": "Ittim",
+    "summary": "Jewish prayers app that helps users track and complete their daily prayers, available as a web app and on Google Play.",
+    "links": [
+      {
+        "label": "Visit Ittim",
+        "url": "https://ittim.app"
+      }
+    ]
+  },
+  {
+    "role": "Personal Project",
     "title": "Echoes Player",
     "summary": "Free, open-source media player built on the YouTube API with Angular.",
     "links": [
