@@ -36,7 +36,7 @@ const firstNames = nameParts.join(" ");
         >
       </h1>
       <p class="hero-title">{profile.title}</p>
-      <p class="hero-subtitle">{profile.subtitle}</p>
+      {profile.subtitle && <p class="hero-subtitle">{profile.subtitle}</p>}
       <p class="hero-lede">
         I build resilient frontend systems and lead the engineering quality
         behind them — architecture, React &amp; TypeScript at scale,

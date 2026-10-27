@@ -14,6 +14,7 @@ const {
   role,
   date,
   company,
+  location,
   tagline,
   projectsTitle,
   clients,
@@ -47,7 +48,7 @@ const otherProjects = projects.filter(
         <h3 class="role-title">{role}</h3>
         <p class="role-company">
           <Icon icon="building" isLa />
-          {company}
+          {company}{location ? `, ${location}` : ""}
         </p>
       </div>
       <div class="role-meta">

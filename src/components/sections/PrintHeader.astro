@@ -17,7 +17,7 @@ const otherLinks = contact.links.filter((l) => l !== email);
     <div>
       <h1>{profile.name}</h1>
       <p class="print-role">{profile.title}</p>
-      <p class="print-role">{profile.subtitle}</p>
+      {profile.subtitle && <p class="print-role">{profile.subtitle}</p>}
     </div>
     <img src={portraitImg} alt="" class="print-portrait" />
   </div>

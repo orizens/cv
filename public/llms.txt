@@ -1,9 +1,10 @@
 # Oren Farhi — CV / Resume
 
-> Senior Frontend Engineer and Tech Lead with 20+ years of experience building high-performance, scalable web applications.
+> Senior Frontend Engineer for AI, SaaS & Enterprise Software, based in Boca Raton, FL, with 20+ years of experience building high-performance, scalable web applications.
 
 ## Contact
 
+- Location: Boca Raton, FL
 - Email: farhioren@gmail.com
 - Website: https://orizens.github.io/cv
 - Blog: https://orizens.com
@@ -18,8 +19,8 @@ Seasoned frontend engineer specialising in software architecture, TypeScript, Re
 
 ## Experience
 
-**Senior & Lead UI Engineer — ZScaler** (Jan 2026 – Present)
-Hands-on architect of scalable UI solutions with React, TypeScript and Playwright; set TDD standards and mentor 5+ engineers.
+**Lead UI Engineer — Zscaler** (2026 – 2026)
+Mentored 5+ engineers while architecting scalable UI with React, TypeScript and Playwright; set TDD standards for the team.
 Tech: React, Vite, MUI, TypeScript, Tanstack-Table, GraphQL, Tanstack-Query, Vitest, Playwright, CSS, GitHub Actions.
 
 **Lead UI Engineer — HighRes BioSolutions** (2024 – 2026)
