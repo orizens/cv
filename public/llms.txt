@@ -19,11 +19,11 @@ Seasoned frontend engineer specialising in software architecture, TypeScript, Re
 
 ## Experience
 
-**Lead UI Engineer — Zscaler** (2026 – 2026)
+**Lead UI Engineer — Zscaler** (2025 – 2026)
 Mentored 5+ engineers while architecting scalable UI with React, TypeScript and Playwright; set TDD standards for the team.
 Tech: React, Vite, MUI, TypeScript, Tanstack-Table, GraphQL, Tanstack-Query, Vitest, Playwright, CSS, GitHub Actions.
 
-**Lead UI Engineer — HighRes BioSolutions** (2024 – 2026)
+**Lead UI Engineer — HighRes BioSolutions** (2024 – 2025)
 Reduced UI production bugs by introducing BDD with Playwright; mentored the team and established React and TypeScript best practices.
 Tech: React, Vite, TypeScript, Tailwind, Tanstack-Query, CSS, Playwright.
 
