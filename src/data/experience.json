@@ -2,7 +2,7 @@
   {
     "id": "zscaler",
     "role": "Lead UI Engineer",
-    "date": "2025 - 2026",
+    "date": "Nov 2025 - Jun 2026",
     "company": "Zscaler",
     "tagline": "Mentored 5+ engineers while architecting scalable UI with React, TypeScript and Playwright; set TDD standards for the team.",
     "clientTitle": "",
@@ -23,7 +23,7 @@
   {
     "id": "highres-biosolutions",
     "role": "Lead UI Engineer",
-    "date": "2024 - 2025",
+    "date": "Aug 2024 - Nov 2025",
     "company": "HighRes BioSolutions",
     "tagline": "Introduced BDD with Playwright to reduce UI production bugs; mentored the team and established React and TypeScript best practices.",
     "clientTitle": "",
@@ -44,7 +44,7 @@
   {
     "id": "akto-space",
     "role": "CTO & Lead Software Engineer",
-    "date": "2023 - 2024",
+    "date": "Nov 2023 - Aug 2024",
     "company": "AKTO SPACE",
     "tagline": "Built the Electron and React desktop application from start to finish and advised on technical direction as CTO.",
     "clientTitle": "",
@@ -65,7 +65,7 @@
   {
     "id": "rivery",
     "role": "Senior Frontend Tech Lead",
-    "date": "2022 - 2023",
+    "date": "May 2022 - Nov 2023",
     "company": "Rivery",
     "tagline": "Led the migration from Angular 1 to React, Redux and RTK Query; designed the architecture and integrated Chakra UI with the backend team.",
     "clientTitle": "",
@@ -94,7 +94,7 @@
   {
     "id": "1care-ai",
     "role": "Head of Frontend Engineering",
-    "date": "2020 - 2022",
+    "date": "Sep 2021 - May 2022",
     "company": "1Care.ai",
     "tagline": "Directed frontend development of web and mobile applications with a team of 3 engineers.",
     "clientTitle": "",
@@ -119,7 +119,7 @@
   {
     "id": "tangent-logic",
     "role": "Senior Frontend Engineer",
-    "date": "2018 - 2020",
+    "date": "Jun 2018 - Sep 2021",
     "company": "Tangent Logic",
     "tagline": "Built reusable, well-tested web applications with React, Redux, Angular, TypeScript and NgRx.",
     "clientTitle": "Consulting:",
@@ -136,7 +136,7 @@
   {
     "id": "orizens-consultant",
     "role": "Independent Frontend Consultant",
-    "date": "2016 - 2018",
+    "date": "Feb 2016 - Jun 2018",
     "company": "Orizens (Self-Employed)",
     "tagline": "Built web applications with React, Angular, Redux, NgRx, TypeScript and CI/CD; created ReadM, Echoes Player and open-source npm packages (see Projects & Open Source).",
     "clientTitle": "",
@@ -148,7 +148,7 @@
   {
     "id": "tikal-knowledge",
     "role": "Frontend Architect",
-    "date": "2010 - 2016",
+    "date": "Aug 2010 - Feb 2016",
     "company": "Tikal Knowledge",
     "tagline": "Led Tikal's JavaScript group: recruited experts, hosted JS workshops and consulted for customers on Angular, Backbone and React applications.",
     "clientTitle": "",
@@ -160,7 +160,7 @@
   {
     "id": "comverse",
     "role": "UI Frontend Developer",
-    "date": "2008 - 2010",
+    "date": "May 2008 - Aug 2010",
     "company": "Comverse",
     "tagline": "Built the web GUI of an internal application with OOP JavaScript, Ajax, HTML and CSS; refactored the UI to a component-based architecture and led the CSS design system.",
     "clientTitle": "",
@@ -172,7 +172,7 @@
   {
     "id": "orizens-freelance",
     "role": "Freelance Web Developer",
-    "date": "2005 - 2010",
+    "date": "Jan 2005 - Jan 2010",
     "company": "Orizens.com",
     "tagline": "Designed and developed websites for customers with HTML, JS, CSS, PHP and WordPress; founded VisitWeb, a free online event management service.",
     "clientTitle": "",
