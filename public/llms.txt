@@ -1,6 +1,6 @@
 # Oren Farhi — CV / Resume
 
-> Senior Frontend Engineer for AI, SaaS & Enterprise Software, based in Boca Raton, FL, with 20+ years of experience building high-performance, scalable web applications.
+> Senior Software Engineer (Frontend Architecture) for AI, SaaS & Enterprise Software, based in Boca Raton, FL, with 20+ years of experience building high-performance, scalable web applications.
 
 ## Contact
 

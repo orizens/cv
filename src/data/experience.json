@@ -156,5 +156,29 @@
     "projectsTitle": "",
     "projects": [],
     "highlight": false
+  },
+  {
+    "id": "comverse",
+    "role": "UI Frontend Developer",
+    "date": "2008 - 2010",
+    "company": "Comverse",
+    "tagline": "Built the web GUI of an internal application with OOP JavaScript, Ajax, HTML and CSS; refactored the UI to a component-based architecture and led the CSS design system.",
+    "clientTitle": "",
+    "clients": [],
+    "projectsTitle": "",
+    "projects": [],
+    "highlight": false
+  },
+  {
+    "id": "orizens-freelance",
+    "role": "Freelance Web Developer",
+    "date": "2005 - 2010",
+    "company": "Orizens.com",
+    "tagline": "Designed and developed websites for customers with HTML, JS, CSS, PHP and WordPress; founded VisitWeb, a free online event management service.",
+    "clientTitle": "",
+    "clients": [],
+    "projectsTitle": "",
+    "projects": [],
+    "highlight": false
   }
 ]
