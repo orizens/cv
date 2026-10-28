@@ -19,40 +19,40 @@ Seasoned frontend engineer specialising in software architecture, TypeScript, Re
 
 ## Experience
 
-**Lead UI Engineer — Zscaler** (2025 – 2026)
+**Lead UI Engineer — Zscaler** (Nov 2025 – Jun 2026)
 Mentored 5+ engineers while architecting scalable UI with React, TypeScript and Playwright; set TDD standards for the team.
 Tech: React, Vite, MUI, TypeScript, Tanstack-Table, GraphQL, Tanstack-Query, Vitest, Playwright, CSS, GitHub Actions.
 
-**Lead UI Engineer — HighRes BioSolutions** (2024 – 2025)
+**Lead UI Engineer — HighRes BioSolutions** (Aug 2024 – Nov 2025)
 Reduced UI production bugs by introducing BDD with Playwright; mentored the team and established React and TypeScript best practices.
 Tech: React, Vite, TypeScript, Tailwind, Tanstack-Query, CSS, Playwright.
 
-**CTO & Lead Software Engineer — AKTO SPACE** (2023 – 2024)
+**CTO & Lead Software Engineer — AKTO SPACE** (Nov 2023 – Aug 2024)
 Led development of the desktop application from start to finish with Electron.js and React, and advised on technical direction as CTO.
 Tech: React, TypeScript, CSS, ChakraUI, Electron.js, Node.js.
 
-**Senior Frontend Tech Lead / Engineer — Rivery** (2022 – 2023)
+**Senior Frontend Tech Lead / Engineer — Rivery** (May 2022 – Nov 2023)
 Led the migration from Angular 1 to React, Redux and RTK Query; wrote 230+ Cypress user scenarios; mentored 4 engineers; cut dev build time by 35% and prod build time by 55%.
 Tech: React, RTK Toolkit, RTK Query, TypeScript, Chakra UI, SCSS, Cypress, Testing Library, StoryBook, GitHub Actions.
 
-**Head of Frontend Engineering / Tech Lead — 1Care.ai** (2020 – 2022)
+**Head of Frontend Engineering / Tech Lead — 1Care.ai** (Sep 2021 – May 2022)
 Led frontend development with a team of 3 engineers to create web & mobile applications.
 Tech: React, React Native (Android/iOS), TypeScript, Redux Toolkit, Blueprint, SCSS, Cypress, Jest, Testing Library, GraphQL, AWS/Amplify.
 
-**Senior Frontend Engineer & Consultant — Tangent Logic** (2018 – 2020)
+**Senior Frontend Engineer & Consultant — Tangent Logic** (Jun 2018 – Sep 2021)
 Developed web applications focused on reusability and testing with React, Angular, TypeScript, Redux, NGRX.
 Notable client: Lifion — React, Node.js, Jest, Enzyme, Testing Library, TypeScript, Sass.
 
-**Senior Frontend Engineer & Consultant — Orizens (Self-Owned)** (2016 – 2018)
+**Senior Frontend Engineer & Consultant — Orizens (Self-Owned)** (Feb 2016 – Jun 2018)
 Built web applications with React, Angular, Redux, NgRx, TypeScript. Personal projects include ReadM, Echoes Player, and open-source npm packages (1.3M+ monthly downloads; used by Google, Microsoft, Amazon, Disney and SAP).
 
-**Senior Frontend Engineer, Frontend Architect — Tikal Knowledge** (2010 – 2016)
+**Senior Frontend Engineer, Frontend Architect — Tikal Knowledge** (Aug 2010 – Feb 2016)
 Developed web applications with Angular, Backbone, React, Node.js. Led Tikal's JavaScript Group, ran workshops, and consulted for enterprise customers.
 
-**UI Frontend Developer — Comverse** (2008 – 2010)
+**UI Frontend Developer — Comverse** (May 2008 – Aug 2010)
 Developed web GUI for internal applications using OOP JavaScript, Ajax, HTML, CSS, XML & XSLT. Refactored UI to a component-based architecture.
 
-**Web Developer & Designer Freelance — Orizens.com** (2005 – 2010)
+**Web Developer & Designer Freelance — Orizens.com** (Jan 2005 – Jan 2010)
 Designed and developed websites using HTML, JS, CSS, PHP and WordPress.
 
 ## Skills
