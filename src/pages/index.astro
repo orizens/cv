@@ -55,6 +55,14 @@ const featuredProjects = projects as {
   links?: { label: string; url: string }[];
 }[];
 
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+/** "Nov 2025" -> "2025-11" (schema.org date format) */
+const toIsoMonth = (d: string) => {
+  const [m, y] = d.split(" ");
+  const i = MONTHS.indexOf(m);
+  return i < 0 ? d : `${y}-${String(i + 1).padStart(2, "0")}`;
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -84,8 +92,10 @@ const jsonLd = {
   hasOccupation: experienceData.map((e) => ({
     "@type": "Role",
     roleName: e.role,
-    startDate: e.date.split(" - ")[0],
-    endDate: e.date.includes("Present") ? undefined : e.date.split(" - ")[1],
+    startDate: toIsoMonth(e.date.split(" - ")[0]),
+    endDate: e.date.includes("Present")
+      ? undefined
+      : toIsoMonth(e.date.split(" - ")[1]),
     worksFor: { "@type": "Organization", name: e.company },
     description: e.tagline,
   })),
