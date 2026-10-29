@@ -15,7 +15,7 @@
 
 ## Summary
 
-Seasoned frontend engineer specialising in software architecture, TypeScript, React, CSS, and modern testing practices. Author of "Reactive Programming with Angular and NGRX" (Apress). Co-Founder & Lead Software Engineer of ReadM (https://readm.app), an AI-powered reading fluency assessment tool for K–4 students.
+Seasoned frontend engineer specialising in software architecture, TypeScript, React, CSS, and modern testing practices. Author of "Reactive Programming with Angular and NGRX" (Springer). Co-Founder & Lead Software Engineer of ReadM (https://readm.app), an AI-powered reading fluency assessment tool for K–4 students.
 
 ## Experience
 
@@ -57,12 +57,13 @@ Designed and developed websites using HTML, JS, CSS, PHP and WordPress.
 
 ## Skills
 
-Languages: TypeScript, JavaScript, CSS
-Libraries: React, React Native, TanStack Query, Redux Toolkit, NgRx, Tailwind, Chakra UI
+Languages: TypeScript, JavaScript, HTML, CSS
+Libraries: React, Next.js, React Native, TanStack Query, Redux Toolkit, NgRx, Tailwind, Chakra UI
 Frameworks: Angular, Electron, Node.js
+APIs: REST, GraphQL
 Testing: Playwright, Cypress, Vitest, Jest, Testing Library
 AI-assisted engineering: Claude Code, GitHub Copilot
-Other: GitHub Actions, Technical Leadership, Mentoring, Architecture
+Other: CI/CD, Accessibility, GitHub Actions, Technical Leadership, Mentoring, Architecture
 
 ## Education
 
@@ -70,5 +71,5 @@ B.A. Computer Science & Management — The Open University (2001 – 2007)
 
 ## Publications
 
-"Reactive Programming with Angular and NGRX" — Apress
+"Reactive Programming with Angular and NGRX" — Springer
 https://www.amazon.com/Reactive-Programming-Angular-ngrx-Extensions/dp/1484226194

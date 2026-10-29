@@ -2,10 +2,12 @@
   "languages": [
     "TypeScript",
     "JavaScript",
+    "HTML",
     "CSS"
   ],
   "libraries": [
     "React",
+    "Next.js",
     "React Native",
     "TanStack Query",
     "Redux Toolkit",
@@ -20,7 +22,9 @@
   "frameworks": [
     "Angular",
     "Electron",
-    "Node.js"
+    "Node.js",
+    "REST",
+    "GraphQL"
   ],
   "testing": [
     "Playwright",
@@ -30,6 +34,8 @@
     "Testing Library"
   ],
   "other": [
+    "CI/CD",
+    "Accessibility",
     "GitHub Actions",
     "Technical Leadership",
     "Mentoring",

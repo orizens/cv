@@ -403,7 +403,7 @@
   }
 
   .timeline-summary-main .role-company::before {
-    content: "\2013\00a0";
+    content: "|\00a0";
   }
 
   .role-meta,

@@ -10,6 +10,11 @@ const { profile, contact, social } = Astro.props;
 const email = contact.links.find((l) => l.href.startsWith("mailto:"));
 const portraitImg = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/profile.png`;
 const otherLinks = contact.links.filter((l) => l !== email);
+// Fixed order so plain-text extraction reads email, phone, location, site, GitHub, LinkedIn, npm
+const socialOrder = ["github-alt", "linkedin", "npm"];
+const socialLinks = socialOrder
+  .map((icon) => social.find((s) => s.icon === icon))
+  .filter((s): s is SocialLink => Boolean(s));
 ---
 
 <header class="print-header print-only">
@@ -18,16 +23,14 @@ const otherLinks = contact.links.filter((l) => l !== email);
       <h1>{profile.name}</h1>
       <p class="print-role">{profile.title}</p>
       {profile.subtitle && <p class="print-role">{profile.subtitle}</p>}
+      <ul class="print-contact-list">
+        {email && <li>{email.text}</li>}
+        {contact.phones.map((phone) => <li>{phone}</li>)}
+        {contact.location && <li>{contact.location}</li>}
+        {otherLinks.map((l) => <li>{l.href.replace(/^\/\//, "")}</li>)}
+        {socialLinks.map((s) => <li>{s.href.replace(/^\/\//, "")}</li>)}
+      </ul>
     </div>
-    <img src={portraitImg} alt="" class="print-portrait" />
+    <img src={portraitImg} alt="" aria-hidden="true" class="print-portrait" />
   </div>
-  <ul class="print-contact-list">
-    {email && <li>{email.text}</li>}
-    {contact.phones.map((phone) => <li>{phone}</li>)}
-    {contact.location && <li>{contact.location}</li>}
-    {otherLinks.map((l) => <li>{l.href.replace(/^\/\//, "")}</li>)}
-    {social
-      .filter((s) => ["github-alt", "linkedin", "npm"].includes(s.icon))
-      .map((s) => <li>{s.href.replace(/^\/\//, "")}</li>)}
-  </ul>
 </header>
