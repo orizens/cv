@@ -94,6 +94,7 @@ img {
   --night: #020817;
   --night-raised: #0c203b;
   --night-surface: rgba(9, 26, 50, 0.78);
+  --night-nav: rgb(2 8 23 / 68%);
   --night-line: rgba(109, 220, 255, 0.14);
   --night-line-strong: rgba(109, 220, 255, 0.3);
   --on-night: #f7faff;
@@ -118,6 +119,11 @@ img {
   --radius-card: 20px;
   --radius-sm: 10px;
   --radius-pill: 999px;
+  --radius-nav: 4rem;
+
+  --nav-float-offset: 1rem;
+  --nav-float-width: 97%;
+  --duration-nav: 0.3s;
 
   --shadow-card: 0 16px 40px rgba(23, 27, 38, 0.07);
   --shadow-night-card: 0 20px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -229,13 +235,25 @@ strong {
   background: transparent;
   backdrop-filter: none;
   border-bottom: 1px solid transparent;
-  transition: background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
+  width: 100%;
+  margin-inline: auto;
+  border-radius: 0;
+  transition:
+    top var(--duration-nav) ease,
+    width var(--duration-nav) ease,
+    border-radius var(--duration-nav) ease,
+    background var(--duration-nav) ease,
+    backdrop-filter var(--duration-nav) ease,
+    border-color var(--duration-nav) ease;
 }
 
 .cv-nav.is-scrolled {
-  background: rgba(2, 8, 23, 0.82);
+  top: var(--nav-float-offset);
+  width: var(--nav-float-width);
+  border-radius: var(--radius-nav);
+  background: var(--night-nav);
   backdrop-filter: blur(12px);
-  border-bottom-color: var(--night-line);
+  border-bottom-color: transparent;
 }
 
 .cv-nav-inner {
