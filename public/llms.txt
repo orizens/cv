@@ -52,7 +52,7 @@ Developed web applications with Angular, Backbone, React, Node.js. Led Tikal's J
 **UI Frontend Developer — Comverse** (May 2008 – Aug 2010)
 Developed web GUI for internal applications using OOP JavaScript, Ajax, HTML, CSS, XML & XSLT. Refactored UI to a component-based architecture.
 
-**Web Developer & Designer Freelance — Orizens.com** (Jan 2005 – Aug 2008)
+**Web Developer & Designer Freelance — Orizens.com** (Jan 2005 – Apr 2008)
 Designed and developed websites using HTML, JS, CSS, PHP and WordPress.
 
 ## Skills

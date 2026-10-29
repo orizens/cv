@@ -16,10 +16,10 @@ const { projects } = Astro.props;
 ---
 
 <section aria-labelledby="projects-heading">
-  <span class="section-eyebrow">Personal Projects &amp; Open Source</span>
+  <span class="section-eyebrow">Personal Projects</span>
   <h2 class="section-heading" id="projects-heading">
     <Icon icon="rocket" isLa />
-    Projects &amp; Open Source
+    Projects
   </h2>
   <div class="projects-grid">
     {projects.map((p) => <ProjectCard {...p} />)}

@@ -138,7 +138,7 @@
     "role": "Independent Frontend Consultant",
     "date": "Feb 2016 - Jun 2018",
     "company": "Orizens (Self-Employed)",
-    "tagline": "Built web applications with React, Angular, Redux, NgRx, TypeScript and CI/CD; created ReadM, Echoes Player and open-source npm packages (see Projects & Open Source).",
+    "tagline": "Built web applications with React, Angular, Redux, NgRx, TypeScript and CI/CD; created ReadM, Echoes Player and open-source npm packages (see Projects).",
     "clientTitle": "",
     "clients": [],
     "projectsTitle": "",
@@ -172,7 +172,7 @@
   {
     "id": "orizens-freelance",
     "role": "Freelance Web Developer",
-    "date": "Jan 2005 - Aug 2008",
+    "date": "Jan 2005 - Apr 2008",
     "company": "Orizens.com",
     "tagline": "Designed and developed websites for customers with HTML, JS, CSS, PHP and WordPress; founded VisitWeb, a free online event management service.",
     "clientTitle": "",
