@@ -58,12 +58,14 @@ work.innerHTML =
       date: '2026 - Present',
       company: 'ZScaler',
       tagline:
-        'Hands-on architect and implementer of scalable UI solutions using React, TypeScript, and Playwright, while establishing TDD standards and upskilling 5+ engineers through direct mentorship.',
+        'Architecting scalable UI solutions and establishing engineering standards (TDD, test infrastructure, build performance) while upskilling 5+ engineers through direct mentorship.',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Highlights:`,
       projects: [
-        [`Redesigning E2E infrastructure`, `implementing base fixtures and simplified reusable components for e2e & visual regression tests.`],
+        [`Quality systems`, `redesigned E2E infrastructure with base fixtures and simplified reusable components for e2e & visual regression tests, so teams ship with confidence.`],
+        [`Standards & mentoring`, `established TDD standards and mentored 5+ engineers through code reviews and pairing.`],
+        [`Delivery speed`, `reduced build times with modern tooling (Vite, Bun).`],
         [`Tech`, `React, Vite, MUI, Typescript, Tanstack-Table, GraphQL, Tanstack-Query, Vitest, Playwright, CSS, GitHub Actions.`]
       ]
     },
@@ -72,12 +74,14 @@ work.innerHTML =
       date: '2024 - 2026',
       company: 'HighRes BioSolutions',
       tagline:
-        'Hands-on lead engineer driving UI excellence by personally implementing BDD with Playwright, reducing UI production bugs, while mentoring team members and establishing React & TypeScript best practices.',
+        'Led UI engineering in a life-science lab automation environment: introduced BDD with Playwright to reduce UI production bugs, mentored team members and established React & TypeScript best practices.',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Highlights:`,
       projects: [
-        [`Hands-on architecture & development`, `designing, building, and shipping UI with React & Playwright.`],
+        [`Quality & release safety`, `BDD with Playwright (component and integration testing) to reduce UI production bugs, plus feature flags for safer rollouts.`],
+        [`Delivery speed`, `reduced build times (Vite, Bun) and CI run times for unit and E2E tests.`],
+        [`Architecture & standards`, `designed and shipped UI architecture with React & TypeScript and set best practices for the team.`],
         [`Tech`, `React, Vite, Typescript, Tailwind, Tanstack-Query, CSS, Playwright (component and integration testing).`]
       ]
     },
@@ -86,13 +90,13 @@ work.innerHTML =
       date: '2023 - 2024',
       company: 'AKTO SPACE',
       tagline:
-        'Advising on tech direction and leading the development, hadns-on, of the desktop application from start to finish with elecron.js and react',
+        'Owned technical direction as CTO and led development of a desktop application from start to finish with Electron.js and React.',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Highlights:`,
       projects: [
-        [`Architecture & Development`, `Hands-on Designing & Developing Desktop App with web technologies`],
-        [`Advisory / CTO`, `Specializing as a technical advisor for both desktop and web applications written in JS & TS, with a focus on seamlessly integrating video interaction as a core component of the product.`],
+        [`CTO / technical direction`, `set the technical strategy for desktop and web applications written in JS & TS, with video interaction as a core component of the product.`],
+        [`Architecture & delivery`, `designed and delivered the desktop app with web technologies, from architecture to release.`],
         [`Tech`, `React, Typescript, CSS, ChakraUI, Electron.js, and Node.js.`]
       ]
     },
@@ -101,13 +105,14 @@ work.innerHTML =
       date: '2022 - 2023',
       company: 'Rivery',
       tagline:
-        'Hands-on lead engineer personally driving the migration from Angular 1 to React, Redux & RTK-Query — writing production code, designing the architecture, and integrating ChakraUI in close collaboration with the backend team.',
+        'Led the migration from Angular 1 to React, Redux & RTK-Query: defined the architecture, integrated ChakraUI and worked closely with the backend team.',
       projectsTitle: `Highlights:`,
       projects: [
-        [`Architecture`, `Personally designed and implemented a new architecture that reduced the mental model for development, making it faster to add and update features.`],
-        [`Technical Front End Lead`, `Hands-on refactoring of the codebase — updated the tech stack and directly reduced defects, dev, and prod build times.`],
-        [`Mentoring`, `Mentored 4 engineers through hands-on code reviews, pairing sessions, and discussions on React and front end testing best practices.`],
-        [`E2E`, `Personally wrote and shipped 230+ tested user scenarios with Cypress, growing e2e coverage from the ground up while coaching the team on TDD.`],
+        [`Architecture`, `designed and implemented a new architecture that reduced the mental model for development, making it faster to add and update features.`],
+        [`Technical lead`, `updated the tech stack and reduced defects and dev and prod build times.`],
+        [`Growth & experimentation`, `worked on signup funnels, onboarding and analytics instrumentation, and used feature flags for controlled rollouts.`],
+        [`Mentoring`, `mentored 4 engineers through code reviews, pairing sessions, and discussions on React and front end testing best practices.`],
+        [`Quality`, `wrote and shipped 230+ tested user scenarios with Cypress, growing e2e coverage from the ground up while coaching the team on TDD.`],
         [`Tech`, `React, RTK Toolkit (Redux), RTK Query, Typescript, Chakra UI, SCSS, Cypress (+ Cypress Cloud), Cucumber/Gherkin, Testing Library, StoryBook, Git, Github Actions`],
       ],
     },
@@ -116,14 +121,14 @@ work.innerHTML =
       date: '2020 - 2022',
       company: '1Care.ai',
       tagline:
-        'Leading front end development with 2 junior engineers and 1 intermediate engineer to create the web & mobile applications.',
+        'Led the front end team (2 junior engineers and 1 intermediate engineer) to create the web & mobile applications.',
       clientTitle: ``,
       clients: [],
       projectsTitle: `Highlights:`,
       projects: [
-        [`Architecture`, `responsible for making code interchangeable with both web and mobile`],
-        [`Product`, `Planning out tasks to keep the project moving forward each week with jira`],
-        [`Team Lead & Mentoring`, `Leading and coordinating development of a team of 3 developers, code review and discussions.`],
+        [`Team leadership`, `led and coordinated a team of 3 developers, with code reviews and technical discussions.`],
+        [`Delivery planning`, `planned weekly tasks in Jira to keep the project moving forward.`],
+        [`Architecture`, `made code interchangeable between web and mobile.`],
         [`Tech`, `React, React Native (Android/iOS), Typescript, Redux, Redux Toolkit, Blueprint, SCSS, Cypress, Cucumber/Gherkin, Jest, Testing Library, Jira, GraphQL, AWS/Amplify, Git`],
         [`UX`, `Designing and defining the UX solutions for the ui challanges and improving the user experience.`],
       ],
@@ -175,7 +180,7 @@ work.innerHTML =
       ],
     },
     {
-      role: 'Senior Frond End Engineer, Front End Architect',
+      role: 'Senior Front End Engineer, Front End Architect',
       date: '2010 - 2016',
       company: 'Tikal Knowledge, Full-Time',
       tagline: `Developing Web Applications using Javascript, Angular, Backbone and React, CSS & HTML, Node.js. In addition, Tech Leading Tikal’s Javascript Group
