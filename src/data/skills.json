@@ -34,13 +34,18 @@
     "Testing Library"
   ],
   "other": [
-    "CI/CD",
-    "Accessibility",
-    "GitHub Actions",
-    "Technical Leadership",
-    "Mentoring",
     "Architecture",
-    "Technical Strategy",
+    "SDLC",
+    "Quality Gates",
+    "Technical Roadmaps",
+    "Team Leadership",
+    "Mentoring",
+    "Hiring",
+    "AI-Assisted Development",
+    "CI/CD",
+    "Feature Flags",
+    "GitHub Actions",
+    "Accessibility",
     "Cross-Team Collaboration"
   ]
 }
