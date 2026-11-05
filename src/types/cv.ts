@@ -72,6 +72,13 @@ export interface EducationItem {
   years: string;
 }
 
+export interface LanguageItem {
+  name: string;
+  /** BCP 47 / ISO 639-1 language code */
+  code: string;
+  proficiency: string;
+}
+
 export interface Achievement {
   title: string;
   description?: string;

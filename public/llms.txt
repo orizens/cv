@@ -69,6 +69,11 @@ Other: CI/CD, Accessibility, GitHub Actions, Technical Leadership, Mentoring, Ar
 
 B.A. Computer Science & Management — The Open University (2001 – 2007)
 
+## Spoken Languages
+
+Hebrew (he) — Native
+English (en) — Fluent
+
 ## Publications
 
 "Reactive Programming with Angular and NGRX" — Springer

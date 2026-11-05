@@ -1,0 +1,26 @@
+---
+import Icon from "@components/ui/Icon.astro";
+import type { LanguageItem } from "../../types/cv";
+
+interface Props {
+  languages: LanguageItem[];
+}
+const { languages } = Astro.props;
+---
+
+<div class="card">
+  <h2 class="card-title">
+    <Icon icon="language" isLa />
+    Spoken Languages
+  </h2>
+  <ul class="language-list">
+    {
+      languages.map(({ name, code, proficiency }) => (
+        <li class="language-item">
+          <span lang={code}>{name}</span>
+          <span class="language-level">{proficiency}</span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
