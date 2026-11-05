@@ -1,0 +1,26 @@
+[
+  {
+    "value": "20+",
+    "label": "Years",
+    "description": "Product development experience",
+    "icon": "clock"
+  },
+  {
+    "value": "230+",
+    "label": "E2E Scenarios",
+    "description": "Designed and implemented at Rivery",
+    "icon": "code-2"
+  },
+  {
+    "value": "5+",
+    "label": "Engineers Mentored",
+    "description": "Direct mentorship across teams",
+    "icon": "users"
+  },
+  {
+    "value": "Author",
+    "label": "Published",
+    "description": "Reactive Programming with Angular & NgRx",
+    "icon": "book"
+  }
+]

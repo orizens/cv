@@ -1,0 +1,12 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^mkdir -p src/styles && cp screen-style\\.css src/styles/screen\\.css && cp css/print-style\\.css src/styles/print\\.css && echo \"done\"$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^mkdir -p public && cp -r images public/ && cp -r fonts public/ && echo \"done\"$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
+}

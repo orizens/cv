@@ -1,0 +1,99 @@
+---
+import "../../styles/screen.css";
+import "../../styles/print.css";
+import PlanetIcon from "@components/ui/PlanetIcon.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  jsonLd?: object;
+}
+
+const {
+  title = "Oren Farhi | Senior Software Engineer | Frontend Architecture - AI, SaaS & Enterprise Software",
+  description = "Oren Farhi — Senior Frontend Engineer for AI, SaaS & enterprise software, based in Boca Raton, FL. 20+ years building high-performance React & TypeScript systems, leading engineering quality, and mentoring teams.",
+  keywords = "cv, resume, frontend, architect, react, typescript, tech lead, javascript",
+  jsonLd,
+} = Astro.props;
+
+// Same og image as orizens.com. The CV is served from orencv.netlify.app
+// (orizens.com/cv redirects there), so link previews need that absolute host.
+const ogImage = new URL(
+  `${import.meta.env.BASE_URL}/images/og-image.webp`.replace(/\/+/g, "/"),
+  "https://orencv.netlify.app",
+).href;
+---
+
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Oren Farhi" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Oren Farhi" />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <PlanetIcon />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+    />
+    {
+      jsonLd && (
+        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+      )
+    }
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <slot />
+    <script>
+      const nav = document.querySelector(".cv-nav");
+      if (nav) {
+        const toggleNavBg = () => {
+          nav.classList.toggle("is-scrolled", window.scrollY > 40);
+        };
+        toggleNavBg();
+        window.addEventListener("scroll", toggleNavBg, { passive: true });
+      }
+
+      const navToggle = document.querySelector(".cv-nav-toggle");
+      const navPanel = document.querySelector(".cv-nav-mobile");
+      if (navToggle && navPanel) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navPanel.getAttribute("data-open") === "true";
+          navPanel.setAttribute("data-open", String(!isOpen));
+          navToggle.setAttribute("aria-expanded", String(!isOpen));
+        });
+        navPanel.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navPanel.setAttribute("data-open", "false");
+            navToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+
+      const printTriggers = document.querySelectorAll("[data-print-trigger]");
+      printTriggers.forEach((btn) => {
+        btn.addEventListener("click", () => window.print());
+      });
+    </script>
+  </body>
+</html>

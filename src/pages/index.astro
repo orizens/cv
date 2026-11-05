@@ -1,0 +1,174 @@
+---
+import CVLayout from "../components/layout/CVLayout.astro";
+import CvNav from "../components/sections/CvNav.astro";
+import Hero from "../components/sections/Hero.astro";
+import CredibilityMetrics from "../components/sections/CredibilityMetrics.astro";
+import PrintHeader from "../components/sections/PrintHeader.astro";
+import Profile from "../components/sections/Profile.astro";
+import ImpactHighlights from "../components/sections/ImpactHighlights.astro";
+import Experience from "../components/sections/Experience.astro";
+import ProjectsSection from "../components/sections/ProjectsSection.astro";
+import Skills from "../components/sections/Skills.astro";
+import Achievements from "../components/sections/Achievements.astro";
+import Publications from "../components/sections/Publications.astro";
+import Education from "../components/sections/Education.astro";
+import Contact from "../components/sections/Contact.astro";
+import ContactCta from "../components/sections/ContactCta.astro";
+import CvFooter from "../components/sections/CvFooter.astro";
+
+import profile from "../data/profile.json";
+import contact from "../data/contact.json";
+import experience from "../data/experience.json";
+import skills from "../data/skills.json";
+import achievements from "../data/achievements.json";
+import publications from "../data/publications.json";
+import education from "../data/education.json";
+import social from "../data/social.json";
+import metrics from "../data/metrics.json";
+import impact from "../data/impact.json";
+import projects from "../data/projects.json";
+
+import type {
+  UserProfile,
+  Contact as ContactType,
+  ExperienceItem,
+  Skills as SkillsType,
+  Achievement,
+  Publication,
+  EducationItem,
+  SocialLink,
+  Metric,
+  ImpactHighlight,
+} from "../types/cv";
+
+const experienceData = experience as unknown as ExperienceItem[];
+const achievementsData = achievements as Achievement[];
+const book = achievementsData.find((a) => a.title.includes("Author"));
+const npmModule = achievementsData.find((a) =>
+  a.title.includes("ngx-infinite-scroll"),
+);
+
+const featuredProjects = projects as {
+  role?: string;
+  title: string;
+  summary: string;
+  links?: { label: string; url: string }[];
+}[];
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+/** "Nov 2025" -> "2025-11" (schema.org date format) */
+const toIsoMonth = (d: string) => {
+  const [m, y] = d.split(" ");
+  const i = MONTHS.indexOf(m);
+  return i < 0 ? d : `${y}-${String(i + 1).padStart(2, "0")}`;
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: (profile as UserProfile).name,
+  jobTitle: (profile as UserProfile).title,
+  description:
+    "Senior Frontend Engineer for AI, SaaS and enterprise software with 20+ years of experience building high-performance web applications, leading engineering quality, and mentoring teams.",
+  email: (contact as ContactType).links.find((l) =>
+    l.href.startsWith("mailto:"),
+  )?.text,
+  telephone: (contact as ContactType).phones,
+  url: "https://orencv.netlify.app",
+  image: `https:${(profile as UserProfile).avatarUrl}`,
+  sameAs: (social as SocialLink[]).map((s) =>
+    s.href.startsWith("//") ? `https:${s.href}` : s.href,
+  ),
+  knowsAbout: [
+    ...(skills as SkillsType).languages,
+    ...(skills as SkillsType).libraries,
+    ...(skills as SkillsType).frameworks,
+    ...(skills as SkillsType).testing,
+    ...(skills as SkillsType).other,
+    "Frontend Architecture",
+    "Technical Leadership",
+    "End-to-End Testing (E2E)",
+  ],
+  hasOccupation: experienceData.map((e) => ({
+    "@type": "Role",
+    roleName: e.role,
+    startDate: toIsoMonth(e.date.split(" - ")[0]),
+    endDate: e.date.includes("Present")
+      ? undefined
+      : toIsoMonth(e.date.split(" - ")[1]),
+    worksFor: { "@type": "Organization", name: e.company },
+    description: e.tagline,
+  })),
+  alumniOf: (education as EducationItem[]).map((e) => ({
+    "@type": "EducationalOrganization",
+    name: e.institution,
+    description: `${e.degree}, ${e.years}`,
+  })),
+  author: book
+    ? [
+        {
+          "@type": "Book",
+          name: book.title.replace("Author of ", ""),
+          url: book.href,
+        },
+      ]
+    : undefined,
+  award: npmModule
+    ? [
+        {
+          "@type": "CreativeWork",
+          name: npmModule.title,
+          description: npmModule.description,
+          url: npmModule.href,
+          additionalProperty: npmModule.details
+            ? {
+                "@type": "PropertyValue",
+                name: "usage",
+                value: npmModule.details.join(", "),
+              }
+            : undefined,
+        },
+      ]
+    : undefined,
+};
+---
+
+<CVLayout jsonLd={jsonLd}>
+  <CvNav profile={profile as UserProfile} />
+
+  <main id="main-content">
+    <Hero profile={profile as UserProfile} social={social as SocialLink[]} />
+    <CredibilityMetrics metrics={metrics as Metric[]} />
+    <PrintHeader
+      profile={profile as UserProfile}
+      contact={contact as ContactType}
+      social={social as SocialLink[]}
+    />
+
+    <div class="cv-body">
+      <div class="cv-grid">
+        <div class="cv-main">
+          <Profile profile={profile as UserProfile} />
+          <ImpactHighlights impact={impact as ImpactHighlight[]} />
+          <Experience experience={experienceData} />
+          <ProjectsSection projects={featuredProjects} />
+        </div>
+
+        <aside class="cv-aside">
+          <Contact
+            contact={contact as ContactType}
+            social={social as SocialLink[]}
+          />
+          <Skills skills={skills as SkillsType} />
+          <Achievements achievements={achievementsData} />
+          <Publications publications={publications as Publication[]} />
+          <Education education={education as EducationItem[]} />
+        </aside>
+      </div>
+    </div>
+
+    <ContactCta contact={contact as ContactType} />
+  </main>
+
+  <CvFooter />
+</CVLayout>

@@ -1,0 +1,46 @@
+{
+  "languages": [
+    "TypeScript",
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ],
+  "libraries": [
+    "React",
+    "Next.js",
+    "React Native",
+    "TanStack Query",
+    "Redux Toolkit",
+    "NgRx",
+    "Tailwind",
+    "Chakra UI"
+  ],
+  "ai": [
+    "Claude Code",
+    "GitHub Copilot"
+  ],
+  "frameworks": [
+    "Angular",
+    "Electron",
+    "Node.js",
+    "REST",
+    "GraphQL"
+  ],
+  "testing": [
+    "Playwright",
+    "Cypress",
+    "Vitest",
+    "Jest",
+    "Testing Library"
+  ],
+  "other": [
+    "CI/CD",
+    "Accessibility",
+    "GitHub Actions",
+    "Technical Leadership",
+    "Mentoring",
+    "Architecture",
+    "Technical Strategy",
+    "Cross-Team Collaboration"
+  ]
+}

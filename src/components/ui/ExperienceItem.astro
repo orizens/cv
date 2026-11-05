@@ -1,0 +1,92 @@
+---
+import type { ExperienceItem } from "../../types/cv";
+import Icon from "./Icon.astro";
+import ProjectList from "./ProjectList.astro";
+
+interface Props {
+  item: ExperienceItem;
+  expanded?: boolean;
+  current?: boolean;
+}
+const { item, expanded = false, current = false } = Astro.props;
+const {
+  id,
+  role,
+  date,
+  company,
+  location,
+  tagline,
+  projectsTitle,
+  clients,
+  projects,
+  clientTitle,
+  highlight = false,
+  earlier = false,
+} = item;
+
+const techEntry = projects.find(([name]) => name.toLowerCase() === "tech");
+const techTags = techEntry
+  ? techEntry[1]
+      .replace(/\.$/, "")
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean)
+  : [];
+const otherProjects = projects.filter(
+  ([name]) => name.toLowerCase() !== "tech",
+);
+---
+
+<article
+  class:list={["timeline-item", { "is-current": current, "is-earlier": earlier }]}
+  id={id}
+>
+  <span class="timeline-marker" aria-hidden="true"></span>
+  <details class="timeline-card" open={expanded}>
+    <summary class="timeline-summary">
+      <div class="timeline-summary-main">
+        <h3 class="role-title">{role}</h3>
+        <p class="role-company">
+          <Icon icon="building" isLa />
+          {company}{location ? `, ${location}` : ""}
+        </p>
+      </div>
+      <div class="role-meta">
+        <span class="role-date">
+          <Icon icon="calendar" isLa />
+          {date}
+        </span>
+        <Icon icon="chevron-down" isLa class="timeline-toggle-icon" />
+      </div>
+    </summary>
+    <div class="timeline-body">
+      <p class="role-tagline" set:html={tagline} />
+      <ProjectList
+        title={clientTitle}
+        items={clients}
+        icon="at-sign"
+        highlight={highlight}
+      />
+      <ProjectList
+        title={projectsTitle}
+        items={otherProjects}
+        icon="git-branch"
+        highlight={highlight}
+      />
+      {
+        techTags.length > 0 && (
+          <>
+            <div class="tech-tags print-hide">
+              {techTags.map((tag) => (
+                <span class="tech-tag">{tag}</span>
+              ))}
+            </div>
+            <p class="tech-plain print-only">
+              Technologies: {techTags.join(", ")}
+            </p>
+          </>
+        )
+      }
+    </div>
+  </details>
+</article>

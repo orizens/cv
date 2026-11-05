@@ -1,0 +1,26 @@
+---
+import Icon from "@components/ui/Icon.astro";
+import type { EducationItem } from "../../types/cv";
+
+interface Props {
+  education: EducationItem[];
+}
+const { education } = Astro.props;
+---
+
+<div class="card">
+  <h2 class="card-title">
+    <Icon icon="graduation-cap" isLa />
+    Education
+  </h2>
+  {
+    education.map(({ institution, degree, years }) => (
+      <div class="education-item">
+        <h3>{institution}</h3>
+        <p>
+          {degree}, {years}
+        </p>
+      </div>
+    ))
+  }
+</div>

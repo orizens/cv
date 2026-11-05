@@ -1,0 +1,96 @@
+export interface UserProfile {
+  name: string;
+  title: string;
+  subtitle?: string;
+  avatarUrl: string;
+  summary: string[];
+  cofounding: {
+    label: string;
+    url: string;
+    description: string;
+  };
+}
+
+export interface ContactLink {
+  href: string;
+  icon: string;
+  text: string;
+  isLa?: boolean;
+}
+
+export interface Contact {
+  location?: string;
+  links: ContactLink[];
+  phones: string[];
+}
+
+export interface SocialLink {
+  href: string;
+  icon: string;
+  text: string;
+  isLa?: boolean;
+}
+
+export interface Skills {
+  languages: string[];
+  libraries: string[];
+  frameworks: string[];
+  testing: string[];
+  other: string[];
+  ai: string[];
+}
+
+/** [name, description, optionalLink?] */
+export type ProjectEntry = [string, string, string?];
+
+export interface ExperienceItem {
+  id: string;
+  role: string;
+  date: string;
+  company: string;
+  location?: string;
+  tagline: string;
+  clientTitle: string;
+  clients: ProjectEntry[];
+  projectsTitle: string;
+  projects: ProjectEntry[];
+  highlight?: boolean;
+  /** Pre-2016 roles print as a single summary line (ATS-friendly, saves pages) */
+  earlier?: boolean;
+}
+
+export interface Publication {
+  title: string;
+  href: string;
+  image: string;
+  imageAlt: string;
+}
+
+export interface EducationItem {
+  institution: string;
+  degree: string;
+  years: string;
+}
+
+export interface Achievement {
+  title: string;
+  description?: string;
+  href?: string;
+  badge?: string;
+  details?: string[];
+}
+
+export interface Metric {
+  value: string;
+  label: string;
+  description: string;
+  icon: string;
+}
+
+export interface ImpactHighlight {
+  icon: string;
+  title: string;
+  summary: string;
+  signal?: string;
+  experienceId: string;
+}

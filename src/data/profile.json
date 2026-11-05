@@ -1,0 +1,17 @@
+{
+  "name": "Oren Farhi",
+  "title": "Senior Software Engineer | Frontend Architecture - AI, SaaS & Enterprise Software",
+  "avatarUrl": "//www.gravatar.com/avatar/10036b8b167326fa6edfd2ad38c01ddc?s=512",
+  "summary": [
+    "20+ years building scalable, maintainable web applications; expert in TypeScript, React and end-to-end quality.",
+    "Leads TDD and BDD strategy, owns system design and technical roadmaps, and partners with product, design and backend teams.",
+    "Makes pragmatic architectural decisions, writes the hard parts, raises engineering standards and mentors engineers.",
+    "Uses AI-assisted development as a force multiplier while keeping architecture, correctness and security <span class=\"nowrap\">human-led</span>.",
+    "1.3M+ monthly npm downloads for <span class=\"nowrap\">ngx-infinite-scroll</span>; author of <strong><a href=\"https://link.springer.com/book/10.1007/978-1-4842-2620-9\" target=\"_blank\">Reactive Programming with Angular and NGRX</a> (Springer)</strong>."
+  ],
+  "cofounding": {
+    "label": "ReadM",
+    "url": "https://readm.app",
+    "description": "Co-Founder & Lead Software Engineer of"
+  }
+}

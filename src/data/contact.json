@@ -1,0 +1,20 @@
+{
+  "links": [
+    {
+      "href": "mailto:farhioren@gmail.com",
+      "icon": "envelope",
+      "text": "farhioren@gmail.com",
+      "isLa": true
+    },
+    {
+      "href": "https://orizens.com/cv",
+      "icon": "link",
+      "text": "orizens.com/cv",
+      "isLa": true
+    }
+  ],
+  "location": "Boca Raton, FL",
+  "phones": [
+    "+1 (646) 753 4899"
+  ]
+}

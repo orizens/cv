@@ -1,0 +1,25 @@
+---
+import Icon from "@components/ui/Icon.astro";
+import ExperienceItem from "../ui/ExperienceItem.astro";
+import type { ExperienceItem as ExperienceItemType } from "../../types/cv";
+
+interface Props {
+  experience: ExperienceItemType[];
+}
+const { experience } = Astro.props;
+---
+
+<section id="work-experience" aria-labelledby="experience-heading">
+  <span class="section-eyebrow">Career History</span>
+  <h2 class="section-heading" id="experience-heading">
+    <Icon icon="briefcase" isLa />
+    Experience
+  </h2>
+  <div class="timeline-list">
+    {
+      experience.map((item, index) => (
+        <ExperienceItem item={item} expanded current={index === 0} />
+      ))
+    }
+  </div>
+</section>
