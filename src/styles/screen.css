@@ -1224,6 +1224,30 @@ details[open] > .timeline-summary .timeline-toggle-icon {
   font-family: var(--font-mono);
 }
 
+.language-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.25rem 0;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.language-level {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+}
+
 .contact-card-list li {
   display: flex;
   align-items: center;

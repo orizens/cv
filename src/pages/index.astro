@@ -12,6 +12,7 @@ import Skills from "../components/sections/Skills.astro";
 import Achievements from "../components/sections/Achievements.astro";
 import Publications from "../components/sections/Publications.astro";
 import Education from "../components/sections/Education.astro";
+import Languages from "../components/sections/Languages.astro";
 import Contact from "../components/sections/Contact.astro";
 import ContactCta from "../components/sections/ContactCta.astro";
 import CvFooter from "../components/sections/CvFooter.astro";
@@ -23,6 +24,7 @@ import skills from "../data/skills.json";
 import achievements from "../data/achievements.json";
 import publications from "../data/publications.json";
 import education from "../data/education.json";
+import languages from "../data/languages.json";
 import social from "../data/social.json";
 import metrics from "../data/metrics.json";
 import impact from "../data/impact.json";
@@ -35,6 +37,7 @@ import type {
   Achievement,
   Publication,
   EducationItem,
+  LanguageItem,
   SocialLink,
   Metric,
   ImpactHighlight,
@@ -143,6 +146,12 @@ const jsonLd = {
     name: e.institution,
     description: `${e.degree}, ${e.years}`,
   })),
+  knowsLanguage: (languages as LanguageItem[]).map((l) => ({
+    "@type": "Language",
+    name: l.name,
+    alternateName: l.code,
+    description: `${l.proficiency} proficiency`,
+  })),
   author: book
     ? [
         {
@@ -202,6 +211,7 @@ const jsonLd = {
           <Achievements achievements={achievementsData} />
           <Publications publications={publications as Publication[]} />
           <Education education={education as EducationItem[]} />
+          <Languages languages={languages as LanguageItem[]} />
         </aside>
       </div>
     </div>
