@@ -1,17 +1,25 @@
 [
   {
     "id": "zscaler",
-    "role": "Lead UI Engineer",
+    "role": "Senior & Lead UI Engineer",
     "date": "Nov 2025 - Jun 2026",
     "company": "Zscaler",
-    "tagline": "Mentored 5+ engineers while architecting scalable UI with React, TypeScript and Playwright; set TDD standards for the team.",
+    "tagline": "Architecting scalable UI solutions and establishing engineering standards (TDD, test infrastructure, build performance) while mentoring 5+ engineers.",
     "clientTitle": "",
     "clients": [],
     "projectsTitle": "Highlights:",
     "projects": [
       [
-        "E2E infrastructure",
-        "Redesigned E2E infrastructure with base fixtures and simplified reusable components for E2E and visual regression tests."
+        "Quality systems",
+        "Redesigned E2E infrastructure with base fixtures and reusable components for E2E and visual regression tests, so teams ship with confidence."
+      ],
+      [
+        "Standards & mentoring",
+        "Established TDD standards and mentored 5+ engineers through code reviews and pairing."
+      ],
+      [
+        "Delivery speed",
+        "Reduced build times with modern tooling (Vite, Bun)."
       ],
       [
         "Tech",
@@ -25,14 +33,22 @@
     "role": "Lead UI Engineer",
     "date": "Aug 2024 - Nov 2025",
     "company": "HighRes BioSolutions",
-    "tagline": "Introduced BDD with Playwright to reduce UI production bugs; mentored the team and established React and TypeScript best practices.",
+    "tagline": "Led UI engineering in a life-science lab automation environment: introduced BDD with Playwright to reduce UI production bugs, mentored team members, and established React and TypeScript best practices.",
     "clientTitle": "",
     "clients": [],
     "projectsTitle": "Highlights:",
     "projects": [
       [
-        "Architecture & delivery",
-        "Designed, built and shipped UI with React and Playwright."
+        "Quality & release safety",
+        "Introduced BDD with Playwright (component and integration testing) to reduce production bugs, plus feature flags for safer rollouts."
+      ],
+      [
+        "Delivery speed",
+        "Reduced build times (Vite, Bun) and CI run times for unit and E2E tests."
+      ],
+      [
+        "Architecture & standards",
+        "Designed and shipped UI architecture with React and TypeScript and set best practices for the team."
       ],
       [
         "Tech",
@@ -46,14 +62,18 @@
     "role": "CTO & Lead Software Engineer",
     "date": "Nov 2023 - Aug 2024",
     "company": "AKTO SPACE",
-    "tagline": "Built the Electron and React desktop application from start to finish and advised on technical direction as CTO.",
+    "tagline": "Owned technical direction as CTO and led development of a desktop application from architecture to release with Electron and React.",
     "clientTitle": "",
     "clients": [],
     "projectsTitle": "Highlights:",
     "projects": [
       [
-        "Advisory",
-        "Guided desktop and web applications written in JS and TS, with video interaction as a core product component."
+        "CTO / technical direction",
+        "Set technical strategy for desktop and web applications in JS and TS, with video interaction as a core product component."
+      ],
+      [
+        "Architecture & delivery",
+        "Designed and delivered the desktop app with web technologies, from architecture to release."
       ],
       [
         "Tech",
@@ -64,25 +84,33 @@
   },
   {
     "id": "rivery",
-    "role": "Senior Frontend Tech Lead",
+    "role": "Senior Frontend Tech Lead / Engineer",
     "date": "May 2022 - Nov 2023",
     "company": "Rivery",
-    "tagline": "Led the migration from Angular 1 to React, Redux and RTK Query; designed the architecture and integrated Chakra UI with the backend team.",
+    "tagline": "Led the migration from Angular 1 to React, Redux and RTK Query: defined the architecture, integrated Chakra UI and worked closely with backend teams.",
     "clientTitle": "",
     "clients": [],
     "projectsTitle": "Highlights:",
     "projects": [
       [
-        "Build performance",
-        "35% shorter dev builds and 55% shorter prod builds after refactoring the codebase and updating the tech stack."
+        "Architecture",
+        "Designed and implemented a new architecture that reduced complexity and made feature delivery faster."
       ],
       [
-        "E2E",
-        "230+ Cypress user scenarios shipped, growing E2E coverage from zero while coaching the team on TDD."
+        "Technical lead",
+        "Updated the tech stack and reduced defects and dev/prod build times."
+      ],
+      [
+        "Growth & experimentation",
+        "Worked on signup funnels, onboarding and analytics instrumentation, and used feature flags for controlled rollouts."
       ],
       [
         "Mentoring",
-        "4 engineers coached through code reviews, pairing sessions and React testing discussions."
+        "Mentored 4 engineers through code reviews, pairing sessions and frontend testing best-practice discussions."
+      ],
+      [
+        "Quality",
+        "Shipped 230+ tested user scenarios with Cypress while coaching the team on TDD and growing E2E coverage from zero."
       ],
       [
         "Tech",
@@ -93,25 +121,33 @@
   },
   {
     "id": "1care-ai",
-    "role": "Head of Frontend Engineering",
+    "role": "Head of Frontend Engineering / Tech Lead",
     "date": "Sep 2021 - May 2022",
     "company": "1Care.ai",
-    "tagline": "Directed frontend development of web and mobile applications with a team of 3 engineers.",
+    "tagline": "Led the frontend team (2 junior engineers and 1 intermediate engineer) to build web and mobile applications.",
     "clientTitle": "",
     "clients": [],
     "projectsTitle": "Highlights:",
     "projects": [
       [
+        "Team leadership",
+        "Led and coordinated a team of 3 developers with code reviews and technical discussions."
+      ],
+      [
+        "Delivery planning",
+        "Planned weekly tasks in Jira to keep delivery moving forward."
+      ],
+      [
         "Architecture",
         "Made code interchangeable between web and mobile."
       ],
       [
-        "Delivery",
-        "Planned weekly tasks in Jira and defined UX solutions for UI challenges."
-      ],
-      [
         "Tech",
         "React, React Native (Android/iOS), TypeScript, Redux, Redux Toolkit, Blueprint, SCSS, Cypress, Cucumber/Gherkin, Jest, Testing Library, Jira, GraphQL, AWS/Amplify, Git."
+      ],
+      [
+        "UX",
+        "Designed and defined UX solutions for UI challenges and improved user experience."
       ]
     ],
     "highlight": false

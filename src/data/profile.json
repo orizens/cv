@@ -1,13 +1,13 @@
 {
   "name": "Oren Farhi",
-  "title": "Senior Software Engineer | Frontend Architecture - AI, SaaS & Enterprise Software",
+  "title": "Engineering Leader / Principal Engineer & Tech Lead",
   "avatarUrl": "//www.gravatar.com/avatar/10036b8b167326fa6edfd2ad38c01ddc?s=512",
   "summary": [
-    "20+ years building scalable, maintainable web applications; expert in TypeScript, React and end-to-end quality.",
-    "Leads TDD and BDD strategy, owns system design and technical roadmaps, and partners with product, design and backend teams.",
-    "Makes pragmatic architectural decisions, writes the hard parts, raises engineering standards and mentors engineers.",
-    "Uses AI-assisted development as a force multiplier while keeping architecture, correctness and security <span class=\"nowrap\">human-led</span>.",
-    "1.3M+ monthly npm downloads for <span class=\"nowrap\">ngx-infinite-scroll</span>; author of <strong><a href=\"https://link.springer.com/book/10.1007/978-1-4842-2620-9\" target=\"_blank\">Reactive Programming with Angular and NGRX</a> (Springer)</strong>."
+    "Engineering leader with 20+ years of experience building software and the systems around it: architecture, SDLC, quality gates, test automation and release discipline.",
+    "Led teams as Head of Frontend Engineering, CTO, tech lead and team lead, and co-founded <a href=\"https://readm.app\" target=\"_blank\">ReadM</a>, an AI-powered EdTech platform.",
+    "Brings a practical point of view on AI-native engineering: what to delegate to AI, what stays human, and which quality controls keep AI-generated code safe to ship.",
+    "Drives delivery speed and reliability through build/CI optimization, feature flags, and strong testing culture (TDD/BDD, E2E and visual regression).",
+    "Author of <strong><a href=\"https://link.springer.com/book/10.1007/978-1-4842-2620-9\" target=\"_blank\">Reactive Programming with Angular and NGRX</a> (Springer)</strong>."
   ],
   "cofounding": {
     "label": "ReadM",
