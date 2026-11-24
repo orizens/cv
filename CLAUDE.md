@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is an **Oren Farhi's online CV** — a data-driven static site built with **Astro 5.17** and manual **CSS**, deployed to Netlify. The entire CV content is sourced from JSON data files, making it easy to update credentials, experience, skills, and other information without touching component code.
+This is an **Oren Farhi's online CV** - a data-driven static site built with **Astro 5.17** and manual **CSS**, deployed to Netlify. The entire CV content is sourced from JSON data files, making it easy to update credentials, experience, skills, and other information without touching component code.
 
 ## Common Development Commands
 
@@ -74,7 +74,7 @@ Use these in imports for clarity, though relative paths work too.
 
 ## Modifying Content
 
-To update CV content, edit the JSON files in `src/data/` — no component changes needed:
+To update CV content, edit the JSON files in `src/data/` - no component changes needed:
 
 - **Profile info** → `src/data/profile.json`
 - **Work history** → `src/data/experience.json`
@@ -89,8 +89,8 @@ Ensure JSON is valid and matches the TypeScript interfaces in `src/types/cv.ts` 
 
 ## Component Notes
 
-- **Sections** (Hero, Profile, Experience, etc.) are pure and stateless — no client-side interactivity
-- **Icon component** uses string icon names (e.g., "laptop", "briefcase") — check existing data files for valid names
+- **Sections** (Hero, Profile, Experience, etc.) are pure and stateless - no client-side interactivity
+- **Icon component** uses string icon names (e.g., "laptop", "briefcase") - check existing data files for valid names
 - **ExperienceItem** supports optional `highlight` flag to visually emphasize a role
 - **Publication images** are stored in `public/images/` and referenced in publications.json
 

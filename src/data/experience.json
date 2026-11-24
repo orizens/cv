@@ -1,7 +1,7 @@
 [
   {
     "id": "zscaler",
-    "role": "Lead UI Engineer",
+    "role": "Senior Software Engineer, Lead UI",
     "date": "Nov 2025 - Jun 2026",
     "company": "Zscaler",
     "tagline": "Mentored 5+ engineers while architecting scalable UI with React, TypeScript and Playwright; set TDD standards for the team.",
@@ -22,7 +22,7 @@
   },
   {
     "id": "highres-biosolutions",
-    "role": "Lead UI Engineer",
+    "role": "Senior Software Engineer, Lead UI",
     "date": "Aug 2024 - Nov 2025",
     "company": "HighRes BioSolutions",
     "tagline": "Introduced BDD with Playwright to reduce UI production bugs; mentored the team and established React and TypeScript best practices.",

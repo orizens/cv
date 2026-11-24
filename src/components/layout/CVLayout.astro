@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title = "Oren Farhi | Senior Software Engineer | Frontend Architecture - AI, SaaS & Enterprise Software",
-  description = "Oren Farhi — Senior Frontend Engineer for AI, SaaS & enterprise software, based in Boca Raton, FL. 20+ years building high-performance React & TypeScript systems, leading engineering quality, and mentoring teams.",
+  description = "Oren Farhi - Senior Frontend Engineer for AI, SaaS & enterprise software, based in Boca Raton, FL. 20+ years building high-performance React & TypeScript systems, leading engineering quality, and mentoring teams.",
   keywords = "cv, resume, frontend, architect, react, typescript, tech lead, javascript",
   jsonLd,
 } = Astro.props;
@@ -55,14 +55,14 @@ const ogImage = new URL(
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
     />
-    {
-      jsonLd && (
-        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-      )
-    }
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">
+      Skip to main content
+    </a>
     <slot />
     <script>
       const nav = document.querySelector(".cv-nav");

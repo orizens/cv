@@ -88,17 +88,15 @@ const icons: Record<string, string> = {
   brain: brainIcon,
 };
 
-/** Icon names that always render as the lucide glyph, regardless of isLa — used to force the X logo over the retired bird mark. */
+/** Icon names that always render as the lucide glyph, regardless of isLa - used to force the X logo over the retired bird mark. */
 const forceLucide = new Set(["twitter", "x"]);
 
 const resolvedName = nameMap[icon] ?? (forceLucide.has(icon) ? "x" : icon);
 const svg = isLa || forceLucide.has(icon) ? icons[resolvedName] : undefined;
 ---
 
-{
-  svg ? (
-    <span class={`icon-lucide ${className}`} set:html={svg} />
-  ) : (
-    <span class={`lab la-${icon} ${className}`} />
-  )
-}
+{svg ? (
+  <span class={`icon-lucide ${className}`} set:html={svg} />
+) : (
+  <span class={`lab la-${icon} ${className}`} />
+)}

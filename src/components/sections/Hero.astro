@@ -31,16 +31,15 @@ const firstNames = nameParts.join(" ");
     <div class="hero-copy">
       <p class="hero-eyebrow">Online Résumé</p>
       <h1 class="hero-name">
-        {firstNames && `${firstNames} `}<span class="brand-text"
-          >{lastName}</span
-        >
+        {firstNames && `${firstNames} `}
+        <span class="brand-text">{lastName}</span>
       </h1>
       <p class="hero-title">{profile.title}</p>
       {profile.subtitle && <p class="hero-subtitle">{profile.subtitle}</p>}
       <p class="hero-lede">
         I build resilient frontend systems and lead the engineering quality
-        behind them — architecture, React &amp; TypeScript at scale,
-        and testing practices that let teams ship with confidence.
+        behind them - architecture, React &amp; TypeScript at scale, and testing
+        practices that let teams ship with confidence.
       </p>
       <div class="hero-actions">
         <a href="#work-experience" class="btn btn-primary">
@@ -53,22 +52,20 @@ const firstNames = nameParts.join(" ");
         </button>
       </div>
       <ul class="hero-social list-unstyled">
-        {
-          primarySocial.map(({ href, icon, text, isLa }) => (
-            <li>
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={text}
-                class={icon === "link" ? "hero-social-site" : undefined}
-              >
-                <Icon icon={icon} isLa={isLa} />
-                {icon === "link" && <span>{text}</span>}
-              </a>
-            </li>
-          ))
-        }
+        {primarySocial.map(({ href, icon, text, isLa }) => (
+          <li>
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={text}
+              class={icon === "link" ? "hero-social-site" : undefined}
+            >
+              <Icon icon={icon} isLa={isLa} />
+              {icon === "link" && <span>{text}</span>}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
     <div class="hero-visual">
