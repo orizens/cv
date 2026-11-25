@@ -4,11 +4,6 @@ export interface UserProfile {
   subtitle?: string;
   avatarUrl: string;
   summary: string[];
-  cofounding: {
-    label: string;
-    url: string;
-    description: string;
-  };
 }
 
 export interface ContactLink {

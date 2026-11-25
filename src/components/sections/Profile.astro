@@ -14,10 +14,4 @@ const { profile } = Astro.props;
   <ul class="summary-list">
     {profile.summary.map((p) => <li set:html={p} />)}
   </ul>
-  <div class="profile-callout">
-    {profile.cofounding.description}{" "}
-    <a href={profile.cofounding.url} target="_blank" rel="noopener noreferrer"
-      >{profile.cofounding.label}</a
-    >
-  </div>
 </section>

@@ -3,7 +3,8 @@
     "TypeScript",
     "JavaScript",
     "HTML",
-    "CSS"
+    "CSS",
+    "SCSS"
   ],
   "libraries": [
     "React",
@@ -13,7 +14,9 @@
     "Redux Toolkit",
     "NgRx",
     "Tailwind",
-    "Chakra UI"
+    "Chakra UI",
+    "Redux",
+    "MUI"
   ],
   "ai": [
     "Claude Code",
@@ -31,7 +34,8 @@
     "Cypress",
     "Vitest",
     "Jest",
-    "Testing Library"
+    "Testing Library",
+    "Cucumber"
   ],
   "other": [
     "CI/CD",
@@ -41,6 +45,9 @@
     "Mentoring",
     "Architecture",
     "Technical Strategy",
-    "Cross-Team Collaboration"
+    "Cross-Team Collaboration",
+    "Vite",
+    "Storybook",
+    "AWS"
   ]
 }

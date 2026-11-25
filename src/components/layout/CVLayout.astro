@@ -1,7 +1,6 @@
 ---
 import "../../styles/screen.css";
 import "../../styles/print.css";
-import PlanetIcon from "@components/ui/PlanetIcon.astro";
 
 interface Props {
   title?: string;
@@ -16,6 +15,8 @@ const {
   keywords = "cv, resume, frontend, architect, react, typescript, tech lead, javascript",
   jsonLd,
 } = Astro.props;
+
+const favicon = `${import.meta.env.BASE_URL}/images/favicon.png`.replace(/\/+/g, "/");
 
 // Same og image as orizens.com. The CV is served from orencv.netlify.app
 // (orizens.com/cv redirects there), so link previews need that absolute host.
@@ -44,7 +45,7 @@ const ogImage = new URL(
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <PlanetIcon />
+    <link rel="icon" type="image/png" sizes="96x96" href={favicon} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

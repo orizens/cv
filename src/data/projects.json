@@ -22,7 +22,7 @@
     ]
   },
   {
-    "role": "Personal Project",
+    "role": "Independent Product",
     "title": "Ittim",
     "summary": "Jewish prayers app that helps users track and complete their daily prayers, available as a web app and on Google Play.",
     "links": [
@@ -33,13 +33,24 @@
     ]
   },
   {
-    "role": "Personal Project",
-    "title": "Echoes Player",
-    "summary": "Free, open-source media player built on the YouTube API with Angular.",
+    "role": "Independent Product",
+    "title": "Kashrut Check",
+    "summary": "React Native mobile app that checks a photo of a kosher symbol against a list of approved agencies, entirely on the device; available on Google Play and the App Store.",
     "links": [
       {
-        "label": "Open Project",
-        "url": "https://echoesplayer.netlify.app"
+        "label": "Visit Kashrut Check",
+        "url": "https://kashrutcheck.netlify.app"
+      }
+    ]
+  },
+  {
+    "role": "Independent Product",
+    "title": "Or-El",
+    "summary": "Fullstack smart display for shuls, showing prayer times, zmanim, announcements, sponsors and weather.",
+    "links": [
+      {
+        "label": "Visit Or-El",
+        "url": "https://or-el.netlify.app"
       }
     ]
   }

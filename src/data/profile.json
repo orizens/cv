@@ -8,10 +8,5 @@
     "Makes pragmatic architectural decisions, writes the hard parts, raises engineering standards and mentors engineers.",
     "Uses AI-assisted development as a force multiplier while keeping architecture, correctness and security <span class=\"nowrap\">human-led</span>.",
     "1.3M+ monthly npm downloads for <span class=\"nowrap\">ngx-infinite-scroll</span>; author of <strong><a href=\"https://link.springer.com/book/10.1007/978-1-4842-2620-9\" target=\"_blank\">Reactive Programming with Angular and NGRX</a> (Springer)</strong>."
-  ],
-  "cofounding": {
-    "label": "ReadM",
-    "url": "https://readm.app",
-    "description": "Co-Founder & Lead Software Engineer of"
-  }
+  ]
 }

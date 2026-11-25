@@ -95,14 +95,6 @@
     color: var(--on-night-muted) !important;
   }
 
-  .print-portrait {
-    width: 48pt;
-    height: 48pt;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1.5pt solid rgba(255, 255, 255, 0.4);
-  }
-
   .print-contact-list {
     display: flex;
     flex-wrap: wrap;
@@ -296,11 +288,6 @@
     display: none;
   }
 
-  .profile-callout {
-    border: 0.75pt solid #d1d5db;
-    background: transparent;
-  }
-
   .icon-lucide,
   .lab {
     display: none;
@@ -329,8 +316,15 @@
 
   /* One home per fact: the Projects section, Publication card and print header already cover these */
   .card:has(.achievements-list),
-  .profile-callout,
   .impact-section {
+    display: none !important;
+  }
+
+  /* Fit two pages: hide bullets that repeat the role's tagline or add little.
+     They stay on screen. */
+  #highres-biosolutions .project-list-items,
+  #akto-space .project-list-items,
+  [id="1care-ai"] .project-list-items li:last-child {
     display: none !important;
   }
 
@@ -483,6 +477,8 @@
     font-style: normal !important;
     text-transform: none !important;
     letter-spacing: normal !important;
+    /* Ligatures extract as single glyphs ("fi", "fl"), which breaks keyword search */
+    font-variant-ligatures: none !important;
   }
 
   body :not(.print-header):not(.print-header *) {

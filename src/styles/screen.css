@@ -824,22 +824,6 @@ strong {
   margin-bottom: 0;
 }
 
-.profile-callout {
-  margin-top: 1.5rem;
-  padding: 1.1rem 1.4rem;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--accent);
-  border-radius: var(--radius-sm);
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  color: var(--ink-muted);
-}
-
-.profile-callout a {
-  font-weight: 600;
-}
-
 /* ==========================================================================
    Impact highlights
    ========================================================================== */

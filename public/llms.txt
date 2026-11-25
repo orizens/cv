@@ -15,7 +15,7 @@
 
 ## Summary
 
-Seasoned frontend engineer specialising in software architecture, TypeScript, React, CSS, and modern testing practices. Author of "Reactive Programming with Angular and NGRX" (Springer). Co-Founder & Lead Software Engineer of ReadM (https://readm.app), an AI-powered reading fluency assessment tool for K–4 students.
+Seasoned frontend engineer specialising in software architecture, TypeScript, React, CSS, and modern testing practices. Author of "Reactive Programming with Angular and NGRX" (Springer).
 
 ## Experience
 
@@ -44,7 +44,7 @@ Developed web applications focused on reusability and testing with React, Angula
 Notable client: Lifion - React, Node.js, Jest, Enzyme, Testing Library, TypeScript, Sass.
 
 **Senior Frontend Engineer & Consultant - Orizens (Self-Owned)** (Feb 2016 – Jun 2018)
-Built web applications with React, Angular, Redux, NgRx, TypeScript. Personal projects include ReadM, Echoes Player, and open-source npm packages (1.3M+ monthly downloads; used by Google, Microsoft, Amazon, Disney and SAP).
+Built web applications with React, Angular, Redux, NgRx, TypeScript. Personal projects include ReadM and open-source npm packages (1.3M+ monthly downloads; used by Google, Microsoft, Amazon, Disney and SAP).
 
 **Senior Frontend Engineer, Frontend Architect - Tikal Knowledge** (Aug 2010 – Feb 2016)
 Developed web applications with Angular, Backbone, React, Node.js. Led Tikal's JavaScript Group, ran workshops, and consulted for enterprise customers.
