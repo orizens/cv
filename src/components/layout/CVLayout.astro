@@ -1,6 +1,7 @@
 ---
 import "../../styles/screen.css";
 import "../../styles/print.css";
+import "../../styles/print-color.css";
 
 interface Props {
   title?: string;
@@ -91,9 +92,62 @@ const ogImage = new URL(
         });
       }
 
-      const printTriggers = document.querySelectorAll("[data-print-trigger]");
-      printTriggers.forEach((btn) => {
-        btn.addEventListener("click", () => window.print());
+      // Full-colour print. The page is 1280px wide so the desktop layout applies
+      // (A4 proportions; the print dialog scales it to the paper). Standard print
+      // is the default, including Cmd/Ctrl+P, so everything is undone afterwards.
+      const root = document.documentElement;
+      const printColor = async () => {
+        root.classList.add("print-color");
+
+        const pageStyle = document.createElement("style");
+        pageStyle.textContent = "@page { size: 1280px 1810px; margin: 0; }";
+        document.head.append(pageStyle);
+
+        const collapsed = document.querySelectorAll<HTMLDetailsElement>(
+          "details.timeline-card:not([open])",
+        );
+        collapsed.forEach((d) => (d.open = true));
+
+        // Lazy images that were never scrolled into view would print blank
+        await Promise.all(
+          Array.from(document.images, (img) => {
+            img.loading = "eager";
+            return img.decode().catch(() => {});
+          }),
+        );
+
+        window.addEventListener(
+          "afterprint",
+          () => {
+            root.classList.remove("print-color");
+            pageStyle.remove();
+            collapsed.forEach((d) => (d.open = false));
+          },
+          { once: true },
+        );
+        window.print();
+      };
+
+      const printMenus =
+        document.querySelectorAll<HTMLDetailsElement>(".print-menu");
+      document
+        .querySelectorAll<HTMLElement>("[data-print-trigger]")
+        .forEach((btn) => {
+          btn.addEventListener("click", () => {
+            printMenus.forEach((menu) => (menu.open = false));
+            if (btn.dataset.printTrigger === "color") printColor();
+            else window.print();
+          });
+        });
+
+      // Close an open print menu on outside click or Escape
+      document.addEventListener("click", (e) => {
+        printMenus.forEach((menu) => {
+          if (!menu.contains(e.target as Node)) menu.open = false;
+        });
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") printMenus.forEach((m) => (m.open = false));
       });
     </script>
   </body>

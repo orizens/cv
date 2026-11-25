@@ -1307,6 +1307,11 @@ details[open] > .timeline-summary .timeline-toggle-icon {
   transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
 }
 
+/* Shown only in the full-colour print (print-color.css) */
+.contact-social-handle {
+  display: none;
+}
+
 .contact-socials a:hover {
   color: var(--accent);
   border-color: var(--accent);
@@ -1412,4 +1417,61 @@ details[open] > .timeline-summary .timeline-toggle-icon {
   line-height: 1.7;
   color: var(--ink);
   margin-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   Print menu
+   ========================================================================== */
+.print-menu {
+  position: relative;
+}
+
+.print-menu > summary {
+  list-style: none;
+}
+
+.print-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Opens upward: below the button, the hero and CTA sections would clip it */
+.print-menu-list {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 20;
+  width: max-content;
+  max-width: calc(100vw - 2.5rem);
+  padding: 0.4rem;
+  display: grid;
+  gap: 0.25rem;
+  background: var(--night-raised);
+  border: 1px solid var(--night-line-strong);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-night-card);
+  text-align: left;
+}
+
+.print-menu-option {
+  display: grid;
+  min-height: 44px;
+  padding: 0.5rem 0.85rem;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-sm);
+  color: var(--on-night);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+}
+
+.print-menu-option:hover {
+  background: var(--accent-soft);
+}
+
+.print-menu-option span {
+  font-size: 0.78rem;
+  color: var(--on-night-muted);
 }

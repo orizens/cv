@@ -1,0 +1,170 @@
+/* Full-colour print: the page as it looks on screen. Active only while
+   <html> has .print-color (set by the print menu, see CVLayout.astro).
+   The page size, which triggers the desktop layout, is injected there too,
+   because @page cannot be scoped to a class. */
+@media print {
+  html.print-color,
+  html.print-color * {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  /* Freeze motion so nothing is captured mid-animation */
+  html.print-color *,
+  html.print-color *::before,
+  html.print-color *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Desktop layout, repeated from screen.css: Chrome evaluates width media
+     queries against the default paper size, not the injected @page size */
+  html.print-color .cv-nav-links {
+    display: flex;
+  }
+
+  html.print-color .hero-inner {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 2rem;
+  }
+
+  html.print-color .hero-visual {
+    min-height: 420px;
+  }
+
+  html.print-color .hero-avatar {
+    height: 26rem;
+  }
+
+  html.print-color .cv-grid {
+    grid-template-columns: minmax(0, 2fr) minmax(19rem, 0.85fr);
+    align-items: start;
+  }
+
+  html.print-color .impact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  html.print-color .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tighter spacing so the whole impact section fits on page 1 under the
+     summary. It is kept in one piece, so any overflow moves all of it to page 2 */
+  html.print-color .cv-body {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /* Trim the closing blocks so the footer doesn't spill onto its own page */
+  html.print-color .contact-cta {
+    padding-block: 2rem;
+  }
+
+  html.print-color .cv-footer {
+    padding-block: 1rem;
+  }
+
+  html.print-color .cv-main {
+    gap: 2rem;
+  }
+
+  html.print-color .impact-section .section-heading {
+    margin-bottom: 1rem;
+  }
+
+  html.print-color .impact-card {
+    padding: 1.15rem;
+    gap: 0.5rem;
+  }
+
+  /* Page 1 ends after the impact cards; this keeps the "Career History"
+     label with its heading */
+  html.print-color #work-experience {
+    break-before: page;
+    padding-top: 1.5rem;
+  }
+
+  /* Paper can't be hovered or clicked: list the profiles with their handles */
+  html.print-color .contact-socials {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  html.print-color .contact-socials a {
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    gap: 0.55rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+  }
+
+  /* The profile icons mix inline SVGs and icon-font glyphs: same box for all */
+  html.print-color .contact-socials .icon-lucide,
+  html.print-color .contact-socials .lab {
+    display: inline-flex;
+    justify-content: center;
+    width: 20px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  html.print-color .contact-socials .lab {
+    font-size: 20px;
+  }
+
+  html.print-color .contact-socials .icon-lucide,
+  html.print-color .contact-socials .icon-lucide svg {
+    height: 18px;
+  }
+
+  html.print-color .contact-socials .icon-lucide svg {
+    width: 18px;
+  }
+
+  html.print-color .contact-social-handle {
+    display: inline;
+  }
+
+  /* Sticky elements overlap content or repeat across pages. Their top offsets
+     must be cleared too, or "relative" shifts them down onto what follows */
+  html.print-color .cv-aside,
+  html.print-color .section-heading {
+    position: static;
+  }
+
+  html.print-color .timeline-item,
+  html.print-color .cv-nav {
+    position: relative;
+    top: auto;
+  }
+
+  /* Controls that do nothing on paper */
+  html.print-color .skip-link,
+  html.print-color .cv-nav-toggle,
+  html.print-color .cv-nav-mobile,
+  html.print-color .print-menu,
+  html.print-color .timeline-toggle-icon {
+    display: none !important;
+  }
+
+  /* Keep blocks whole across page breaks */
+  html.print-color .metrics,
+  html.print-color .impact-section,
+  html.print-color .card,
+  html.print-color .impact-card,
+  html.print-color .project-card,
+  html.print-color .timeline-card,
+  html.print-color .contact-cta {
+    break-inside: avoid;
+  }
+
+  html.print-color .section-heading,
+  html.print-color .card-title {
+    break-after: avoid;
+  }
+}

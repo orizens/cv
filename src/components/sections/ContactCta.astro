@@ -1,5 +1,6 @@
 ---
 import Icon from "@components/ui/Icon.astro";
+import PrintMenu from "@components/ui/PrintMenu.astro";
 import type { Contact } from "../../types/cv";
 
 interface Props {
@@ -26,10 +27,7 @@ const email = contact.links.find((l) => l.href.startsWith("mailto:"));
           </a>
         )
       }
-      <button type="button" class="btn btn-secondary" data-print-trigger>
-        <Icon icon="printer" isLa />
-        Print / Save as PDF
-      </button>
+      <PrintMenu />
     </div>
     <div class="contact-cta-list">
       {

@@ -7,14 +7,17 @@
   margin: 7mm 12mm;
 }
 
+/* Default (ATS-friendly) print. Every rule below is scoped with
+   :where(...:not(.print-color)) - zero extra specificity - so it is skipped for
+   the full-colour print (print-color.css). Keep the scope on new rules. */
 @media print {
-  html {
+  html:where(:not(.print-color)) {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
 
   /* Standard system fonts: embedded as plain TrueType, not Type 3, so every ATS can read the text */
-  html:root {
+  html:root:where(:not(.print-color)) {
     --font-display: Georgia, "Times New Roman", serif;
     --font-body: Georgia, "Times New Roman", serif;
     --font-sans: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif;
@@ -24,50 +27,50 @@
   /* Linear text order: positioned elements (the timeline) are painted after
      static blocks, so a parser read the Skills and Education cards before the
      last roles. Keep everything in normal flow so content order = reading order. */
-  .cv-body,
-  .cv-body * {
+  :where(html:not(.print-color)) .cv-body,
+  :where(html:not(.print-color)) .cv-body * {
     position: static !important;
     transform: none !important;
     overflow: visible !important;
   }
 
-  .nowrap {
+  :where(html:not(.print-color)) .nowrap {
     white-space: nowrap;
   }
 
   /* Real bullet characters so each highlight reads as one list item */
-  .project-list-items li::before {
+  :where(html:not(.print-color)) .project-list-items li::before {
     content: "\2022";
     flex-shrink: 0;
   }
 
   /* The book is already named (in bold) in the Summary */
-  .card:has(.publication-item) {
+  :where(html:not(.print-color)) .card:has(.publication-item) {
     display: none !important;
   }
 
-  body {
+  :where(html:not(.print-color)) body {
     background: #fff !important;
     color: #111827 !important;
     font-size: 9.5pt;
     line-height: 1.35;
   }
 
-  a {
+  :where(html:not(.print-color)) a {
     color: inherit !important;
     text-decoration: none;
   }
 
-  .print-hide {
+  :where(html:not(.print-color)) .print-hide {
     display: none !important;
   }
 
-  .print-only {
+  :where(html:not(.print-color)) .print-only {
     display: block !important;
   }
 
   /* Compact identity header replaces the cosmic hero */
-  .print-header {
+  :where(html:not(.print-color)) .print-header {
     background: rgb(24, 40, 60) !important;
     color: var(--on-night) !important;
     margin: 0 0 6pt;
@@ -76,26 +79,26 @@
     border-bottom: none;
   }
 
-  .print-header-row {
+  :where(html:not(.print-color)) .print-header-row {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 12pt;
   }
 
-  .print-header h1 {
+  :where(html:not(.print-color)) .print-header h1 {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 20pt;
     margin: 0 0 2pt;
     color: var(--on-night) !important;
   }
 
-  .print-role {
+  :where(html:not(.print-color)) .print-role {
     font-size: 10pt;
     color: var(--on-night-muted) !important;
   }
 
-  .print-contact-list {
+  :where(html:not(.print-color)) .print-contact-list {
     display: flex;
     flex-wrap: wrap;
     gap: 4pt 14pt;
@@ -104,37 +107,37 @@
     color: var(--on-night-muted) !important;
   }
 
-  .cv-body {
+  :where(html:not(.print-color)) .cv-body {
     padding: 0;
     max-width: 100%;
   }
 
   /* Block flow (not grid/flex) lets sections split across pages instead of jumping whole */
-  .cv-grid,
-  .cv-main,
-  .cv-aside {
+  :where(html:not(.print-color)) .cv-grid,
+  :where(html:not(.print-color)) .cv-main,
+  :where(html:not(.print-color)) .cv-aside {
     display: block !important;
   }
 
-  .cv-grid {
+  :where(html:not(.print-color)) .cv-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10pt;
     align-items: start;
   }
 
-  .cv-aside {
+  :where(html:not(.print-color)) .cv-aside {
     position: static !important;
     max-height: none !important;
     overflow: visible !important;
   }
 
-  .cv-main,
-  .cv-aside {
+  :where(html:not(.print-color)) .cv-main,
+  :where(html:not(.print-color)) .cv-aside {
     gap: 16pt;
   }
 
-  .section-heading {
+  :where(html:not(.print-color)) .section-heading {
     font-weight: 700;
     font-size: 12.5pt;
     margin: 10pt 0 4pt;
@@ -144,31 +147,31 @@
     break-after: avoid;
   }
 
-  .section-eyebrow {
+  :where(html:not(.print-color)) .section-eyebrow {
     display: none;
   }
 
-  .card,
-  .impact-card,
-  .project-card,
-  .timeline-card {
+  :where(html:not(.print-color)) .card,
+  :where(html:not(.print-color)) .impact-card,
+  :where(html:not(.print-color)) .project-card,
+  :where(html:not(.print-color)) .timeline-card {
     box-shadow: none !important;
     border: 0.75pt solid #9ca3af !important;
     border-radius: 4pt;
     break-inside: avoid;
     page-break-inside: avoid;
   }
-  .impact-card {
+  :where(html:not(.print-color)) .impact-card {
     padding: 10pt;
   }
 
-  .card {
+  :where(html:not(.print-color)) .card {
     margin-bottom: 8pt;
     padding: 8pt 10pt;
     border-top: 2.5pt solid rgb(24, 40, 60) !important;
   }
 
-  .card-title {
+  :where(html:not(.print-color)) .card-title {
     font-weight: 700;
     font-size: 10pt;
     margin-bottom: 6pt;
@@ -179,61 +182,61 @@
   }
 
   /* Expand every collapsed role for print */
-  details.timeline-card {
+  :where(html:not(.print-color)) details.timeline-card {
     display: block;
   }
 
-  details.timeline-card > * {
+  :where(html:not(.print-color)) details.timeline-card > * {
     display: block !important;
   }
 
-  .timeline-summary {
+  :where(html:not(.print-color)) .timeline-summary {
     cursor: default;
     padding: 6pt 8pt;
     list-style: none;
   }
 
-  .timeline-toggle-icon {
+  :where(html:not(.print-color)) .timeline-toggle-icon {
     display: none;
   }
 
-  .timeline-body {
+  :where(html:not(.print-color)) .timeline-body {
     padding: 0 8pt 8pt;
   }
 
-  .timeline-list::before {
+  :where(html:not(.print-color)) .timeline-list::before {
     display: none;
   }
 
-  .timeline-item {
+  :where(html:not(.print-color)) .timeline-item {
     padding-left: 0;
   }
 
-  .timeline-marker {
+  :where(html:not(.print-color)) .timeline-marker {
     display: none;
   }
 
-  .role-title {
+  :where(html:not(.print-color)) .role-title {
     font-size: 10.5pt;
   }
 
-  .role-tagline,
-  .impact-summary,
-  .project-summary {
+  :where(html:not(.print-color)) .role-tagline,
+  :where(html:not(.print-color)) .impact-summary,
+  :where(html:not(.print-color)) .project-summary {
     font-size: 9pt;
   }
 
-  .project-list-items li {
+  :where(html:not(.print-color)) .project-list-items li {
     font-size: 8.5pt;
   }
 
-  .tech-tags,
-  .skill-tags {
+  :where(html:not(.print-color)) .tech-tags,
+  :where(html:not(.print-color)) .skill-tags {
     gap: 3pt;
   }
 
-  .tech-tag,
-  .skill-tag {
+  :where(html:not(.print-color)) .tech-tag,
+  :where(html:not(.print-color)) .skill-tag {
     border: 0.75pt solid #9ca3af;
     background: transparent !important;
     color: #111827 !important;
@@ -241,141 +244,141 @@
     padding: 1pt 4pt;
   }
 
-  .impact-grid {
+  :where(html:not(.print-color)) .impact-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 6pt;
   }
 
   /* Single column: multi-column layouts interleave when an ATS extracts text */
-  .projects-grid {
+  :where(html:not(.print-color)) .projects-grid {
     display: block;
   }
 
-  .project-card {
+  :where(html:not(.print-color)) .project-card {
     margin-bottom: 3pt;
     padding: 3pt 8pt;
   }
 
-  .tech-plain,
-  .skills-plain {
+  :where(html:not(.print-color)) .tech-plain,
+  :where(html:not(.print-color)) .skills-plain {
     font-size: 8.5pt;
     margin: 2pt 0 0;
   }
 
-  .project-url {
+  :where(html:not(.print-color)) .project-url {
     font-size: 8pt;
     margin: 0;
   }
 
   /* Pre-2016 roles collapse to one summary line */
-  .timeline-item.is-earlier .timeline-body {
+  :where(html:not(.print-color)) .timeline-item.is-earlier .timeline-body {
     display: none !important;
   }
 
-  .summary-list {
+  :where(html:not(.print-color)) .summary-list {
     max-width: none;
     margin: 0;
     padding-inline-start: 12pt;
   }
 
-  .summary-list li {
+  :where(html:not(.print-color)) .summary-list li {
     font-size: 9pt;
     line-height: 1.3;
     margin-bottom: 1pt;
   }
 
-  .impact-link {
+  :where(html:not(.print-color)) .impact-link {
     display: none;
   }
 
-  .icon-lucide,
-  .lab {
+  :where(html:not(.print-color)) .icon-lucide,
+  :where(html:not(.print-color)) .lab {
     display: none;
   }
 
   /* Icon-only profile links are redundant with the plain-text list in .print-header */
-  .contact-socials-label,
-  .contact-socials {
+  :where(html:not(.print-color)) .contact-socials-label,
+  :where(html:not(.print-color)) .contact-socials {
     display: none;
   }
 
   /* Avoid orphaned headings and split cards across pages */
-  h1,
-  h2,
-  h3 {
+  :where(html:not(.print-color)) h1,
+  :where(html:not(.print-color)) h2,
+  :where(html:not(.print-color)) h3 {
     break-after: avoid;
   }
 
-  #contact-info {
+  :where(html:not(.print-color)) #contact-info {
     display: none;
   }
 
-  span.impact-icon {
+  :where(html:not(.print-color)) span.impact-icon {
     display: none;
   }
 
   /* One home per fact: the Projects section, Publication card and print header already cover these */
-  .card:has(.achievements-list),
-  .impact-section {
+  :where(html:not(.print-color)) .card:has(.achievements-list),
+  :where(html:not(.print-color)) .impact-section {
     display: none !important;
   }
 
   /* Fit two pages: hide bullets that repeat the role's tagline or add little.
      They stay on screen. */
-  #highres-biosolutions .project-list-items,
-  #akto-space .project-list-items,
-  [id="1care-ai"] .project-list-items li:last-child {
+  :where(html:not(.print-color)) #highres-biosolutions .project-list-items,
+  :where(html:not(.print-color)) #akto-space .project-list-items,
+  :where(html:not(.print-color)) [id="1care-ai"] .project-list-items li:last-child {
     display: none !important;
   }
 
   /* Keep each role together with its heading and bullets */
-  .timeline-card {
+  :where(html:not(.print-color)) .timeline-card {
     break-inside: avoid;
   }
 
-  .impact-signal {
+  :where(html:not(.print-color)) .impact-signal {
     font-weight: 700;
   }
 
-  .timeline-list {
+  :where(html:not(.print-color)) .timeline-list {
     display: block;
   }
 
   /* Flat role entries: a hairline instead of a box saves roughly a page */
-  .timeline-card {
+  :where(html:not(.print-color)) .timeline-card {
     border: none !important;
     border-bottom: 0.5pt solid #d1d5db !important;
     border-radius: 0;
     margin-bottom: 2pt;
   }
 
-  .timeline-summary {
+  :where(html:not(.print-color)) .timeline-summary {
     padding: 1pt 0;
   }
 
-  .timeline-body {
+  :where(html:not(.print-color)) .timeline-body {
     padding: 0 0 2pt;
   }
 
-  .section-heading {
+  :where(html:not(.print-color)) .section-heading {
     margin-top: 6pt;
   }
 
-  .card {
+  :where(html:not(.print-color)) .card {
     margin-bottom: 3pt;
     padding: 5pt 10pt;
   }
 
-  .project-list-items li {
+  :where(html:not(.print-color)) .project-list-items li {
     padding: 0;
   }
 
   /* Compact print layout: one-line role header, no "Highlights:" label */
-  .project-list-title {
+  :where(html:not(.print-color)) .project-list-title {
     display: none !important;
   }
 
-  details.timeline-card > .timeline-summary {
+  :where(html:not(.print-color)) details.timeline-card > .timeline-summary {
     display: flex !important;
     flex-wrap: nowrap;
     align-items: baseline;
@@ -384,95 +387,95 @@
     padding: 1pt 0;
   }
 
-  .timeline-summary-main {
+  :where(html:not(.print-color)) .timeline-summary-main {
     display: flex !important;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 0 6pt;
   }
 
-  .timeline-summary-main .role-company {
+  :where(html:not(.print-color)) .timeline-summary-main .role-company {
     display: inline;
     font-size: 9.5pt;
   }
 
-  .timeline-summary-main .role-company::before {
+  :where(html:not(.print-color)) .timeline-summary-main .role-company::before {
     content: "|\00a0";
   }
 
-  .role-meta,
-  .role-date {
+  :where(html:not(.print-color)) .role-meta,
+  :where(html:not(.print-color)) .role-date {
     display: inline !important;
     font-size: 8.5pt;
   }
 
-  .role-tagline {
+  :where(html:not(.print-color)) .role-tagline {
     margin: 0 0 1pt;
     line-height: 1.3;
   }
 
-  .timeline-card {
+  :where(html:not(.print-color)) .timeline-card {
     margin-bottom: 2pt;
   }
 
-  .timeline-body {
+  :where(html:not(.print-color)) .timeline-body {
     padding: 0 0 1pt;
   }
 
-  .project-list-items {
+  :where(html:not(.print-color)) .project-list-items {
     margin: 0;
   }
 
-  .project-card {
+  :where(html:not(.print-color)) .project-card {
     margin-bottom: 2pt;
     padding: 2pt 8pt;
   }
 
-  .project-card {
+  :where(html:not(.print-color)) .project-card {
     display: block;
   }
 
-  .project-card .project-role,
-  .project-card .project-title,
-  .project-card .project-summary,
-  .project-card .project-url.print-only {
+  :where(html:not(.print-color)) .project-card .project-role,
+  :where(html:not(.print-color)) .project-card .project-title,
+  :where(html:not(.print-color)) .project-card .project-summary,
+  :where(html:not(.print-color)) .project-card .project-url.print-only {
     display: inline !important;
     margin: 0;
     font-size: 9pt;
   }
 
-  .project-card .project-role::after {
+  :where(html:not(.print-color)) .project-card .project-role::after {
     content: ": ";
   }
 
-  .project-card .project-title {
+  :where(html:not(.print-color)) .project-card .project-title {
     font-weight: 700;
   }
 
-  .project-card .project-title::after {
+  :where(html:not(.print-color)) .project-card .project-title::after {
     content: " \2014 ";
   }
 
-  .project-card .project-url.print-only::before {
+  :where(html:not(.print-color)) .project-card .project-url.print-only::before {
     content: " (";
   }
 
-  .project-card .project-url.print-only::after {
+  :where(html:not(.print-color)) .project-card .project-url.print-only::after {
     content: ")";
   }
 
   /* Minimal type system for ATS and readability: one family (Calibri), one text
      colour, two weights (regular/bold), no italics, no uppercase or
      letter-spacing, and three sizes: 20pt name, 12pt headings, 10pt text. */
-  html:root {
+  html:root:where(:not(.print-color)) {
     --font-display: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif;
     --font-body: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif;
     --font-sans: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif;
     --font-mono: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif;
   }
 
-  body,
-  body * {
+  :where(html:not(.print-color)) body,
+  :where(html:not(.print-color)) body * {
     font-family: Calibri, Carlito, "Segoe UI", Helvetica, sans-serif !important;
     font-style: normal !important;
     text-transform: none !important;
@@ -481,57 +484,57 @@
     font-variant-ligatures: none !important;
   }
 
-  body :not(.print-header):not(.print-header *) {
+  :where(html:not(.print-color)) body :not(.print-header):not(.print-header *) {
     color: #111827 !important;
   }
 
-  body,
-  .role-title,
-  .role-company,
-  .role-date,
-  .role-tagline,
-  .tech-plain,
-  .skills-plain,
-  .project-list-items li,
-  .summary-list li,
-  .project-card .project-role,
-  .project-card .project-title,
-  .project-card .project-summary,
-  .project-card .project-url.print-only,
-  .card-title,
-  .print-role,
-  .print-contact-list {
+  :where(html:not(.print-color)) body,
+  :where(html:not(.print-color)) .role-title,
+  :where(html:not(.print-color)) .role-company,
+  :where(html:not(.print-color)) .role-date,
+  :where(html:not(.print-color)) .role-tagline,
+  :where(html:not(.print-color)) .tech-plain,
+  :where(html:not(.print-color)) .skills-plain,
+  :where(html:not(.print-color)) .project-list-items li,
+  :where(html:not(.print-color)) .summary-list li,
+  :where(html:not(.print-color)) .project-card .project-role,
+  :where(html:not(.print-color)) .project-card .project-title,
+  :where(html:not(.print-color)) .project-card .project-summary,
+  :where(html:not(.print-color)) .project-card .project-url.print-only,
+  :where(html:not(.print-color)) .card-title,
+  :where(html:not(.print-color)) .print-role,
+  :where(html:not(.print-color)) .print-contact-list {
     font-size: 10pt !important;
   }
 
-  .section-heading,
-  .card-title {
+  :where(html:not(.print-color)) .section-heading,
+  :where(html:not(.print-color)) .card-title {
     font-size: 12pt !important;
   }
 
-  .print-header h1 {
+  :where(html:not(.print-color)) .print-header h1 {
     font-size: 20pt !important;
   }
 
-  .print-role {
+  :where(html:not(.print-color)) .print-role {
     font-size: 12pt !important;
   }
 
-  .role-title,
-  .item-client,
-  .project-card .project-title,
-  .project-card .project-role {
+  :where(html:not(.print-color)) .role-title,
+  :where(html:not(.print-color)) .item-client,
+  :where(html:not(.print-color)) .project-card .project-title,
+  :where(html:not(.print-color)) .project-card .project-role {
     font-weight: 700 !important;
   }
 
-  .role-company,
-  .role-date,
-  .role-tagline,
-  .tech-plain,
-  .skills-plain,
-  .project-card .project-summary,
-  .project-card .project-url.print-only,
-  .summary-list li {
+  :where(html:not(.print-color)) .role-company,
+  :where(html:not(.print-color)) .role-date,
+  :where(html:not(.print-color)) .role-tagline,
+  :where(html:not(.print-color)) .tech-plain,
+  :where(html:not(.print-color)) .skills-plain,
+  :where(html:not(.print-color)) .project-card .project-summary,
+  :where(html:not(.print-color)) .project-card .project-url.print-only,
+  :where(html:not(.print-color)) .summary-list li {
     font-weight: 400 !important;
   }
 }

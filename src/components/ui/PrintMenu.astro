@@ -1,0 +1,22 @@
+---
+import Icon from "./Icon.astro";
+
+---
+
+<details class="print-menu">
+  <summary class="btn btn-secondary">
+    <Icon icon="printer" isLa />
+    Print / Save as PDF
+    <Icon icon="chevron-down" isLa class="print-menu-caret" />
+  </summary>
+  <div class="print-menu-list">
+    <button type="button" class="print-menu-option" data-print-trigger="standard">
+      <strong>Standard</strong>
+      <span>Compact and ATS-friendly (default)</span>
+    </button>
+    <button type="button" class="print-menu-option" data-print-trigger="color">
+      <strong>Full color</strong>
+      <span>As shown on screen, with graphics</span>
+    </button>
+  </div>
+</details>

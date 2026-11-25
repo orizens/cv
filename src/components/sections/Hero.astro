@@ -1,5 +1,6 @@
 ---
 import Icon from "@components/ui/Icon.astro";
+import PrintMenu from "@components/ui/PrintMenu.astro";
 import type { UserProfile, SocialLink } from "../../types/cv";
 
 interface Props {
@@ -46,10 +47,7 @@ const firstNames = nameParts.join(" ");
           <Icon icon="arrow-down" isLa />
           View Experience
         </a>
-        <button type="button" class="btn btn-secondary" data-print-trigger>
-          <Icon icon="printer" isLa />
-          Print / Save as PDF
-        </button>
+        <PrintMenu />
       </div>
       <ul class="hero-social list-unstyled">
         {primarySocial.map(({ href, icon, text, isLa }) => (

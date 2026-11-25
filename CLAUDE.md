@@ -97,7 +97,8 @@ Ensure JSON is valid and matches the TypeScript interfaces in `src/types/cv.ts` 
 ## Styling
 
 - **Tailwind CSS** for responsive design
-- **print.css** contains print-specific styles (CV is designed to print well)
+- **print.css** contains the default print styles (compact, ATS-friendly). Each rule is scoped with `:where(...:not(.print-color))`; keep that on new rules
+- **print-color.css** contains the optional full-colour print (as on screen), chosen from the `PrintMenu` button; it applies while `<html>` has `.print-color`
 - **screen.css** contains screen-specific styles
 - Colors and spacing follow Tailwind conventions; customization via tailwind.config.js if needed
 
