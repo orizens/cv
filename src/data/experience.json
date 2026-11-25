@@ -1,5 +1,22 @@
 [
   {
+    "id": "freelance-fullstack",
+    "role": "Senior Fullstack Engineer",
+    "date": "Jul 2026 - Present",
+    "company": "Freelance",
+    "tagline": "Helping companies embrace AI to accelerate development; consulting to startups on AI adoption and software architecture. Built fullstack and mobile apps shipped to the app stores.",
+    "clientTitle": "",
+    "clients": [],
+    "projectsTitle": "Highlights:",
+    "projects": [
+      [
+        "Tech",
+        "React, React Native, Node.js, Cloudflare, GitHub Actions, Tailwind, shadcn/ui, TanStack."
+      ]
+    ],
+    "highlight": false
+  },
+  {
     "id": "zscaler",
     "role": "Senior Software Engineer, Lead UI",
     "date": "Nov 2025 - Jun 2026",

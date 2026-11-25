@@ -4,7 +4,7 @@
 
 @page {
   size: A4;
-  margin: 9mm 12mm;
+  margin: 7mm 12mm;
 }
 
 @media print {
@@ -352,19 +352,19 @@
     border: none !important;
     border-bottom: 0.5pt solid #d1d5db !important;
     border-radius: 0;
-    margin-bottom: 4pt;
+    margin-bottom: 2pt;
   }
 
   .timeline-summary {
-    padding: 2pt 0;
+    padding: 1pt 0;
   }
 
   .timeline-body {
-    padding: 0 0 3pt;
+    padding: 0 0 2pt;
   }
 
   .section-heading {
-    margin-top: 8pt;
+    margin-top: 6pt;
   }
 
   .card {
