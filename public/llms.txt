@@ -1,6 +1,6 @@
 # Oren Farhi - CV / Resume
 
-> AI Product Engineer / Design Engineer based in Boca Raton, FL, with 20+ years of experience building web and mobile products with React and TypeScript, including LLM-powered features and design systems.
+> AI Product Engineer (Product Engineer | Frontend | AI-Native | Agentic UI) based in Boca Raton, FL, with 20+ years of experience building web and mobile products with React and TypeScript, including LLM-powered features and design systems.
 
 ## Contact
 
@@ -15,7 +15,7 @@
 
 ## Summary
 
-AI product engineer and design engineer. Builds generative AI features (Gemini, OpenAI, speech recognition, text-to-speech), on-device ML with TensorFlow Lite, and design systems, backed by software architecture and modern testing practices. Author of "Reactive Programming with Angular and NGRX" (Springer).
+AI product engineer. Builds generative AI features (Gemini, OpenAI, speech recognition, text-to-speech), on-device ML with TensorFlow Lite, and design systems, backed by software architecture and modern testing practices. Author of "Reactive Programming with Angular and NGRX" (Springer).
 
 ## Experience
 

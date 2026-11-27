@@ -72,7 +72,7 @@ const jsonLd = {
   name: (profile as UserProfile).name,
   jobTitle: (profile as UserProfile).title,
   description:
-    "AI Product Engineer and Design Engineer with 20+ years of experience building web and mobile products end-to-end, including LLM-powered features and design systems in React and TypeScript.",
+    "AI Product Engineer with 20+ years of experience building web and mobile products end-to-end, including LLM-powered features and design systems in React and TypeScript.",
   email: (contact as ContactType).links.find((l) =>
     l.href.startsWith("mailto:"),
   )?.text,
