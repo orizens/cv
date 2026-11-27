@@ -19,8 +19,29 @@
     "MUI"
   ],
   "ai": [
+    "LLM Integration",
+    "Generative AI",
+    "Gemini API",
+    "OpenAI API",
+    "Prompt Design",
+    "Structured Output",
+    "Speech Recognition",
+    "Text-to-Speech",
+    "On-Device ML",
+    "TensorFlow Lite",
+    "AI-Assisted Development",
     "Claude Code",
     "GitHub Copilot"
+  ],
+  "design": [
+    "Design Systems",
+    "Design Tokens",
+    "Component Libraries",
+    "Storybook",
+    "shadcn/ui",
+    "UI/UX",
+    "Accessibility",
+    "i18n / RTL"
   ],
   "frameworks": [
     "Angular",
@@ -39,7 +60,6 @@
   ],
   "other": [
     "CI/CD",
-    "Accessibility",
     "GitHub Actions",
     "Technical Leadership",
     "Mentoring",
@@ -47,7 +67,6 @@
     "Technical Strategy",
     "Cross-Team Collaboration",
     "Vite",
-    "Storybook",
     "AWS"
   ]
 }

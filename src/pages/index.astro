@@ -72,7 +72,7 @@ const jsonLd = {
   name: (profile as UserProfile).name,
   jobTitle: (profile as UserProfile).title,
   description:
-    "Senior Frontend Engineer for AI, SaaS and enterprise software with 20+ years of experience building high-performance web applications, leading engineering quality, and mentoring teams.",
+    "AI Product Engineer with 20+ years of experience building web and mobile products end-to-end, including LLM-powered features and design systems in React and TypeScript.",
   email: (contact as ContactType).links.find((l) =>
     l.href.startsWith("mailto:"),
   )?.text,
@@ -88,6 +88,8 @@ const jsonLd = {
     ...(skills as SkillsType).frameworks,
     ...(skills as SkillsType).testing,
     ...(skills as SkillsType).other,
+    ...(skills as SkillsType).ai,
+    ...(skills as SkillsType).design,
     "Frontend Architecture",
     "Technical Leadership",
     "End-to-End Testing (E2E)",

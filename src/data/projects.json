@@ -2,7 +2,7 @@
   {
     "role": "Co-Founder & Lead Software Engineer",
     "title": "ReadM",
-    "summary": "Automated reading-fluency assessment for K-4 and ESL/ELL students, giving teachers live reports and up-to-date insights.",
+    "summary": "AI-powered reading-fluency assessment for K-4 and ESL/ELL students with live teacher reports. Gemini story generation and reading reports, speech AI and OpenAI images.",
     "links": [
       {
         "label": "Visit ReadM",
@@ -35,7 +35,7 @@
   {
     "role": "Independent Product",
     "title": "Kashrut Check",
-    "summary": "React Native mobile app that checks a photo of a kosher symbol against a list of approved agencies, entirely on the device; available on Google Play and the App Store.",
+    "summary": "React Native mobile app that checks a photo of a kosher symbol against a list of approved agencies, using on-device ML (TensorFlow Lite); English/Hebrew (i18n, RTL); on Google Play and the App Store.",
     "links": [
       {
         "label": "Visit Kashrut Check",

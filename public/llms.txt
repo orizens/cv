@@ -1,6 +1,6 @@
 # Oren Farhi - CV / Resume
 
-> Senior Software Engineer (Frontend Architecture) for AI, SaaS & Enterprise Software, based in Boca Raton, FL, with 20+ years of experience building high-performance, scalable web applications.
+> AI Product Engineer (Product Engineer | Frontend | AI-Native | Agentic UI) based in Boca Raton, FL, with 20+ years of experience building web and mobile products with React and TypeScript, including LLM-powered features and design systems.
 
 ## Contact
 
@@ -15,7 +15,7 @@
 
 ## Summary
 
-Seasoned frontend engineer specialising in software architecture, TypeScript, React, CSS, and modern testing practices. Author of "Reactive Programming with Angular and NGRX" (Springer).
+AI product engineer. Builds generative AI features (Gemini, OpenAI, speech recognition, text-to-speech), on-device ML with TensorFlow Lite, and design systems, backed by software architecture and modern testing practices. Author of "Reactive Programming with Angular and NGRX" (Springer).
 
 ## Experience
 
@@ -62,7 +62,8 @@ Libraries: React, Next.js, React Native, TanStack Query, Redux Toolkit, NgRx, Ta
 Frameworks: Angular, Electron, Node.js
 APIs: REST, GraphQL
 Testing: Playwright, Cypress, Vitest, Jest, Testing Library
-AI-assisted engineering: Claude Code, GitHub Copilot
+AI product engineering: LLM Integration, Generative AI, Gemini API, OpenAI API, Prompt Design, Structured Output, Speech Recognition, Text-to-Speech, On-Device ML, TensorFlow Lite, AI-Assisted Development, Claude Code, GitHub Copilot
+Design engineering: Design Systems, Design Tokens, Component Libraries, Storybook, shadcn/ui, UI/UX, Accessibility, i18n / RTL
 Other: CI/CD, Accessibility, GitHub Actions, Technical Leadership, Mentoring, Architecture
 
 ## Education
