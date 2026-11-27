@@ -33,6 +33,7 @@ export interface Skills {
   testing: string[];
   other: string[];
   ai: string[];
+  design: string[];
 }
 
 /** [name, description, optionalLink?] */

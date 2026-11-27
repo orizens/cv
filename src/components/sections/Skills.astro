@@ -14,13 +14,14 @@ const frameworkLibs = skills.libraries.filter(
 );
 
 const groups: { label: string; items: string[] }[] = [
+  { label: "AI Product Engineering", items: skills.ai },
+  { label: "Design Engineering", items: skills.design },
   {
     label: "Architecture",
     items: [
       "System Design",
       "TDD",
       "BDD",
-      "Design Systems",
       "Micro Frontends",
       ...architectureLibs,
     ],
@@ -35,7 +36,6 @@ const groups: { label: string; items: string[] }[] = [
     label: "Leadership & Developer Experience",
     items: skills.other.filter((s) => s !== "Architecture"),
   },
-  { label: "AI-Assisted Engineering", items: skills.ai },
 ];
 ---
 
